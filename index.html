@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouFirst Parking — Votre place, votre priorité</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="logo-icon">P</span>
+        YouFirst <span class="logo-accent">Parking</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#how">Comment ça marche</a></li>
+        <li><a href="#locations">Nos parkings</a></li>
+        <li><a href="#pricing">Tarifs</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav__cta">
+        <a href="#" class="btn btn--ghost">Connexion</a>
+        <a href="#" class="btn btn--primary">Réserver</a>
+      </div>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="#how">Comment ça marche</a>
+      <a href="#locations">Nos parkings</a>
+      <a href="#pricing">Tarifs</a>
+      <a href="#faq">FAQ</a>
+      <a href="#" class="btn btn--primary" style="margin-top:8px;">Réserver</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg">
+      <div class="hero__gradient"></div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__badge">🚗 +2 000 places disponibles partout en France</div>
+      <h1 class="hero__title">
+        Votre place de parking,<br />
+        <span class="hero__title--accent">simple et immédiat</span>
+      </h1>
+      <p class="hero__subtitle">
+        Réservez en 2 minutes, accédez en 1 clic. YouFirst Parking vous garantit
+        une place sécurisée, disponible 24h/24 et 7j/7.
+      </p>
+      <div class="hero__search">
+        <div class="search-box">
+          <div class="search-field">
+            <label>Ville ou adresse</label>
+            <input type="text" placeholder="Paris, Lyon, Marseille…" />
+          </div>
+          <div class="search-field">
+            <label>Arrivée</label>
+            <input type="date" />
+          </div>
+          <div class="search-field">
+            <label>Départ</label>
+            <input type="date" />
+          </div>
+          <button class="btn btn--primary btn--search">Rechercher</button>
+        </div>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <strong>2 000+</strong>
+          <span>places disponibles</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <strong>98%</strong>
+          <span>clients satisfaits</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <strong>50+</strong>
+          <span>villes couvertes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section class="trust">
+    <div class="container">
+      <p class="trust__label">Ils nous font confiance</p>
+      <div class="trust__logos">
+        <span>Michelin</span>
+        <span>SNCF</span>
+        <span>Aéroports de Paris</span>
+        <span>Vinci Park</span>
+        <span>Indigo</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Processus</span>
+        <h2>Réserver en 3 étapes</h2>
+        <p>Simple, rapide, sans surprise. Votre parking en quelques secondes.</p>
+      </div>
+      <div class="how__steps">
+        <div class="step">
+          <div class="step__number">01</div>
+          <div class="step__icon">🔍</div>
+          <h3>Recherchez</h3>
+          <p>Entrez votre destination et vos dates. Nous affichons les places disponibles autour de vous en temps réel.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <div class="step__icon">✅</div>
+          <h3>Réservez</h3>
+          <p>Choisissez votre place, payez en ligne en toute sécurité. Confirmation immédiate par SMS et email.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <div class="step__icon">🅿️</div>
+          <h3>Garez-vous</h3>
+          <p>Accédez au parking grâce à votre QR code ou badge. Votre place vous attend, garantie.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container features__inner">
+      <div class="features__text">
+        <span class="section-badge">Avantages</span>
+        <h2>Pourquoi choisir YouFirst Parking ?</h2>
+        <p class="features__desc">
+          Nous mettons votre tranquillité d'esprit en premier. Chaque parking est vérifié, sécurisé et disponible à tout moment.
+        </p>
+        <ul class="features__list">
+          <li>
+            <div class="feature-icon">🔒</div>
+            <div>
+              <strong>Sécurité garantie</strong>
+              <span>Vidéosurveillance 24h/24, accès contrôlé, assurance incluse.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">💳</div>
+            <div>
+              <strong>Paiement flexible</strong>
+              <span>CB, PayPal, Apple Pay. Annulation gratuite jusqu'à 24h avant.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">📍</div>
+            <div>
+              <strong>Localisation précise</strong>
+              <span>Navigation GPS intégrée jusqu'à votre place de parking.</span>
+            </div>
+          </li>
+          <li>
+            <div class="feature-icon">🕐</div>
+            <div>
+              <strong>Disponible 24h/24</strong>
+              <span>Accès à toute heure, service client joignable en permanence.</span>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="btn btn--primary">Découvrir nos parkings</a>
+      </div>
+      <div class="features__visual">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="app-header">
+              <span class="app-logo">YF</span>
+              <span>YouFirst</span>
+            </div>
+            <div class="app-map">
+              <div class="map-pin map-pin--1">🅿️ 2,50€/h</div>
+              <div class="map-pin map-pin--2">🅿️ 1,90€/h</div>
+              <div class="map-pin map-pin--3 map-pin--active">🅿️ 2,10€/h</div>
+            </div>
+            <div class="app-card">
+              <div class="app-card__name">Parking République</div>
+              <div class="app-card__info">
+                <span>⭐ 4.8</span>
+                <span>· 3 min à pied</span>
+                <span>· 12 places</span>
+              </div>
+              <button class="app-card__btn">Réserver — 2,10€/h</button>
+            </div>
+          </div>
+        </div>
+        <div class="features__badge features__badge--top">
+          <span>✅</span> Confirmation instantanée
+        </div>
+        <div class="features__badge features__badge--bottom">
+          <span>🔒</span> Paiement 100% sécurisé
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+  <section class="locations" id="locations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Destinations</span>
+        <h2>Nos parkings populaires</h2>
+        <p>Des centaines de places disponibles dans les villes qui comptent.</p>
+      </div>
+      <div class="locations__grid">
+        <div class="location-card location-card--large">
+          <div class="location-card__img location-card__img--paris"></div>
+          <div class="location-card__body">
+            <h3>Paris</h3>
+            <p>840 places disponibles</p>
+            <div class="location-card__price">À partir de 1,90€/h</div>
+          </div>
+        </div>
+        <div class="location-card">
+          <div class="location-card__img location-card__img--lyon"></div>
+          <div class="location-card__body">
+            <h3>Lyon</h3>
+            <p>312 places</p>
+            <div class="location-card__price">À partir de 1,20€/h</div>
+          </div>
+        </div>
+        <div class="location-card">
+          <div class="location-card__img location-card__img--marseille"></div>
+          <div class="location-card__body">
+            <h3>Marseille</h3>
+            <p>267 places</p>
+            <div class="location-card__price">À partir de 1,00€/h</div>
+          </div>
+        </div>
+        <div class="location-card">
+          <div class="location-card__img location-card__img--bordeaux"></div>
+          <div class="location-card__body">
+            <h3>Bordeaux</h3>
+            <p>198 places</p>
+            <div class="location-card__price">À partir de 1,10€/h</div>
+          </div>
+        </div>
+        <div class="location-card">
+          <div class="location-card__img location-card__img--nice"></div>
+          <div class="location-card__body">
+            <h3>Nice</h3>
+            <p>154 places</p>
+            <div class="location-card__price">À partir de 1,30€/h</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="#" class="btn btn--outline">Voir toutes les villes →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Tarifs</span>
+        <h2>Des offres pour tous les besoins</h2>
+        <p>Sans engagement, sans frais cachés. Choisissez ce qui vous convient.</p>
+      </div>
+      <div class="pricing__toggle">
+        <button class="toggle-btn toggle-btn--active" data-period="hour">À l'heure</button>
+        <button class="toggle-btn" data-period="day">À la journée</button>
+        <button class="toggle-btn" data-period="month">Mensuel</button>
+      </div>
+      <div class="pricing__grid">
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <h3>Essentiel</h3>
+            <p>Pour les besoins ponctuels</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price" data-hour="1,90€" data-day="12€" data-month="89€">1,90€</span>
+            <span class="period">/heure</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>✓ Réservation à l'heure</li>
+            <li>✓ Confirmation instantanée</li>
+            <li>✓ Accès QR code</li>
+            <li>✓ Annulation flexible</li>
+            <li class="disabled">✗ Place garantie</li>
+            <li class="disabled">✗ Support prioritaire</li>
+          </ul>
+          <a href="#" class="btn btn--outline btn--full">Choisir Essentiel</a>
+        </div>
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__badge">Populaire</div>
+          <div class="pricing-card__header">
+            <h3>Premium</h3>
+            <p>Pour les habitués</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price" data-hour="2,50€" data-day="18€" data-month="149€">2,50€</span>
+            <span class="period">/heure</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>✓ Réservation à l'heure</li>
+            <li>✓ Confirmation instantanée</li>
+            <li>✓ Accès QR code</li>
+            <li>✓ Annulation flexible</li>
+            <li>✓ Place garantie</li>
+            <li>✓ Support prioritaire</li>
+          </ul>
+          <a href="#" class="btn btn--primary btn--full">Choisir Premium</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <h3>Business</h3>
+            <p>Pour les entreprises</p>
+          </div>
+          <div class="pricing-card__price">
+            <span class="price" data-hour="Sur devis" data-day="Sur devis" data-month="Sur devis">Sur devis</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>✓ Tout Premium inclus</li>
+            <li>✓ Facturation mensuelle</li>
+            <li>✓ Gestion multi-véhicules</li>
+            <li>✓ Tableau de bord entreprise</li>
+            <li>✓ Account manager dédié</li>
+            <li>✓ SLA garanti</li>
+          </ul>
+          <a href="#" class="btn btn--outline btn--full">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Avis clients</span>
+        <h2>Ce que disent nos utilisateurs</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Réservation ultra rapide, la place était exactement là où indiqué. Fini le stress de chercher un parking !"</p>
+          <div class="testimonial-card__author">
+            <div class="avatar">SL</div>
+            <div>
+              <strong>Sophie L.</strong>
+              <span>Paris 11ème</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card testimonial-card--featured">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Je prends YouFirst Parking tous les jours pour aller au travail. Le forfait mensuel est imbattable, et le service est impeccable."</p>
+          <div class="testimonial-card__author">
+            <div class="avatar">MR</div>
+            <div>
+              <strong>Marc R.</strong>
+              <span>Lyon Centre</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Application intuitive, paiement simple, parking sécurisé. Exactement ce qu'il me fallait pour mes déplacements."</p>
+          <div class="testimonial-card__author">
+            <div class="avatar">AC</div>
+            <div>
+              <strong>Amélie C.</strong>
+              <span>Marseille</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">FAQ</span>
+        <h2>Questions fréquentes</h2>
+      </div>
+      <div class="faq__list">
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Comment réserver une place de parking ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Il vous suffit d'entrer votre destination et vos dates dans la barre de recherche, de choisir la place qui vous convient, puis de payer en ligne. Vous recevez une confirmation immédiate avec votre QR code d'accès.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Puis-je annuler ma réservation ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Oui, vous pouvez annuler gratuitement jusqu'à 24h avant votre arrivée. Au-delà, des frais d'annulation de 50% s'appliquent.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Comment accéder au parking ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Vous recevez un QR code unique par email et SMS après votre réservation. Il vous suffit de le présenter à l'entrée du parking. Certains parkings disposent également de badges RFID.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Mes données de paiement sont-elles sécurisées ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Absolument. Tous les paiements sont traités via Stripe, certifié PCI-DSS. Nous ne stockons jamais vos informations bancaires sur nos serveurs.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__question">
+            Que se passe-t-il si ma place est occupée à mon arrivée ?
+            <span class="faq-item__icon">+</span>
+          </button>
+          <div class="faq-item__answer">
+            <p>Dans le cas très rare où votre place serait indisponible, nous vous relogeons immédiatement dans un parking proche sans frais supplémentaires, et nous vous remboursons intégralement la différence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-band__inner">
+        <div>
+          <h2>Prêt à ne plus jamais chercher une place ?</h2>
+          <p>Rejoignez plus de 50 000 conducteurs qui font confiance à YouFirst Parking.</p>
+        </div>
+        <div class="cta-band__actions">
+          <a href="#" class="btn btn--white">Réserver maintenant</a>
+          <a href="#" class="btn btn--white-outline">Télécharger l'app</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo">
+            <span class="logo-icon">P</span>
+            YouFirst <span class="logo-accent">Parking</span>
+          </a>
+          <p>La solution de location de parking la plus simple et la plus fiable de France.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="#">Rechercher un parking</a></li>
+            <li><a href="#">Comment ça marche</a></li>
+            <li><a href="#">Tarifs</a></li>
+            <li><a href="#">Louer ma place</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Presse</a></li>
+            <li><a href="#">Carrières</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Centre d'aide</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Conditions d'utilisation</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 YouFirst Parking. Tous droits réservés.</p>
+        <p>Fait avec ❤️ en France</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

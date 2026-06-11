@@ -3,909 +3,597 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScorePulse — L'actualité sportive en temps réel</title>
-  <meta name="description" content="ScorePulse, le média sportif français de référence. Rugby, Football, Tennis, Cyclisme, Basketball — scores en direct, analyses et résultats." />
+  <title>L'Épopée — Journalisme de fond sportif</title>
+  <meta name="description" content="L'Épopée raconte le sport autrement : portraits, enquêtes, anatomies et grandes histoires. Slow journalism sportif en français." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ========== NAVIGATION ========== -->
-  <header class="nav-header" id="navHeader">
-    <nav class="nav-container">
-      <a href="#" class="nav-logo">
-        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M22 12C22 12 19 6 12 6C5 6 2 12 2 12" stroke="#E63946" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="12" cy="12" r="3" fill="#E63946"/>
-          <path d="M2 12C2 12 5 18 12 18C19 18 22 12 22 12" stroke="#E63946" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="12" cy="12" r="1.2" fill="#fff"/>
+  <!-- Reading progress bar -->
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <!-- Top editorial bar -->
+  <div class="top-bar">
+    <span>Le sport a toujours eu ses épopées. On les raconte.</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Navigation principale">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="L'Épopée — accueil">
+        <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" fill="#6B1E2E" opacity="0.12"/>
+          <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" stroke="#6B1E2E" stroke-width="1.4" fill="none"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#6B1E2E" stroke-width="1.4"/>
+          <path d="M10.5 28 Q16 26 21.5 28" stroke="#6B1E2E" stroke-width="1.4" fill="none"/>
+          <path d="M5.5 12 Q8 11 10 13" stroke="#B8860B" stroke-width="1" fill="none" opacity="0.75"/>
+          <path d="M26.5 12 Q24 11 22 13" stroke="#B8860B" stroke-width="1" fill="none" opacity="0.75"/>
+          <path d="M4 16.5 Q6.5 15.5 8.5 17.5" stroke="#B8860B" stroke-width="1" fill="none" opacity="0.55"/>
+          <path d="M28 16.5 Q25.5 15.5 23.5 17.5" stroke="#B8860B" stroke-width="1" fill="none" opacity="0.55"/>
         </svg>
-        <span class="logo-text">Score<span class="logo-accent">Pulse</span></span>
+        <span class="nav-logo-text">L'Épopée</span>
       </a>
 
-      <ul class="nav-sports" id="navSports">
-        <li><a href="#" class="sport-tab active" data-sport="rugby">RUGBY</a></li>
-        <li><a href="#" class="sport-tab" data-sport="football">FOOTBALL</a></li>
-        <li><a href="#" class="sport-tab" data-sport="tennis">TENNIS</a></li>
-        <li><a href="#" class="sport-tab" data-sport="cyclisme">CYCLISME</a></li>
-        <li><a href="#" class="sport-tab" data-sport="basket">BASKET</a></li>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#portraits" class="nav-link">Portraits</a></li>
+        <li><a href="#anatomies" class="nav-link">Anatomies</a></li>
+        <li><a href="#enquetes" class="nav-link">Enquêtes</a></li>
+        <li><a href="#epopees" class="nav-link">Épopées</a></li>
+        <li><a href="#about" class="nav-link">À propos</a></li>
       </ul>
 
       <div class="nav-actions">
-        <button class="nav-icon-btn" aria-label="Rechercher">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        <button class="nav-search" aria-label="Rechercher un article" id="searchBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
           </svg>
         </button>
-        <button class="nav-icon-btn notif-btn" aria-label="Notifications">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-          </svg>
-          <span class="notif-dot"></span>
-        </button>
-        <a href="#" class="btn-premium">⚡ Premium</a>
-        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+        <a href="#abonnement" class="btn-subscribe">S'abonner</a>
       </div>
-    </nav>
-  </header>
 
-  <!-- ========== BREAKING NEWS TICKER ========== -->
-  <div class="ticker-wrapper" aria-label="Actualités en direct">
-    <div class="ticker-label">
-      <span class="live-dot"></span>LIVE
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <div class="ticker-track-outer">
-      <div class="ticker-track" id="tickerTrack">
-        <span class="ticker-item">🏉 Top 14 — Toulouse confirme son statut de leader après une victoire écrasante 42-14 face à Clermont &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">⚽ Ligue 1 — PSG s'impose 3-1 face à Marseille au Parc des Princes lors du Classique &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">🏉 Champions Cup — Le XV de France prépare sa revanche face à l'Irlande en demi-finale &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">🎾 Roland-Garros — Alcaraz élimine Djokovic et file en finale sur la terre battue parisienne &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">🚴 Tour de France — Pogacar reprend le maillot jaune après l'étape de montagne des Alpes &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">🏀 Betclic Élite — Monaco renforce sa domination en battant Paris Basketball 98-81 &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">🏉 Pro D2 — Brive prend la tête du classement après 5 victoires consécutives &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <!-- duplicate for seamless loop -->
-        <span class="ticker-item">🏉 Top 14 — Toulouse confirme son statut de leader après une victoire écrasante 42-14 face à Clermont &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">⚽ Ligue 1 — PSG s'impose 3-1 face à Marseille au Parc des Princes lors du Classique &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">🏉 Champions Cup — Le XV de France prépare sa revanche face à l'Irlande en demi-finale &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">🎾 Roland-Garros — Alcaraz élimine Djokovic et file en finale sur la terre battue parisienne &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">🚴 Tour de France — Pogacar reprend le maillot jaune après l'étape de montagne des Alpes &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">🏀 Betclic Élite — Monaco renforce sa domination en battant Paris Basketball 98-81 &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-        <span class="ticker-item">🏉 Pro D2 — Brive prend la tête du classement après 5 victoires consécutives &nbsp;&nbsp;•&nbsp;&nbsp;</span>
-      </div>
-    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu de navigation" aria-hidden="true">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <nav aria-label="Menu mobile">
+      <a href="#portraits" class="mobile-link">Portraits</a>
+      <a href="#anatomies" class="mobile-link">Anatomies</a>
+      <a href="#enquetes" class="mobile-link">Enquêtes</a>
+      <a href="#epopees" class="mobile-link">Épopées</a>
+      <a href="#about" class="mobile-link">À propos</a>
+      <a href="#abonnement" class="mobile-link mobile-link--cta">S'abonner</a>
+    </nav>
   </div>
 
-  <main>
+  <main id="main-content">
 
-    <!-- ========== HERO SECTION ========== -->
-    <section class="hero-section" id="hero">
-      <div class="container">
-        <div class="hero-grid">
-
-          <!-- Featured main article -->
-          <article class="hero-main fade-in">
-            <div class="hero-img hero-img--rugby">
-              <div class="hero-img-overlay">
-                <span class="sport-badge sport-badge--rugby">RUGBY</span>
-              </div>
-              <div class="rugby-texture"></div>
-              <span class="hero-emoji">🏉</span>
-            </div>
-            <div class="hero-content">
-              <div class="hero-meta">
-                <span class="category-tag">Champions Cup</span>
-                <span class="hero-date">11 Juin 2026</span>
-              </div>
-              <h1 class="hero-title">Toulouse vs Leinster : un choc de titans pour la finale de la Champions Cup</h1>
-              <p class="hero-desc">Le Stade Toulousain et le Leinster se retrouvent pour une finale qui s'annonce historique. Avec cinq titres européens chacun, les deux mastodontes du rugby continental se disputeront la suprématie continentale samedi au Tottenham Hotspur Stadium de Londres devant 60 000 spectateurs.</p>
-              <div class="hero-author">
-                <div class="author-avatar">JD</div>
-                <div>
-                  <span class="author-name">Jean Dupont</span>
-                  <span class="author-sep">·</span>
-                  <span class="read-time">8 min de lecture</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Side articles -->
-          <aside class="hero-side">
-
-            <article class="hero-side-card fade-in">
-              <div class="side-img side-img--rugby">
-                <span class="side-emoji">🏉</span>
-                <span class="sport-badge sport-badge--rugby sport-badge--sm">RUGBY</span>
-              </div>
-              <div class="side-content">
-                <span class="side-tag">Top 14</span>
-                <h3 class="side-title">Toulouse écrase Clermont 42-14 et creuse l'écart en tête</h3>
-                <span class="side-date">10 Juin 2026 · 5 min</span>
-              </div>
-            </article>
-
-            <article class="hero-side-card fade-in">
-              <div class="side-img side-img--france">
-                <span class="side-emoji">🇫🇷</span>
-                <span class="sport-badge sport-badge--rugby sport-badge--sm">XV DE FRANCE</span>
-              </div>
-              <div class="side-content">
-                <span class="side-tag">Test Match</span>
-                <h3 class="side-title">Fabien Galthié dévoile un XV remanié pour affronter l'Australie</h3>
-                <span class="side-date">9 Juin 2026 · 4 min</span>
-              </div>
-            </article>
-
-            <article class="hero-side-card fade-in">
-              <div class="side-img side-img--football">
-                <span class="side-emoji">⚽</span>
-                <span class="sport-badge sport-badge--football sport-badge--sm">FOOTBALL</span>
-              </div>
-              <div class="side-content">
-                <span class="side-tag">Ligue 1</span>
-                <h3 class="side-title">Le Classique : PSG 3-1 OM, Mbappé décisif avec un doublé</h3>
-                <span class="side-date">8 Juin 2026 · 3 min</span>
-              </div>
-            </article>
-
-          </aside>
+    <!-- ================================================
+         HERO — La Grande Histoire
+    ================================================ -->
+    <section class="hero" id="epopees" aria-label="Article à la une">
+      <div class="hero-image" role="img" aria-label="Stade de rugby au crépuscule, lumières d'ambiance"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-inner">
+          <span class="badge badge--epopee">Épopée du mois</span>
+          <h1 class="hero-headline">
+            Comment Toulouse a construit une dynastieen redéfinissant l'identité du rugby français
+          </h1>
+          <p class="hero-standfirst">
+            Pendant trente ans, le Stade Toulousain n'a pas seulement gagné des titres — il a forgé une philosophie, une esthétique, presque une civilisation du rugby. Derrière les trophées, une obsession : jouer beau, jouer vrai, jouer ensemble. Enquête sur les fondations invisibles d'un empire qui ne ressemble à aucun autre.
+          </p>
+          <div class="hero-meta">
+            <span class="hero-author">Par <strong>Mathieu Lacombe</strong></span>
+            <span class="hero-sep" aria-hidden="true">·</span>
+            <time class="hero-date" datetime="2026-06-08">8 juin 2026</time>
+            <span class="hero-sep" aria-hidden="true">·</span>
+            <span class="hero-readtime">22 min de lecture</span>
+          </div>
+          <a href="#" class="btn-hero">Lire l'épopée <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
 
-    <!-- ========== CATEGORY TABS + NEWS GRID ========== -->
-    <section class="news-section" id="newsSection">
+    <!-- ================================================
+         À LA UNE — Featured Stories
+    ================================================ -->
+    <section class="featured" aria-labelledby="featured-title">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Dernières Actualités</h2>
-          <div class="filter-tabs" id="filterTabs" role="tablist">
-            <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">TOUT</button>
-            <button class="filter-tab" data-filter="rugby" role="tab" aria-selected="false">RUGBY</button>
-            <button class="filter-tab" data-filter="football" role="tab" aria-selected="false">FOOTBALL</button>
-            <button class="filter-tab" data-filter="tennis" role="tab" aria-selected="false">TENNIS</button>
-            <button class="filter-tab" data-filter="cyclisme" role="tab" aria-selected="false">CYCLISME</button>
-            <button class="filter-tab" data-filter="basket" role="tab" aria-selected="false">BASKET</button>
-          </div>
-        </div>
+        <header class="section-header">
+          <div class="section-rule" aria-hidden="true"></div>
+          <h2 class="section-title" id="featured-title">À la Une</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </header>
 
-        <div class="news-grid" id="newsGrid">
+        <div class="featured-grid">
 
-          <!-- Card 1 - Rugby -->
-          <article class="news-card fade-in" data-sport="rugby">
-            <div class="card-img card-img--rugby">
-              <span class="card-emoji">🏉</span>
-              <span class="card-badge card-badge--rugby">RUGBY</span>
-              <span class="card-read-time">6 min</span>
-            </div>
+          <!-- Card 1: Lomu -->
+          <article class="article-card fade-in" aria-labelledby="card1-title">
+            <div class="card-image card-image--lomu" role="img" aria-label="Jonah Lomu — portrait"></div>
             <div class="card-body">
-              <h3 class="card-title">Racing 92 vs La Rochelle : la demi-finale qui enflamme le Top 14</h3>
-              <p class="card-excerpt">L'Arena La Défense accueille un choc de titans entre les deux clubs les plus en forme de la saison régulière. Analyse des forces et faiblesses.</p>
-              <div class="card-footer">
-                <div class="card-author">
-                  <div class="author-avatar author-avatar--sm">ML</div>
-                  <span>Marie Laurent</span>
-                </div>
-                <div class="card-stats">
-                  <span class="card-date">10 Juin 2026</span>
-                  <span class="card-likes">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    847
-                  </span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2 - Rugby -->
-          <article class="news-card fade-in" data-sport="rugby">
-            <div class="card-img card-img--rugby">
-              <span class="card-emoji">🏆</span>
-              <span class="card-badge card-badge--rugby">RUGBY</span>
-              <span class="card-read-time">5 min</span>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Pro D2 : Brive termine la saison régulière invaincu à domicile</h3>
-              <p class="card-excerpt">Le CA Brive a réussi l'exploit de rester invaincu au Municipal toute la saison, confirmant leur retour au premier plan du rugby français.</p>
-              <div class="card-footer">
-                <div class="card-author">
-                  <div class="author-avatar author-avatar--sm">PB</div>
-                  <span>Pierre Bernard</span>
-                </div>
-                <div class="card-stats">
-                  <span class="card-date">9 Juin 2026</span>
-                  <span class="card-likes">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    512
-                  </span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 - Football -->
-          <article class="news-card fade-in" data-sport="football">
-            <div class="card-img card-img--football">
-              <span class="card-emoji">⚽</span>
-              <span class="card-badge card-badge--football">FOOTBALL</span>
-              <span class="card-read-time">4 min</span>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Equipe de France : Deschamps convoque 26 joueurs pour l'Euro 2028</h3>
-              <p class="card-excerpt">Le sélectionneur Didier Deschamps a dévoilé sa liste pour les qualifications à l'Euro 2028 avec plusieurs nouvelles têtes issues de la génération montante.</p>
-              <div class="card-footer">
-                <div class="card-author">
-                  <div class="author-avatar author-avatar--sm">SR</div>
-                  <span>Sophie Renard</span>
-                </div>
-                <div class="card-stats">
-                  <span class="card-date">8 Juin 2026</span>
-                  <span class="card-likes">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    1 204
-                  </span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 4 - Tennis -->
-          <article class="news-card fade-in" data-sport="tennis">
-            <div class="card-img card-img--tennis">
-              <span class="card-emoji">🎾</span>
-              <span class="card-badge card-badge--tennis">TENNIS</span>
-              <span class="card-read-time">3 min</span>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Roland-Garros : Swiatek domine Gauff en finale et remporte un 6e titre</h3>
-              <p class="card-excerpt">La Polonaise Iga Swiatek a une nouvelle fois dominé le tableau féminin à la Porte d'Auteuil, ne perdant qu'un seul set durant tout le tournoi.</p>
-              <div class="card-footer">
-                <div class="card-author">
-                  <div class="author-avatar author-avatar--sm">CM</div>
-                  <span>Claire Martin</span>
-                </div>
-                <div class="card-stats">
-                  <span class="card-date">8 Juin 2026</span>
-                  <span class="card-likes">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    2 341
-                  </span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 5 - Cyclisme -->
-          <article class="news-card fade-in" data-sport="cyclisme">
-            <div class="card-img card-img--cyclisme">
-              <span class="card-emoji">🚴</span>
-              <span class="card-badge card-badge--cyclisme">CYCLISME</span>
-              <span class="card-read-time">5 min</span>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Tour de France : Pogacar en patron, Vingegaard craque dans les Alpes</h3>
-              <p class="card-excerpt">Le Slovène a réalisé une démonstration de force lors de l'étape reine de l'Alpe d'Huez, lâchant tous ses concurrents à 8 km du sommet.</p>
-              <div class="card-footer">
-                <div class="card-author">
-                  <div class="author-avatar author-avatar--sm">AD</div>
-                  <span>Antoine Dubois</span>
-                </div>
-                <div class="card-stats">
-                  <span class="card-date">7 Juin 2026</span>
-                  <span class="card-likes">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    983
-                  </span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 6 - Rugby -->
-          <article class="news-card fade-in" data-sport="rugby">
-            <div class="card-img card-img--rugby">
-              <span class="card-emoji">🏉</span>
-              <span class="card-badge card-badge--rugby">RUGBY</span>
-              <span class="card-read-time">7 min</span>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Antoine Dupont : "Notre objectif, c'est de remporter les deux finales"</h3>
-              <p class="card-excerpt">Le capitaine du XV de France et joueur de Toulouse nous a accordé une interview exclusive avant les grandes échéances de juin. Il revient sur sa saison exceptionnelle.</p>
-              <div class="card-footer">
-                <div class="card-author">
-                  <div class="author-avatar author-avatar--sm">JD</div>
-                  <span>Jean Dupont</span>
-                </div>
-                <div class="card-stats">
-                  <span class="card-date">7 Juin 2026</span>
-                  <span class="card-likes">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    3 710
-                  </span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-        </div><!-- /news-grid -->
-
-        <div class="load-more-wrap">
-          <button class="btn-load-more">Voir plus d'articles</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== LIVE SCORES ========== -->
-    <section class="live-section" id="liveSection">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">
-            Résultats en direct
-            <span class="live-badge" aria-label="En direct">LIVE</span>
-          </h2>
-          <a href="#" class="see-all">Tous les résultats →</a>
-        </div>
-
-        <div class="scores-grid">
-
-          <!-- Match 1 - Champions Cup -->
-          <div class="score-card score-card--live fade-in">
-            <div class="score-competition">
-              <span class="comp-icon">🏆</span>
-              <span>Champions Cup — Finale</span>
-            </div>
-            <div class="score-body">
-              <div class="score-team">
-                <div class="team-logo team-logo--red">TLS</div>
-                <span class="team-name">Toulouse</span>
-              </div>
-              <div class="score-center">
-                <div class="score-numbers">
-                  <span class="score-val" id="score1a">24</span>
-                  <span class="score-sep">–</span>
-                  <span class="score-val" id="score1b">17</span>
-                </div>
-                <div class="score-status score-status--live">
-                  <span class="live-pulse"></span>
-                  LIVE 58'
-                </div>
-              </div>
-              <div class="score-team score-team--right">
-                <div class="team-logo team-logo--blue">LEI</div>
-                <span class="team-name">Leinster</span>
-              </div>
-            </div>
-            <div class="score-footer">Tottenham Hotspur Stadium, Londres</div>
-          </div>
-
-          <!-- Match 2 - Top 14 -->
-          <div class="score-card fade-in">
-            <div class="score-competition">
-              <span class="comp-icon">🏉</span>
-              <span>Top 14 — Demi-finale</span>
-            </div>
-            <div class="score-body">
-              <div class="score-team">
-                <div class="team-logo team-logo--skyblue">R92</div>
-                <span class="team-name">Racing 92</span>
-              </div>
-              <div class="score-center">
-                <div class="score-numbers">
-                  <span class="score-val" id="score2a">19</span>
-                  <span class="score-sep">–</span>
-                  <span class="score-val" id="score2b">22</span>
-                </div>
-                <div class="score-status score-status--live">
-                  <span class="live-pulse"></span>
-                  LIVE 72'
-                </div>
-              </div>
-              <div class="score-team score-team--right">
-                <div class="team-logo team-logo--yellow">LRO</div>
-                <span class="team-name">La Rochelle</span>
-              </div>
-            </div>
-            <div class="score-footer">Stade Matmut Atlantique, Bordeaux</div>
-          </div>
-
-          <!-- Match 3 - Ligue 1 -->
-          <div class="score-card fade-in">
-            <div class="score-competition">
-              <span class="comp-icon">⚽</span>
-              <span>Ligue 1 — J37</span>
-            </div>
-            <div class="score-body">
-              <div class="score-team">
-                <div class="team-logo team-logo--darkblue">PSG</div>
-                <span class="team-name">Paris SG</span>
-              </div>
-              <div class="score-center">
-                <div class="score-numbers">
-                  <span class="score-val">3</span>
-                  <span class="score-sep">–</span>
-                  <span class="score-val">1</span>
-                </div>
-                <div class="score-status score-status--ft">FT</div>
-              </div>
-              <div class="score-team score-team--right">
-                <div class="team-logo team-logo--white">OM</div>
-                <span class="team-name">Marseille</span>
-              </div>
-            </div>
-            <div class="score-footer">Parc des Princes, Paris</div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CLASSEMENTS ========== -->
-    <section class="rankings-section" id="rankings">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Classements</h2>
-          <a href="#" class="see-all">Tous les classements →</a>
-        </div>
-        <div class="rankings-grid">
-
-          <!-- Top 14 -->
-          <div class="ranking-table fade-in">
-            <div class="ranking-header">
-              <h3 class="ranking-title">
-                <span class="ranking-icon">🏉</span>
-                Top 14 — Saison 2025/26
+              <span class="badge badge--portrait">Portrait</span>
+              <h3 class="card-headline" id="card1-title">
+                <a href="#">Jonah Lomu, l'homme qui a changé le rugby malgré lui</a>
               </h3>
+              <p class="card-excerpt">
+                Il ne cherchait pas à révolutionner un sport. Il cherchait simplement à exister — à courir, à franchir, à vivre dans le seul espace où sa puissance était célébrée plutôt que crainte. Et pourtant, en soixante-dix-huit matchs internationaux, Jonah Lomu a reconfiguré les frontières du possible.
+              </p>
+              <footer class="card-footer">
+                <div class="card-meta">
+                  <span class="card-author">Antoine Ferreira</span>
+                  <span class="card-sep" aria-hidden="true">·</span>
+                  <span class="card-readtime">18 min</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn-like" aria-label="J'aime cet article (247 likes)" data-count="247" data-liked="false">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <span class="like-count">247</span>
+                  </button>
+                  <button class="btn-bookmark" aria-label="Sauvegarder cet article" data-saved="false">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/>
+                    </svg>
+                  </button>
+                </div>
+              </footer>
             </div>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Club</th>
-                  <th>Pts</th>
-                  <th>V</th>
-                  <th>D</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="rank-top3 rank-1">
-                  <td><span class="rank-num">1</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#E63946"></span>Toulouse</td>
-                  <td><strong>82</strong></td>
-                  <td>18</td>
-                  <td>4</td>
-                </tr>
-                <tr class="rank-top3 rank-2">
-                  <td><span class="rank-num">2</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#4ECDC4"></span>La Rochelle</td>
-                  <td><strong>74</strong></td>
-                  <td>16</td>
-                  <td>6</td>
-                </tr>
-                <tr class="rank-top3 rank-3">
-                  <td><span class="rank-num">3</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#6EC6F5"></span>Racing 92</td>
-                  <td><strong>71</strong></td>
-                  <td>15</td>
-                  <td>7</td>
-                </tr>
-                <tr>
-                  <td><span class="rank-num">4</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#F4D35E"></span>Clermont</td>
-                  <td><strong>68</strong></td>
-                  <td>14</td>
-                  <td>8</td>
-                </tr>
-                <tr>
-                  <td><span class="rank-num">5</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#FF6B35"></span>Bordeaux-B.</td>
-                  <td><strong>65</strong></td>
-                  <td>13</td>
-                  <td>9</td>
-                </tr>
-                <tr>
-                  <td><span class="rank-num">6</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#2D6A4F"></span>Stade Français</td>
-                  <td><strong>60</strong></td>
-                  <td>12</td>
-                  <td>10</td>
-                </tr>
-                <tr>
-                  <td><span class="rank-num">7</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#9B59B6"></span>Montpellier</td>
-                  <td><strong>58</strong></td>
-                  <td>11</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td><span class="rank-num">8</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#E67E22"></span>Lyon</td>
-                  <td><strong>54</strong></td>
-                  <td>10</td>
-                  <td>12</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          </article>
 
-          <!-- Pro D2 -->
-          <div class="ranking-table fade-in">
-            <div class="ranking-header">
-              <h3 class="ranking-title">
-                <span class="ranking-icon">🏉</span>
-                Pro D2 — Saison 2025/26
+          <!-- Card 2: XV de France -->
+          <article class="article-card fade-in" aria-labelledby="card2-title">
+            <div class="card-image card-image--france" role="img" aria-label="XV de France — finale"></div>
+            <div class="card-body">
+              <span class="badge badge--anatomie">Anatomie</span>
+              <h3 class="card-headline" id="card2-title">
+                <a href="#">Pourquoi le XV de France perd toujours les finales qu'il mérite de gagner</a>
               </h3>
+              <p class="card-excerpt">
+                1987, 1999, 2011, 2023 — la liste des finales perdues est aussi longue que douloureuse. Mais ce n'est pas une malédiction ni une question de talent. C'est une structure psychologique, une relation au risque, une façon d'habiter les grands moments qui se transmet de génération en génération.
+              </p>
+              <footer class="card-footer">
+                <div class="card-meta">
+                  <span class="card-author">Sophie Marchand</span>
+                  <span class="card-sep" aria-hidden="true">·</span>
+                  <span class="card-readtime">14 min</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn-like" aria-label="J'aime cet article (183 likes)" data-count="183" data-liked="false">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <span class="like-count">183</span>
+                  </button>
+                  <button class="btn-bookmark" aria-label="Sauvegarder cet article" data-saved="false">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/>
+                    </svg>
+                  </button>
+                </div>
+              </footer>
             </div>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Club</th>
-                  <th>Pts</th>
-                  <th>V</th>
-                  <th>D</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="rank-top3 rank-1">
-                  <td><span class="rank-num">1</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#E63946"></span>Brive</td>
-                  <td><strong>88</strong></td>
-                  <td>20</td>
-                  <td>2</td>
-                </tr>
-                <tr class="rank-top3 rank-2">
-                  <td><span class="rank-num">2</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#3498DB"></span>Perpignan</td>
-                  <td><strong>79</strong></td>
-                  <td>17</td>
-                  <td>5</td>
-                </tr>
-                <tr class="rank-top3 rank-3">
-                  <td><span class="rank-num">3</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#27AE60"></span>Agen</td>
-                  <td><strong>72</strong></td>
-                  <td>15</td>
-                  <td>7</td>
-                </tr>
-                <tr>
-                  <td><span class="rank-num">4</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#F39C12"></span>Oyonnax</td>
-                  <td><strong>68</strong></td>
-                  <td>14</td>
-                  <td>8</td>
-                </tr>
-                <tr>
-                  <td><span class="rank-num">5</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#8E44AD"></span>Colomiers</td>
-                  <td><strong>63</strong></td>
-                  <td>13</td>
-                  <td>9</td>
-                </tr>
-                <tr>
-                  <td><span class="rank-num">6</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#16A085"></span>Nevers</td>
-                  <td><strong>59</strong></td>
-                  <td>12</td>
-                  <td>10</td>
-                </tr>
-                <tr>
-                  <td><span class="rank-num">7</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#C0392B"></span>Grenoble</td>
-                  <td><strong>54</strong></td>
-                  <td>11</td>
-                  <td>11</td>
-                </tr>
-                <tr>
-                  <td><span class="rank-num">8</span></td>
-                  <td class="team-cell"><span class="team-dot" style="background:#2C3E50"></span>Aurillac</td>
-                  <td><strong>49</strong></td>
-                  <td>9</td>
-                  <td>13</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          </article>
+
+          <!-- Card 3: Toulon -->
+          <article class="article-card fade-in" aria-labelledby="card3-title">
+            <div class="card-image card-image--toulon" role="img" aria-label="RC Toulon — stade Mayol"></div>
+            <div class="card-body">
+              <span class="badge badge--enquete">Enquête</span>
+              <h3 class="card-headline" id="card3-title">
+                <a href="#">La chute de Toulon : autopsie d'un empire qui s'est effondré</a>
+              </h3>
+              <p class="card-excerpt">
+                Trois Coupes d'Europe en trois ans. Des stars mondiales à chaque poste. Un projet sportif qui semblait indestructible. Et puis le silence, la relégation, les dettes. Comment un club peut-il tout avoir et tout perdre en l'espace d'une décennie ? L'enquête que beaucoup n'osaient pas faire.
+              </p>
+              <footer class="card-footer">
+                <div class="card-meta">
+                  <span class="card-author">Romain Duval</span>
+                  <span class="card-sep" aria-hidden="true">·</span>
+                  <span class="card-readtime">20 min</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn-like" aria-label="J'aime cet article (312 likes)" data-count="312" data-liked="false">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <span class="like-count">312</span>
+                  </button>
+                  <button class="btn-bookmark" aria-label="Sauvegarder cet article" data-saved="false">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/>
+                    </svg>
+                  </button>
+                </div>
+              </footer>
+            </div>
+          </article>
 
         </div>
       </div>
     </section>
 
-    <!-- ========== CALENDRIER ========== -->
-    <section class="calendar-section" id="calendar">
+    <!-- ================================================
+         ANATOMIES — Flagship section (dark bordeaux)
+    ================================================ -->
+    <section class="anatomies" id="anatomies" aria-labelledby="anatomies-title">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Prochains Matchs</h2>
-          <a href="#" class="see-all">Calendrier complet →</a>
-        </div>
-        <div class="calendar-scroll">
-          <div class="calendar-track">
+        <header class="anatomies-header">
+          <p class="anatomies-label">Rubrique phare</p>
+          <h2 class="anatomies-title" id="anatomies-title">Anatomies</h2>
+          <p class="anatomies-subtitle">
+            Comprendre les raisons profondes des victoires et des défaites
+          </p>
+          <p class="anatomies-manifesto">
+            Nous ne racontons pas les résultats. Nous disséquons les mécanismes qui les produisent — les structures mentales, les décisions tactiques, les rapports de pouvoir, les failles invisibles qui décident du sort des équipes bien avant que le coup de sifflet retentisse.
+          </p>
+        </header>
 
-            <div class="calendar-card fade-in">
-              <div class="cal-date">
-                <span class="cal-day">14</span>
-                <span class="cal-month">JUIN</span>
-              </div>
-              <div class="cal-comp">🏆 Champions Cup — Finale</div>
-              <div class="cal-match">
-                <span>Toulouse</span>
-                <span class="cal-vs">VS</span>
-                <span>Leinster</span>
-              </div>
-              <div class="cal-time">17h00</div>
-            </div>
+        <div class="anatomies-grid">
 
-            <div class="calendar-card fade-in">
-              <div class="cal-date">
-                <span class="cal-day">15</span>
-                <span class="cal-month">JUIN</span>
+          <article class="anatomie-card fade-in" aria-labelledby="anatomie1-title">
+            <div class="anatomie-image anatomie-image--allblacks" role="img" aria-label="All Blacks 2015 — Coupe du monde"></div>
+            <div class="anatomie-body">
+              <span class="badge badge--anatomie">Anatomie — Rugby</span>
+              <h3 class="anatomie-headline" id="anatomie1-title">
+                <a href="#">L'anatomie d'une invincibilité : les All Blacks 2015</a>
+              </h3>
+              <p class="anatomie-excerpt">
+                Ils ont disputé quatorze matchs. Ils en ont gagné quatorze. Mais l'invincibilité des All Blacks à la Coupe du monde 2015 n'était pas une question de talent individuel — c'était l'aboutissement d'une décennie de construction psychologique, d'une culture de la responsabilité collective que peu d'équipes dans l'histoire du sport ont réussi à incarner. Comment Steve Hansen a transformé une équipe de rugby en machine à dominer le présent.
+              </p>
+              <div class="anatomie-footer">
+                <div class="card-meta">
+                  <span class="card-author">Pierre-Emmanuel Gallet</span>
+                  <span class="card-sep" aria-hidden="true">·</span>
+                  <span class="card-readtime">25 min</span>
+                </div>
+                <a href="#" class="anatomie-link">Lire l'anatomie <span aria-hidden="true">→</span></a>
               </div>
-              <div class="cal-comp">🏉 Top 14 — Finale</div>
-              <div class="cal-match">
-                <span>La Rochelle</span>
-                <span class="cal-vs">VS</span>
-                <span>Racing 92</span>
+            </div>
+          </article>
+
+          <article class="anatomie-card fade-in" aria-labelledby="anatomie2-title">
+            <div class="anatomie-image anatomie-image--psg" role="img" aria-label="PSG — Ligue des Champions"></div>
+            <div class="anatomie-body">
+              <span class="badge badge--enquete">Enquête — Football</span>
+              <h3 class="anatomie-headline" id="anatomie2-title">
+                <a href="#">Pourquoi le Paris Saint-Germain n'a jamais su gagner la Ligue des Champions</a>
+              </h3>
+              <p class="anatomie-excerpt">
+                Deux milliards d'euros dépensés en recrues galactiques. Deux finales de Ligue des Champions. Zéro titre européen. Ce n'est pas une question de budget, ni de talent, ni de chance. C'est une question d'architecture — une façon de construire des équipes autour d'individus plutôt que de systèmes, une culture du club qui célèbre la célébrité avant la victoire collective.
+              </p>
+              <div class="anatomie-footer">
+                <div class="card-meta">
+                  <span class="card-author">Clara Ndiaye</span>
+                  <span class="card-sep" aria-hidden="true">·</span>
+                  <span class="card-readtime">19 min</span>
+                </div>
+                <a href="#" class="anatomie-link">Lire l'anatomie <span aria-hidden="true">→</span></a>
               </div>
-              <div class="cal-time">21h00</div>
             </div>
-
-            <div class="calendar-card fade-in">
-              <div class="cal-date">
-                <span class="cal-day">21</span>
-                <span class="cal-month">JUIN</span>
-              </div>
-              <div class="cal-comp">🇫🇷 Test Match</div>
-              <div class="cal-match">
-                <span>XV de France</span>
-                <span class="cal-vs">VS</span>
-                <span>Australie</span>
-              </div>
-              <div class="cal-time">20h45</div>
-            </div>
-
-            <div class="calendar-card fade-in">
-              <div class="cal-date">
-                <span class="cal-day">28</span>
-                <span class="cal-month">JUIN</span>
-              </div>
-              <div class="cal-comp">⚽ Euro Qualif.</div>
-              <div class="cal-match">
-                <span>France</span>
-                <span class="cal-vs">VS</span>
-                <span>Espagne</span>
-              </div>
-              <div class="cal-time">20h45</div>
-            </div>
-
-            <div class="calendar-card fade-in">
-              <div class="cal-date">
-                <span class="cal-day">5</span>
-                <span class="cal-month">JUIL</span>
-              </div>
-              <div class="cal-comp">🚴 Tour de France J1</div>
-              <div class="cal-match">
-                <span>Départ</span>
-                <span class="cal-vs">—</span>
-                <span>Florence</span>
-              </div>
-              <div class="cal-time">13h00</div>
-            </div>
-
-            <div class="calendar-card fade-in">
-              <div class="cal-date">
-                <span class="cal-day">12</span>
-                <span class="cal-month">JUIL</span>
-              </div>
-              <div class="cal-comp">🎾 Wimbledon — QF</div>
-              <div class="cal-match">
-                <span>Alcaraz</span>
-                <span class="cal-vs">VS</span>
-                <span>Sinner</span>
-              </div>
-              <div class="cal-time">14h30</div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== VIDEOS ========== -->
-    <section class="videos-section" id="videos">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Vidéos à la une</h2>
-          <a href="#" class="see-all">Toutes les vidéos →</a>
-        </div>
-        <div class="videos-grid">
-
-          <div class="video-card fade-in">
-            <div class="video-thumb video-thumb--rugby">
-              <span class="video-emoji">🏆</span>
-              <button class="play-btn" aria-label="Lire la vidéo">
-                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              </button>
-              <span class="video-duration">12:34</span>
-            </div>
-            <div class="video-info">
-              <span class="video-tag">Champions Cup</span>
-              <h4 class="video-title">Résumé Toulouse vs Leinster — Demi-finale aller</h4>
-              <span class="video-views">142 000 vues · Il y a 2 jours</span>
-            </div>
-          </div>
-
-          <div class="video-card fade-in">
-            <div class="video-thumb video-thumb--france">
-              <span class="video-emoji">🇫🇷</span>
-              <button class="play-btn" aria-label="Lire la vidéo">
-                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              </button>
-              <span class="video-duration">18:07</span>
-            </div>
-            <div class="video-info">
-              <span class="video-tag">Analyse Tactique</span>
-              <h4 class="video-title">Analyse tactique : comment le XV de France neutralise le jeu irlandais</h4>
-              <span class="video-views">89 500 vues · Il y a 3 jours</span>
-            </div>
-          </div>
-
-          <div class="video-card fade-in">
-            <div class="video-thumb video-thumb--football">
-              <span class="video-emoji">⚽</span>
-              <button class="play-btn" aria-label="Lire la vidéo">
-                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              </button>
-              <span class="video-duration">6:22</span>
-            </div>
-            <div class="video-info">
-              <span class="video-tag">Ligue 1</span>
-              <h4 class="video-title">Tous les buts du Classique PSG 3-1 OM</h4>
-              <span class="video-views">521 000 vues · Il y a 4 jours</span>
-            </div>
-          </div>
-
-          <div class="video-card fade-in">
-            <div class="video-thumb video-thumb--cyclisme">
-              <span class="video-emoji">🚴</span>
-              <button class="play-btn" aria-label="Lire la vidéo">
-                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              </button>
-              <span class="video-duration">9:48</span>
-            </div>
-            <div class="video-info">
-              <span class="video-tag">Tour de France</span>
-              <h4 class="video-title">Pogacar fait l'Alpe d'Huez seul — Le résumé de l'étape 12</h4>
-              <span class="video-views">378 000 vues · Il y a 5 jours</span>
-            </div>
-          </div>
+          </article>
 
         </div>
       </div>
     </section>
 
-    <!-- ========== NEWSLETTER ========== -->
-    <section class="newsletter-section" id="newsletter">
+    <!-- ================================================
+         PORTRAITS
+    ================================================ -->
+    <section class="portraits" id="portraits" aria-labelledby="portraits-title">
       <div class="container">
-        <div class="newsletter-inner fade-in">
-          <div class="newsletter-text">
-            <span class="newsletter-sup">RESTEZ CONNECTÉ</span>
-            <h2 class="newsletter-title">Restez dans la mêlée</h2>
-            <p class="newsletter-desc">Recevez chaque matin l'essentiel de l'actualité sportive directement dans votre boîte mail.</p>
-            <div class="newsletter-trust">
-              <div class="trust-avatars">
-                <div class="trust-av" style="background:#E63946">S</div>
-                <div class="trust-av" style="background:#2D6A4F">A</div>
-                <div class="trust-av" style="background:#457B9D">T</div>
-                <div class="trust-av" style="background:#F4A261">M</div>
-                <div class="trust-av" style="background:#9B59B6">R</div>
+        <header class="section-header">
+          <div class="section-rule" aria-hidden="true"></div>
+          <h2 class="section-title" id="portraits-title">Portraits</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </header>
+        <p class="section-subtitle">Ces hommes et ces femmes qui ont fait le sport</p>
+
+        <div class="portraits-grid">
+
+          <article class="portrait-card fade-in" aria-labelledby="portrait1-name">
+            <div class="portrait-image portrait-image--chabal" role="img" aria-label="Sébastien Chabal"></div>
+            <div class="portrait-body">
+              <div class="portrait-sport">Rugby</div>
+              <h3 class="portrait-name" id="portrait1-name">Sébastien Chabal</h3>
+              <p class="portrait-tagline">La bête, le mythe, l'homme blessé</p>
+              <p class="portrait-excerpt">
+                Derrière la crinière et les yeux noirs se cachait quelqu'un qui ne savait pas très bien comment habiter la légende qu'il était devenu.
+              </p>
+              <a href="#" class="portrait-link">Lire le portrait <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="portrait-card fade-in" aria-labelledby="portrait2-name">
+            <div class="portrait-image portrait-image--riner" role="img" aria-label="Teddy Riner"></div>
+            <div class="portrait-body">
+              <div class="portrait-sport">Judo</div>
+              <h3 class="portrait-name" id="portrait2-name">Teddy Riner</h3>
+              <p class="portrait-tagline">Seul au sommet, seul dans sa tête</p>
+              <p class="portrait-excerpt">
+                Dix titres mondiaux. La question que personne ne pose : à quel prix psychologique se paye une décennie d'invincibilité absolue ?
+              </p>
+              <a href="#" class="portrait-link">Lire le portrait <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="portrait-card fade-in" aria-labelledby="portrait3-name">
+            <div class="portrait-image portrait-image--mauresmo" role="img" aria-label="Amélie Mauresmo"></div>
+            <div class="portrait-body">
+              <div class="portrait-sport">Tennis</div>
+              <h3 class="portrait-name" id="portrait3-name">Amélie Mauresmo</h3>
+              <p class="portrait-tagline">Être femme dans un sport d'hommes</p>
+              <p class="portrait-excerpt">
+                Elle a gagné Wimbledon et l'Open d'Australie. Elle a surtout survécu à une époque qui ne savait pas encore comment la regarder.
+              </p>
+              <a href="#" class="portrait-link">Lire le portrait <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="portrait-card fade-in" aria-labelledby="portrait4-name">
+            <div class="portrait-image portrait-image--hinault" role="img" aria-label="Bernard Hinault"></div>
+            <div class="portrait-body">
+              <div class="portrait-sport">Cyclisme</div>
+              <h3 class="portrait-name" id="portrait4-name">Bernard Hinault</h3>
+              <p class="portrait-tagline">Le blaireau et l'art de la guerre</p>
+              <p class="portrait-excerpt">
+                Cinq Tours de France. Une personnalité qui n'a jamais compris pourquoi le sport devrait s'excuser de ses violences. Le dernier coureur à faire peur.
+              </p>
+              <a href="#" class="portrait-link">Lire le portrait <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         PULL QUOTE — Editorial Statement
+    ================================================ -->
+    <section class="pull-quote" aria-label="Citation éditoriale">
+      <div class="container">
+        <div class="pull-quote-inner">
+          <span class="pull-quote-mark" aria-hidden="true">"</span>
+          <blockquote class="pull-quote-text">
+            Le sport est le seul endroit où l'échec et la gloire se succèdent à quelques secondes d'intervalle, et où les deux méritent qu'on les comprenne.
+          </blockquote>
+          <cite class="pull-quote-attr">— La rédaction de L'Épopée</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         ENQUÊTES
+    ================================================ -->
+    <section class="enquetes" id="enquetes" aria-labelledby="enquetes-title">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-rule" aria-hidden="true"></div>
+          <h2 class="section-title" id="enquetes-title">Enquêtes</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </header>
+        <p class="section-subtitle">Là où le sport rencontre le monde réel</p>
+
+        <ol class="enquetes-list" aria-label="Liste des enquêtes">
+
+          <li class="enquete-item fade-in">
+            <div class="enquete-number" aria-hidden="true">01</div>
+            <div class="enquete-body">
+              <span class="badge badge--enquete">Enquête — Cyclisme</span>
+              <h3 class="enquete-headline">
+                <a href="#">Le dopage au cyclisme : ce que l'affaire Armstrong n'a pas révélé</a>
+              </h3>
+              <p class="enquete-excerpt">
+                Lance Armstrong a tout avoué. Les journalistes ont fermé leurs carnets. Mais les systèmes qui ont rendu l'ère Armstrong possible sont toujours en place, légèrement camouflés, scientifiquement perfectionnés.
+              </p>
+              <div class="enquete-meta">
+                <span class="card-author">Jean-Baptiste Moreau</span>
+                <span class="card-sep" aria-hidden="true">·</span>
+                <span class="card-readtime">31 min de lecture</span>
               </div>
-              <span class="trust-text">50 000+ supporters nous font confiance</span>
+            </div>
+          </li>
+
+          <li class="enquete-item fade-in">
+            <div class="enquete-number" aria-hidden="true">02</div>
+            <div class="enquete-body">
+              <span class="badge badge--enquete">Enquête — Rugby</span>
+              <h3 class="enquete-headline">
+                <a href="#">Comment les agents ont pris le contrôle du rugby professionnel</a>
+              </h3>
+              <p class="enquete-excerpt">
+                Ils ne jouent pas, ne coachent pas, ne dirigent pas de club. Pourtant, depuis vingt ans, les super-agents du rugby professionnel décident en coulisses qui joue où, combien, et pour combien de temps. Portrait d'un pouvoir invisible.
+              </p>
+              <div class="enquete-meta">
+                <span class="card-author">Lucie Bertrand</span>
+                <span class="card-sep" aria-hidden="true">·</span>
+                <span class="card-readtime">24 min de lecture</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="enquete-item fade-in">
+            <div class="enquete-number" aria-hidden="true">03</div>
+            <div class="enquete-body">
+              <span class="badge badge--enquete">Enquête — Football</span>
+              <h3 class="enquete-headline">
+                <a href="#">L'homophobie dans le foot français : le silence qui dure</a>
+              </h3>
+              <p class="enquete-excerpt">
+                Des dizaines de joueurs professionnels homosexuels évoluent dans les divisions françaises. Aucun n'a fait son coming-out. Vingt-cinq témoignages recueillis en trois ans dessinent la cartographie d'une institution qui n'est pas prête.
+              </p>
+              <div class="enquete-meta">
+                <span class="card-author">Sara Kowalski</span>
+                <span class="card-sep" aria-hidden="true">·</span>
+                <span class="card-readtime">27 min de lecture</span>
+              </div>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================================================
+         ABONNEMENT — Manifesto + Plans
+    ================================================ -->
+    <section class="abonnement" id="abonnement" aria-labelledby="abonnement-title">
+      <div class="container">
+        <div class="abonnement-inner">
+
+          <div class="abonnement-text">
+            <h2 class="abonnement-title" id="abonnement-title">
+              L'Épopée, c'est un pacte avec le lecteur
+            </h2>
+            <div class="abonnement-manifesto">
+              <p>
+                Nous ne publions pas pour le flux. Nous ne courons pas après les clics. Chaque article que vous lisez ici a demandé des semaines de travail, des dizaines d'interviews, des kilomètres parcourus pour rencontrer des gens qui ont vécu le sport de l'intérieur. Nous croyons que le journalisme lent est le seul journalisme honnête.
+              </p>
+              <p>
+                L'Épopée existe pour dire que le sport mérite mieux que des dépêches. Qu'un essai de rugby ou un but à la dernière minute portent des histoires humaines profondes — de sacrifice, de doute, d'ambition, de chute et de renaissance. Ces histoires-là, on prend le temps de les raconter vraiment.
+              </p>
+              <p>
+                Rejoindre L'Épopée, c'est choisir la profondeur sur la vitesse, la nuance sur le choc, la durée sur l'éphémère. C'est soutenir un journalisme sportif qui respecte à la fois ses sujets et ses lecteurs.
+              </p>
             </div>
           </div>
-          <form class="newsletter-form" id="newsletterForm" novalidate>
-            <div class="form-group">
-              <input type="email" class="form-input" placeholder="votre@email.fr" id="emailInput" aria-label="Votre adresse email" required />
-              <button type="submit" class="btn-subscribe">S'abonner</button>
+
+          <div class="abonnement-plans" role="list" aria-label="Formules d'abonnement">
+
+            <div class="plan plan--free" role="listitem">
+              <div class="plan-header">
+                <h3 class="plan-name">Gratuit</h3>
+                <div class="plan-price">0 <span class="plan-currency">€</span><span class="plan-period">/mois</span></div>
+              </div>
+              <ul class="plan-features" aria-label="Fonctionnalités incluses">
+                <li>3 articles par mois</li>
+                <li>Accès aux Portraits</li>
+                <li>Newsletter hebdomadaire</li>
+              </ul>
+              <a href="#" class="btn-plan btn-plan--free">Commencer gratuitement</a>
             </div>
-            <p class="form-notice">Pas de spam. Désabonnement en 1 clic.</p>
-            <p class="form-success" id="formSuccess" hidden>Merci ! Vous êtes inscrit.</p>
-          </form>
+
+            <div class="plan plan--premium" role="listitem">
+              <div class="plan-badge-top" aria-label="Formule recommandée">Le plus populaire</div>
+              <div class="plan-header">
+                <h3 class="plan-name">Premium</h3>
+                <div class="plan-price">7 <span class="plan-currency">€</span><span class="plan-period">/mois</span></div>
+              </div>
+              <ul class="plan-features" aria-label="Fonctionnalités incluses">
+                <li>Accès illimité à tous les articles</li>
+                <li>Anatomies &amp; Enquêtes exclusives</li>
+                <li>Archives complètes depuis 2019</li>
+                <li>Podcast mensuel — La grande conversation</li>
+                <li>Édition PDF mensuelle</li>
+              </ul>
+              <a href="#" class="btn-plan btn-plan--premium">S'abonner — 7 €/mois</a>
+            </div>
+
+          </div>
+
+          <div class="abonnement-email">
+            <p class="abonnement-email-label">Ou commencez par notre newsletter — gratuite, sans engagement :</p>
+            <form class="email-form" id="newsletterForm" novalidate>
+              <label for="emailInput" class="sr-only">Votre adresse email</label>
+              <input
+                type="email"
+                id="emailInput"
+                class="email-input"
+                placeholder="votre@email.fr"
+                required
+                autocomplete="email"
+                aria-required="true"
+              />
+              <button type="submit" class="btn-email">Rejoindre</button>
+            </form>
+            <p class="email-disclaimer" aria-live="polite" id="emailMsg">Aucun spam. Désabonnement en un clic.</p>
+          </div>
+
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
+  <!-- ================================================
+       FOOTER
+  ================================================ -->
+  <footer class="footer" id="about" role="contentinfo">
     <div class="container">
-      <div class="footer-grid">
 
-        <!-- Brand -->
-        <div class="footer-col footer-col--brand">
-          <a href="#" class="nav-logo footer-logo">
-            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M22 12C22 12 19 6 12 6C5 6 2 12 2 12" stroke="#E63946" stroke-width="2.5" stroke-linecap="round"/>
-              <circle cx="12" cy="12" r="3" fill="#E63946"/>
-              <path d="M2 12C2 12 5 18 12 18C19 18 22 12 22 12" stroke="#E63946" stroke-width="2.5" stroke-linecap="round"/>
-              <circle cx="12" cy="12" r="1.2" fill="#fff"/>
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="#" class="footer-logo" aria-label="L'Épopée — retour à l'accueil">
+            <svg class="footer-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" fill="#6B1E2E" opacity="0.12"/>
+              <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" stroke="#6B1E2E" stroke-width="1.4" fill="none"/>
+              <line x1="16" y1="23" x2="16" y2="29" stroke="#6B1E2E" stroke-width="1.4"/>
+              <path d="M10.5 28 Q16 26 21.5 28" stroke="#6B1E2E" stroke-width="1.4" fill="none"/>
+              <path d="M5.5 12 Q8 11 10 13" stroke="#B8860B" stroke-width="1" fill="none" opacity="0.75"/>
+              <path d="M26.5 12 Q24 11 22 13" stroke="#B8860B" stroke-width="1" fill="none" opacity="0.75"/>
             </svg>
-            <span class="logo-text">Score<span class="logo-accent">Pulse</span></span>
+            <span class="footer-logo-text">L'Épopée</span>
           </a>
-          <p class="footer-desc">Le média sportif français de référence. Scores en direct, analyses approfondies et actualités de tous les sports.</p>
-          <div class="footer-socials">
-            <a href="#" class="social-link" aria-label="Twitter / X">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="TikTok">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.7a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="YouTube">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
-            </a>
-          </div>
+          <p class="footer-tagline">Le sport mérite mieux que des dépêches</p>
+          <p class="footer-desc">Journalisme de fond sportif depuis 2019.<br>Rugby, football, tennis, cyclisme, basket.</p>
         </div>
 
-        <!-- Sports -->
         <div class="footer-col">
-          <h4 class="footer-heading">Sports</h4>
+          <h4 class="footer-col-title">Rubriques</h4>
           <ul class="footer-links">
-            <li><a href="#">Rugby — Top 14</a></li>
-            <li><a href="#">Rugby — Champions Cup</a></li>
-            <li><a href="#">Rugby — XV de France</a></li>
-            <li><a href="#">Football — Ligue 1</a></li>
-            <li><a href="#">Tennis — Grand Chelem</a></li>
-            <li><a href="#">Cyclisme — Tour de France</a></li>
-            <li><a href="#">Basketball — Betclic Élite</a></li>
+            <li><a href="#portraits">Portraits</a></li>
+            <li><a href="#anatomies">Anatomies</a></li>
+            <li><a href="#enquetes">Enquêtes</a></li>
+            <li><a href="#epopees">Épopées</a></li>
+            <li><a href="#">Archives</a></li>
           </ul>
         </div>
 
-        <!-- À propos -->
         <div class="footer-col">
-          <h4 class="footer-heading">À propos</h4>
+          <h4 class="footer-col-title">À propos</h4>
           <ul class="footer-links">
-            <li><a href="#">Qui sommes-nous ?</a></li>
-            <li><a href="#">Notre équipe</a></li>
-            <li><a href="#">Nous contacter</a></li>
-            <li><a href="#">Publicité</a></li>
-            <li><a href="#">Abonnement Premium</a></li>
+            <li><a href="#">Notre manifeste</a></li>
+            <li><a href="#">La rédaction</a></li>
+            <li><a href="#">Rejoindre l'équipe</a></li>
+            <li><a href="#">Charte éditoriale</a></li>
+            <li><a href="#">Presse &amp; partenaires</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:redaction@lepopee.fr">redaction@lepopee.fr</a></li>
+            <li><a href="#">Proposer un sujet</a></li>
             <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Confidentialité</a></li>
           </ul>
-        </div>
-
-        <!-- App / Newsletter -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Applications</h4>
-          <ul class="footer-links">
-            <li><a href="#">App iOS</a></li>
-            <li><a href="#">App Android</a></li>
-            <li><a href="#">Flux RSS</a></li>
-            <li><a href="#">Newsletter</a></li>
-          </ul>
-          <div class="footer-app-badges">
-            <a href="#" class="app-badge">
-              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.9 14.4l-1.4 1.4-3.5-3.5-3.5 3.5-1.4-1.4 3.5-3.5-3.5-3.5 1.4-1.4 3.5 3.5 3.5-3.5 1.4 1.4-3.5 3.5 3.5 3.5z"/></svg>
-              App Store
-            </a>
-            <a href="#" class="app-badge">
-              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.9 14.4l-1.4 1.4-3.5-3.5-3.5 3.5-1.4-1.4 3.5-3.5-3.5-3.5 1.4-1.4 3.5 3.5 3.5-3.5 1.4 1.4-3.5 3.5 3.5 3.5z"/></svg>
-              Google Play
-            </a>
-          </div>
         </div>
 
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 ScorePulse. Tous droits réservés.</span>
-        <span>Fait avec passion pour le sport français 🏉</span>
+        <p class="footer-copy">© 2026 L'Épopée — Journalisme de fond sportif. Tous droits réservés.</p>
+        <p class="footer-made">Fait avec rigueur, à Paris.</p>
       </div>
+
     </div>
   </footer>
 

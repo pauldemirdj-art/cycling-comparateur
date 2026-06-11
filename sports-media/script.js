@@ -1,341 +1,358 @@
 /**
- * ScorePulse — script.js
- * Sports media site interactions
+ * L'Épopée — script.js
+ * Literary sports journalism interactions
+ *
+ * Features:
+ *  - Reading progress bar
+ *  - Sticky nav with scroll-based opacity
+ *  - Smooth scroll for anchor links
+ *  - Intersection Observer fade-in for article cards
+ *  - Mobile nav toggle (hamburger)
+ *  - Like / Bookmark toggles on article cards
+ *  - Newsletter form feedback
  */
 
 'use strict';
 
 /* ============================================================
-   1. STICKY NAV — scroll detection
+   Helpers
    ============================================================ */
-(function initStickyNav() {
-  const header = document.getElementById('navHeader');
-  if (!header) return;
 
-  let ticking = false;
+/**
+ * Query a single element; returns null if not found.
+ * @param {string} selector
+ * @param {Element|Document} [root=document]
+ * @returns {Element|null}
+ */
+function $(selector, root = document) {
+  return root.querySelector(selector);
+}
 
-  function onScroll() {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        header.classList.toggle('scrolled', window.scrollY > 10);
-        ticking = false;
-      });
-      ticking = true;
+/**
+ * Query all matching elements as an Array.
+ * @param {string} selector
+ * @param {Element|Document} [root=document]
+ * @returns {Element[]}
+ */
+function $$(selector, root = document) {
+  return Array.from(root.querySelectorAll(selector));
+}
+
+/* ============================================================
+   1. Reading Progress Bar
+   ============================================================ */
+
+function initProgressBar() {
+  const bar = $('#progressBar');
+  if (!bar) return;
+
+  function updateBar() {
+    const scrollTop    = window.scrollY || document.documentElement.scrollTop;
+    const docHeight    = document.documentElement.scrollHeight - window.innerHeight;
+    const progress     = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width    = Math.min(progress, 100).toFixed(2) + '%';
+  }
+
+  window.addEventListener('scroll', updateBar, { passive: true });
+  updateBar();
+}
+
+/* ============================================================
+   2. Sticky Navigation — Scroll-based Opacity
+   ============================================================ */
+
+function initStickyNav() {
+  const nav = $('#mainNav');
+  if (!nav) return;
+
+  // The top-bar is ~36px; once we've scrolled past it, add the
+  // "scrolled" class which makes the nav slightly more opaque.
+  const THRESHOLD = 40;
+
+  function handleScroll() {
+    if (window.scrollY > THRESHOLD) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
     }
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-})();
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
 
 /* ============================================================
-   2. MOBILE NAV TOGGLE
+   3. Smooth Scroll for Anchor Links
    ============================================================ */
-(function initMobileNav() {
-  const hamburger = document.getElementById('hamburger');
-  const navSports = document.getElementById('navSports');
-  if (!hamburger || !navSports) return;
 
-  hamburger.addEventListener('click', () => {
-    const isOpen = navSports.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', String(isOpen));
-  });
+function initSmoothScroll() {
+  // The CSS already handles `scroll-behavior: smooth` on <html>,
+  // but we add JS handling for nav offset compensation and
+  // mobile-menu-close-before-scroll.
 
-  // Close when clicking a sport tab on mobile
-  navSports.addEventListener('click', (e) => {
-    if (e.target.matches('.sport-tab') && window.innerWidth <= 768) {
-      navSports.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    }
-  });
+  const nav = $('#mainNav');
 
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navSports.contains(e.target)) {
-      navSports.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-    }
+  document.addEventListener('click', function (e) {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+
+    const href = anchor.getAttribute('href');
+    if (!href || href === '#') return;
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+
+    // Close mobile menu if open
+    closeMobileMenu();
+
+    const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight - 8;
+
+    window.scrollTo({ top: targetTop, behavior: 'smooth' });
   });
-})();
+}
 
 /* ============================================================
-   3. SPORT TABS in NAV — visual active state only
+   4. Fade-in on Scroll (Intersection Observer)
    ============================================================ */
-(function initNavSportTabs() {
-  const tabs = document.querySelectorAll('.nav-sports .sport-tab');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-      e.preventDefault();
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-    });
-  });
-})();
 
-/* ============================================================
-   4. NEWS GRID FILTER TABS
-   ============================================================ */
-(function initFilterTabs() {
-  const tabsContainer = document.getElementById('filterTabs');
-  const grid = document.getElementById('newsGrid');
-  if (!tabsContainer || !grid) return;
+function initFadeIn() {
+  const items = $$('.fade-in');
+  if (!items.length) return;
 
-  const tabs = tabsContainer.querySelectorAll('.filter-tab');
-  const cards = grid.querySelectorAll('.news-card');
-
-  function filterCards(filter) {
-    cards.forEach(card => {
-      const sport = card.getAttribute('data-sport');
-      const show = filter === 'all' || sport === filter;
-      // Use hidden attribute for accessibility
-      card.hidden = !show;
-      if (show) {
-        // Re-trigger animation
-        card.classList.remove('visible');
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => card.classList.add('visible'));
-        });
-      }
-    });
+  // If the browser doesn't support IntersectionObserver, reveal all immediately
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('is-visible'));
+    return;
   }
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-
-      const filter = tab.getAttribute('data-filter');
-      filterCards(filter);
-    });
-  });
-})();
-
-/* ============================================================
-   5. INTERSECTION OBSERVER — fade-in cards
-   ============================================================ */
-(function initFadeIn() {
-  const elements = document.querySelectorAll('.fade-in');
-  if (!elements.length) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          // Unobserve once visible to save memory
+          entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
       });
     },
     {
-      threshold: 0.1,
-      rootMargin: '0px 0px -40px 0px',
+      rootMargin: '0px 0px -60px 0px', // trigger 60px before element enters viewport
+      threshold: 0.08
     }
   );
 
-  elements.forEach((el, i) => {
-    // Stagger delay within the same grid
-    el.style.transitionDelay = `${(i % 6) * 0.07}s`;
-    observer.observe(el);
-  });
-})();
+  items.forEach(el => observer.observe(el));
+}
 
 /* ============================================================
-   6. LIVE SCORES AUTO-REFRESH SIMULATION
+   5. Mobile Navigation Toggle
    ============================================================ */
-(function initLiveScores() {
-  // Match state
-  const matches = [
-    {
-      scoreA: document.getElementById('score1a'),
-      scoreB: document.getElementById('score1b'),
-      valA: 24,
-      valB: 17,
-      minute: 58,
-      maxMinute: 80,
-      active: true,
-    },
-    {
-      scoreA: document.getElementById('score2a'),
-      scoreB: document.getElementById('score2b'),
-      valA: 19,
-      valB: 22,
-      minute: 72,
-      maxMinute: 80,
-      active: true,
-    },
-  ];
 
-  function flashScore(el) {
-    if (!el) return;
-    el.style.transition = 'color 0.2s';
-    el.style.color = '#E63946';
-    setTimeout(() => {
-      el.style.color = '';
-    }, 600);
+let mobileMenuOpen = false;
+
+function openMobileMenu() {
+  const menu    = $('#mobileMenu');
+  const btn     = $('#hamburgerBtn');
+  if (!menu || !btn) return;
+
+  mobileMenuOpen = true;
+  menu.classList.add('is-open');
+  menu.setAttribute('aria-hidden', 'false');
+  btn.classList.add('is-active');
+  btn.setAttribute('aria-expanded', 'true');
+  btn.setAttribute('aria-label', 'Fermer le menu de navigation');
+
+  // Trap focus inside menu; prevent body scroll
+  document.body.style.overflow = 'hidden';
+
+  // Move focus to close button
+  const closeBtn = $('#mobileMenuClose');
+  if (closeBtn) {
+    setTimeout(() => closeBtn.focus(), 50);
   }
+}
 
-  function updateScores() {
-    matches.forEach(match => {
-      if (!match.active) return;
+function closeMobileMenu() {
+  const menu    = $('#mobileMenu');
+  const btn     = $('#hamburgerBtn');
+  if (!menu || !btn || !mobileMenuOpen) return;
 
-      match.minute += Math.floor(Math.random() * 3) + 1;
-      if (match.minute >= match.maxMinute) {
-        match.active = false;
-        return;
-      }
+  mobileMenuOpen = false;
+  menu.classList.remove('is-open');
+  menu.setAttribute('aria-hidden', 'true');
+  btn.classList.remove('is-active');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('aria-label', 'Ouvrir le menu de navigation');
 
-      // ~15% chance a team scores on each tick
-      const rand = Math.random();
-      if (rand < 0.08) {
-        match.valA += [3, 5, 7][Math.floor(Math.random() * 3)];
-        if (match.scoreA) {
-          match.scoreA.textContent = match.valA;
-          flashScore(match.scoreA);
-        }
-      } else if (rand < 0.16) {
-        match.valB += [3, 5, 7][Math.floor(Math.random() * 3)];
-        if (match.scoreB) {
-          match.scoreB.textContent = match.valB;
-          flashScore(match.scoreB);
-        }
-      }
-    });
-  }
+  document.body.style.overflow = '';
+  btn.focus();
+}
 
-  // Update every 30 seconds
-  const interval = setInterval(updateScores, 30000);
+function initMobileNav() {
+  const hamburger = $('#hamburgerBtn');
+  const closeBtn  = $('#mobileMenuClose');
+  const menu      = $('#mobileMenu');
 
-  // Cleanup on page unload
-  window.addEventListener('beforeunload', () => clearInterval(interval));
-})();
+  if (!hamburger || !menu) return;
 
-/* ============================================================
-   7. TICKER ANIMATION — pause on hover
-   ============================================================ */
-(function initTicker() {
-  const track = document.getElementById('tickerTrack');
-  if (!track) return;
-
-  track.addEventListener('mouseenter', () => {
-    track.style.animationPlayState = 'paused';
-  });
-  track.addEventListener('mouseleave', () => {
-    track.style.animationPlayState = 'running';
-  });
-})();
-
-/* ============================================================
-   8. SMOOTH SCROLL for anchor links
-   ============================================================ */
-(function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        const navHeight = parseInt(
-          getComputedStyle(document.documentElement).getPropertyValue('--nav-height') || '64'
-        );
-        const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    });
-  });
-})();
-
-/* ============================================================
-   9. NEWSLETTER FORM
-   ============================================================ */
-(function initNewsletter() {
-  const form = document.getElementById('newsletterForm');
-  const input = document.getElementById('emailInput');
-  const successMsg = document.getElementById('formSuccess');
-  if (!form || !input || !successMsg) return;
-
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (!isValidEmail(input.value)) {
-      input.style.borderColor = '#E63946';
-      input.focus();
-      setTimeout(() => { input.style.borderColor = ''; }, 2000);
-      return;
+  hamburger.addEventListener('click', () => {
+    if (mobileMenuOpen) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
     }
-    // Simulate API call
-    const btn = form.querySelector('.btn-subscribe');
-    btn.textContent = '...';
-    btn.disabled = true;
+  });
 
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeMobileMenu);
+  }
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenuOpen) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close on backdrop click (click outside the <nav> inside menu)
+  menu.addEventListener('click', (e) => {
+    if (e.target === menu) {
+      closeMobileMenu();
+    }
+  });
+}
+
+/* ============================================================
+   6. Like / Bookmark Toggles
+   ============================================================ */
+
+function initArticleActions() {
+  // Like buttons
+  $$('.btn-like').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const isLiked = this.dataset.liked === 'true';
+      const countEl = this.querySelector('.like-count');
+      const count   = parseInt(this.dataset.count, 10) || 0;
+
+      if (isLiked) {
+        this.dataset.liked = 'false';
+        this.dataset.count = count - 1;
+        this.classList.remove('is-liked');
+        this.setAttribute('aria-label', `J'aime cet article (${count - 1} likes)`);
+        if (countEl) countEl.textContent = count - 1;
+      } else {
+        this.dataset.liked = 'true';
+        this.dataset.count = count + 1;
+        this.classList.add('is-liked');
+        this.setAttribute('aria-label', `J'aime cet article (${count + 1} likes)`);
+        if (countEl) countEl.textContent = count + 1;
+
+        // Micro-animation: brief scale pulse
+        this.style.transform = 'scale(1.25)';
+        setTimeout(() => { this.style.transform = ''; }, 180);
+      }
+    });
+  });
+
+  // Bookmark buttons
+  $$('.btn-bookmark').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const isSaved = this.dataset.saved === 'true';
+
+      if (isSaved) {
+        this.dataset.saved = 'false';
+        this.classList.remove('is-saved');
+        this.setAttribute('aria-label', 'Sauvegarder cet article');
+      } else {
+        this.dataset.saved = 'true';
+        this.classList.add('is-saved');
+        this.setAttribute('aria-label', 'Article sauvegardé');
+
+        // Micro-animation
+        this.style.transform = 'scale(1.3)';
+        setTimeout(() => { this.style.transform = ''; }, 200);
+      }
+    });
+  });
+}
+
+/* ============================================================
+   7. Newsletter Form
+   ============================================================ */
+
+function initNewsletterForm() {
+  const form  = $('#newsletterForm');
+  const msgEl = $('#emailMsg');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const input = $('#emailInput');
+    const email = input ? input.value.trim() : '';
+
+    if (!email) return;
+
+    // Disable form during submission
+    const submitBtn = form.querySelector('.btn-email');
+    if (submitBtn) {
+      submitBtn.disabled   = true;
+      submitBtn.textContent = '...';
+    }
+
+    // Simulate async submission (replace with real API call)
     setTimeout(() => {
-      successMsg.hidden = false;
-      input.value = '';
-      btn.textContent = 'S\'abonner';
-      btn.disabled = false;
-      setTimeout(() => { successMsg.hidden = true; }, 4000);
+      if (msgEl) {
+        msgEl.textContent = 'Bienvenue dans L\'Épopée. Consultez votre boîte mail.';
+        msgEl.style.color = '#B8860B';
+      }
+
+      if (input)     input.value      = '';
+      if (submitBtn) {
+        submitBtn.disabled   = false;
+        submitBtn.textContent = 'Rejoindre';
+      }
+
+      // Reset message after 6 seconds
+      setTimeout(() => {
+        if (msgEl) {
+          msgEl.textContent = 'Aucun spam. Désabonnement en un clic.';
+          msgEl.style.color = '';
+        }
+      }, 6000);
     }, 900);
   });
-})();
+}
 
 /* ============================================================
-   10. VIDEO PLAY BUTTONS — click feedback
+   8. Search Button (placeholder interaction)
    ============================================================ */
-(function initVideoCards() {
-  document.querySelectorAll('.play-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Visual feedback: brief scale + message
-      btn.style.transform = 'scale(0.9)';
-      setTimeout(() => { btn.style.transform = ''; }, 150);
-    });
+
+function initSearch() {
+  const btn = $('#searchBtn');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    // Placeholder: a real implementation would open a search overlay.
+    // For now, visually indicate the feature is coming.
+    btn.classList.add('nav-search--active');
+    setTimeout(() => btn.classList.remove('nav-search--active'), 300);
   });
-})();
+}
 
 /* ============================================================
-   11. LIKE BUTTON — toggle on news cards
+   Init — DOMContentLoaded
    ============================================================ */
-(function initLikeButtons() {
-  document.querySelectorAll('.card-likes').forEach(likeEl => {
-    let liked = false;
-    const countText = likeEl.lastChild;
 
-    likeEl.style.cursor = 'pointer';
-    likeEl.setAttribute('role', 'button');
-    likeEl.setAttribute('aria-label', 'J\'aime');
-
-    likeEl.addEventListener('click', () => {
-      liked = !liked;
-      likeEl.style.color = liked ? '#E63946' : '';
-
-      // Parse and update count
-      const raw = countText.textContent.trim().replace(/\s/g, '');
-      const num = parseInt(raw.replace(/[^0-9]/g, ''), 10);
-      if (!isNaN(num)) {
-        const updated = liked ? num + 1 : num - 1;
-        // Re-format with space thousand separator
-        countText.textContent = ' ' + updated.toLocaleString('fr-FR');
-      }
-    });
-  });
-})();
-
-/* ============================================================
-   12. CALENDAR SCROLL BUTTONS — keyboard navigation
-   ============================================================ */
-(function initCalendarScroll() {
-  const scroll = document.querySelector('.calendar-scroll');
-  if (!scroll) return;
-
-  scroll.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') scroll.scrollBy({ left: 220, behavior: 'smooth' });
-    if (e.key === 'ArrowLeft')  scroll.scrollBy({ left: -220, behavior: 'smooth' });
-  });
-})();
+document.addEventListener('DOMContentLoaded', () => {
+  initProgressBar();
+  initStickyNav();
+  initSmoothScroll();
+  initFadeIn();
+  initMobileNav();
+  initArticleActions();
+  initNewsletterForm();
+  initSearch();
+});

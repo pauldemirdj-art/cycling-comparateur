@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ScorePulse — L'actualité sportive en temps réel</title>
+  <meta name="description" content="ScorePulse, le média sportif français de référence. Rugby, Football, Tennis, Cyclisme, Basketball — scores en direct, analyses et résultats." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="nav-header" id="navHeader">
+    <nav class="nav-container">
+      <a href="#" class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22 12C22 12 19 6 12 6C5 6 2 12 2 12" stroke="#E63946" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="12" cy="12" r="3" fill="#E63946"/>
+          <path d="M2 12C2 12 5 18 12 18C19 18 22 12 22 12" stroke="#E63946" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="12" cy="12" r="1.2" fill="#fff"/>
+        </svg>
+        <span class="logo-text">Score<span class="logo-accent">Pulse</span></span>
+      </a>
+
+      <ul class="nav-sports" id="navSports">
+        <li><a href="#" class="sport-tab active" data-sport="rugby">RUGBY</a></li>
+        <li><a href="#" class="sport-tab" data-sport="football">FOOTBALL</a></li>
+        <li><a href="#" class="sport-tab" data-sport="tennis">TENNIS</a></li>
+        <li><a href="#" class="sport-tab" data-sport="cyclisme">CYCLISME</a></li>
+        <li><a href="#" class="sport-tab" data-sport="basket">BASKET</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+        <button class="nav-icon-btn notif-btn" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          <span class="notif-dot"></span>
+        </button>
+        <a href="#" class="btn-premium">⚡ Premium</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== BREAKING NEWS TICKER ========== -->
+  <div class="ticker-wrapper" aria-label="Actualités en direct">
+    <div class="ticker-label">
+      <span class="live-dot"></span>LIVE
+    </div>
+    <div class="ticker-track-outer">
+      <div class="ticker-track" id="tickerTrack">
+        <span class="ticker-item">🏉 Top 14 — Toulouse confirme son statut de leader après une victoire écrasante 42-14 face à Clermont &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">⚽ Ligue 1 — PSG s'impose 3-1 face à Marseille au Parc des Princes lors du Classique &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">🏉 Champions Cup — Le XV de France prépare sa revanche face à l'Irlande en demi-finale &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">🎾 Roland-Garros — Alcaraz élimine Djokovic et file en finale sur la terre battue parisienne &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">🚴 Tour de France — Pogacar reprend le maillot jaune après l'étape de montagne des Alpes &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">🏀 Betclic Élite — Monaco renforce sa domination en battant Paris Basketball 98-81 &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">🏉 Pro D2 — Brive prend la tête du classement après 5 victoires consécutives &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <!-- duplicate for seamless loop -->
+        <span class="ticker-item">🏉 Top 14 — Toulouse confirme son statut de leader après une victoire écrasante 42-14 face à Clermont &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">⚽ Ligue 1 — PSG s'impose 3-1 face à Marseille au Parc des Princes lors du Classique &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">🏉 Champions Cup — Le XV de France prépare sa revanche face à l'Irlande en demi-finale &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">🎾 Roland-Garros — Alcaraz élimine Djokovic et file en finale sur la terre battue parisienne &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">🚴 Tour de France — Pogacar reprend le maillot jaune après l'étape de montagne des Alpes &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">🏀 Betclic Élite — Monaco renforce sa domination en battant Paris Basketball 98-81 &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+        <span class="ticker-item">🏉 Pro D2 — Brive prend la tête du classement après 5 victoires consécutives &nbsp;&nbsp;•&nbsp;&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Featured main article -->
+          <article class="hero-main fade-in">
+            <div class="hero-img hero-img--rugby">
+              <div class="hero-img-overlay">
+                <span class="sport-badge sport-badge--rugby">RUGBY</span>
+              </div>
+              <div class="rugby-texture"></div>
+              <span class="hero-emoji">🏉</span>
+            </div>
+            <div class="hero-content">
+              <div class="hero-meta">
+                <span class="category-tag">Champions Cup</span>
+                <span class="hero-date">11 Juin 2026</span>
+              </div>
+              <h1 class="hero-title">Toulouse vs Leinster : un choc de titans pour la finale de la Champions Cup</h1>
+              <p class="hero-desc">Le Stade Toulousain et le Leinster se retrouvent pour une finale qui s'annonce historique. Avec cinq titres européens chacun, les deux mastodontes du rugby continental se disputeront la suprématie continentale samedi au Tottenham Hotspur Stadium de Londres devant 60 000 spectateurs.</p>
+              <div class="hero-author">
+                <div class="author-avatar">JD</div>
+                <div>
+                  <span class="author-name">Jean Dupont</span>
+                  <span class="author-sep">·</span>
+                  <span class="read-time">8 min de lecture</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Side articles -->
+          <aside class="hero-side">
+
+            <article class="hero-side-card fade-in">
+              <div class="side-img side-img--rugby">
+                <span class="side-emoji">🏉</span>
+                <span class="sport-badge sport-badge--rugby sport-badge--sm">RUGBY</span>
+              </div>
+              <div class="side-content">
+                <span class="side-tag">Top 14</span>
+                <h3 class="side-title">Toulouse écrase Clermont 42-14 et creuse l'écart en tête</h3>
+                <span class="side-date">10 Juin 2026 · 5 min</span>
+              </div>
+            </article>
+
+            <article class="hero-side-card fade-in">
+              <div class="side-img side-img--france">
+                <span class="side-emoji">🇫🇷</span>
+                <span class="sport-badge sport-badge--rugby sport-badge--sm">XV DE FRANCE</span>
+              </div>
+              <div class="side-content">
+                <span class="side-tag">Test Match</span>
+                <h3 class="side-title">Fabien Galthié dévoile un XV remanié pour affronter l'Australie</h3>
+                <span class="side-date">9 Juin 2026 · 4 min</span>
+              </div>
+            </article>
+
+            <article class="hero-side-card fade-in">
+              <div class="side-img side-img--football">
+                <span class="side-emoji">⚽</span>
+                <span class="sport-badge sport-badge--football sport-badge--sm">FOOTBALL</span>
+              </div>
+              <div class="side-content">
+                <span class="side-tag">Ligue 1</span>
+                <h3 class="side-title">Le Classique : PSG 3-1 OM, Mbappé décisif avec un doublé</h3>
+                <span class="side-date">8 Juin 2026 · 3 min</span>
+              </div>
+            </article>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CATEGORY TABS + NEWS GRID ========== -->
+    <section class="news-section" id="newsSection">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Dernières Actualités</h2>
+          <div class="filter-tabs" id="filterTabs" role="tablist">
+            <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">TOUT</button>
+            <button class="filter-tab" data-filter="rugby" role="tab" aria-selected="false">RUGBY</button>
+            <button class="filter-tab" data-filter="football" role="tab" aria-selected="false">FOOTBALL</button>
+            <button class="filter-tab" data-filter="tennis" role="tab" aria-selected="false">TENNIS</button>
+            <button class="filter-tab" data-filter="cyclisme" role="tab" aria-selected="false">CYCLISME</button>
+            <button class="filter-tab" data-filter="basket" role="tab" aria-selected="false">BASKET</button>
+          </div>
+        </div>
+
+        <div class="news-grid" id="newsGrid">
+
+          <!-- Card 1 - Rugby -->
+          <article class="news-card fade-in" data-sport="rugby">
+            <div class="card-img card-img--rugby">
+              <span class="card-emoji">🏉</span>
+              <span class="card-badge card-badge--rugby">RUGBY</span>
+              <span class="card-read-time">6 min</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Racing 92 vs La Rochelle : la demi-finale qui enflamme le Top 14</h3>
+              <p class="card-excerpt">L'Arena La Défense accueille un choc de titans entre les deux clubs les plus en forme de la saison régulière. Analyse des forces et faiblesses.</p>
+              <div class="card-footer">
+                <div class="card-author">
+                  <div class="author-avatar author-avatar--sm">ML</div>
+                  <span>Marie Laurent</span>
+                </div>
+                <div class="card-stats">
+                  <span class="card-date">10 Juin 2026</span>
+                  <span class="card-likes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    847
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 - Rugby -->
+          <article class="news-card fade-in" data-sport="rugby">
+            <div class="card-img card-img--rugby">
+              <span class="card-emoji">🏆</span>
+              <span class="card-badge card-badge--rugby">RUGBY</span>
+              <span class="card-read-time">5 min</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Pro D2 : Brive termine la saison régulière invaincu à domicile</h3>
+              <p class="card-excerpt">Le CA Brive a réussi l'exploit de rester invaincu au Municipal toute la saison, confirmant leur retour au premier plan du rugby français.</p>
+              <div class="card-footer">
+                <div class="card-author">
+                  <div class="author-avatar author-avatar--sm">PB</div>
+                  <span>Pierre Bernard</span>
+                </div>
+                <div class="card-stats">
+                  <span class="card-date">9 Juin 2026</span>
+                  <span class="card-likes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    512
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 - Football -->
+          <article class="news-card fade-in" data-sport="football">
+            <div class="card-img card-img--football">
+              <span class="card-emoji">⚽</span>
+              <span class="card-badge card-badge--football">FOOTBALL</span>
+              <span class="card-read-time">4 min</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Equipe de France : Deschamps convoque 26 joueurs pour l'Euro 2028</h3>
+              <p class="card-excerpt">Le sélectionneur Didier Deschamps a dévoilé sa liste pour les qualifications à l'Euro 2028 avec plusieurs nouvelles têtes issues de la génération montante.</p>
+              <div class="card-footer">
+                <div class="card-author">
+                  <div class="author-avatar author-avatar--sm">SR</div>
+                  <span>Sophie Renard</span>
+                </div>
+                <div class="card-stats">
+                  <span class="card-date">8 Juin 2026</span>
+                  <span class="card-likes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    1 204
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 - Tennis -->
+          <article class="news-card fade-in" data-sport="tennis">
+            <div class="card-img card-img--tennis">
+              <span class="card-emoji">🎾</span>
+              <span class="card-badge card-badge--tennis">TENNIS</span>
+              <span class="card-read-time">3 min</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Roland-Garros : Swiatek domine Gauff en finale et remporte un 6e titre</h3>
+              <p class="card-excerpt">La Polonaise Iga Swiatek a une nouvelle fois dominé le tableau féminin à la Porte d'Auteuil, ne perdant qu'un seul set durant tout le tournoi.</p>
+              <div class="card-footer">
+                <div class="card-author">
+                  <div class="author-avatar author-avatar--sm">CM</div>
+                  <span>Claire Martin</span>
+                </div>
+                <div class="card-stats">
+                  <span class="card-date">8 Juin 2026</span>
+                  <span class="card-likes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    2 341
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 - Cyclisme -->
+          <article class="news-card fade-in" data-sport="cyclisme">
+            <div class="card-img card-img--cyclisme">
+              <span class="card-emoji">🚴</span>
+              <span class="card-badge card-badge--cyclisme">CYCLISME</span>
+              <span class="card-read-time">5 min</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Tour de France : Pogacar en patron, Vingegaard craque dans les Alpes</h3>
+              <p class="card-excerpt">Le Slovène a réalisé une démonstration de force lors de l'étape reine de l'Alpe d'Huez, lâchant tous ses concurrents à 8 km du sommet.</p>
+              <div class="card-footer">
+                <div class="card-author">
+                  <div class="author-avatar author-avatar--sm">AD</div>
+                  <span>Antoine Dubois</span>
+                </div>
+                <div class="card-stats">
+                  <span class="card-date">7 Juin 2026</span>
+                  <span class="card-likes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    983
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 - Rugby -->
+          <article class="news-card fade-in" data-sport="rugby">
+            <div class="card-img card-img--rugby">
+              <span class="card-emoji">🏉</span>
+              <span class="card-badge card-badge--rugby">RUGBY</span>
+              <span class="card-read-time">7 min</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Antoine Dupont : "Notre objectif, c'est de remporter les deux finales"</h3>
+              <p class="card-excerpt">Le capitaine du XV de France et joueur de Toulouse nous a accordé une interview exclusive avant les grandes échéances de juin. Il revient sur sa saison exceptionnelle.</p>
+              <div class="card-footer">
+                <div class="card-author">
+                  <div class="author-avatar author-avatar--sm">JD</div>
+                  <span>Jean Dupont</span>
+                </div>
+                <div class="card-stats">
+                  <span class="card-date">7 Juin 2026</span>
+                  <span class="card-likes">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    3 710
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /news-grid -->
+
+        <div class="load-more-wrap">
+          <button class="btn-load-more">Voir plus d'articles</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LIVE SCORES ========== -->
+    <section class="live-section" id="liveSection">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Résultats en direct
+            <span class="live-badge" aria-label="En direct">LIVE</span>
+          </h2>
+          <a href="#" class="see-all">Tous les résultats →</a>
+        </div>
+
+        <div class="scores-grid">
+
+          <!-- Match 1 - Champions Cup -->
+          <div class="score-card score-card--live fade-in">
+            <div class="score-competition">
+              <span class="comp-icon">🏆</span>
+              <span>Champions Cup — Finale</span>
+            </div>
+            <div class="score-body">
+              <div class="score-team">
+                <div class="team-logo team-logo--red">TLS</div>
+                <span class="team-name">Toulouse</span>
+              </div>
+              <div class="score-center">
+                <div class="score-numbers">
+                  <span class="score-val" id="score1a">24</span>
+                  <span class="score-sep">–</span>
+                  <span class="score-val" id="score1b">17</span>
+                </div>
+                <div class="score-status score-status--live">
+                  <span class="live-pulse"></span>
+                  LIVE 58'
+                </div>
+              </div>
+              <div class="score-team score-team--right">
+                <div class="team-logo team-logo--blue">LEI</div>
+                <span class="team-name">Leinster</span>
+              </div>
+            </div>
+            <div class="score-footer">Tottenham Hotspur Stadium, Londres</div>
+          </div>
+
+          <!-- Match 2 - Top 14 -->
+          <div class="score-card fade-in">
+            <div class="score-competition">
+              <span class="comp-icon">🏉</span>
+              <span>Top 14 — Demi-finale</span>
+            </div>
+            <div class="score-body">
+              <div class="score-team">
+                <div class="team-logo team-logo--skyblue">R92</div>
+                <span class="team-name">Racing 92</span>
+              </div>
+              <div class="score-center">
+                <div class="score-numbers">
+                  <span class="score-val" id="score2a">19</span>
+                  <span class="score-sep">–</span>
+                  <span class="score-val" id="score2b">22</span>
+                </div>
+                <div class="score-status score-status--live">
+                  <span class="live-pulse"></span>
+                  LIVE 72'
+                </div>
+              </div>
+              <div class="score-team score-team--right">
+                <div class="team-logo team-logo--yellow">LRO</div>
+                <span class="team-name">La Rochelle</span>
+              </div>
+            </div>
+            <div class="score-footer">Stade Matmut Atlantique, Bordeaux</div>
+          </div>
+
+          <!-- Match 3 - Ligue 1 -->
+          <div class="score-card fade-in">
+            <div class="score-competition">
+              <span class="comp-icon">⚽</span>
+              <span>Ligue 1 — J37</span>
+            </div>
+            <div class="score-body">
+              <div class="score-team">
+                <div class="team-logo team-logo--darkblue">PSG</div>
+                <span class="team-name">Paris SG</span>
+              </div>
+              <div class="score-center">
+                <div class="score-numbers">
+                  <span class="score-val">3</span>
+                  <span class="score-sep">–</span>
+                  <span class="score-val">1</span>
+                </div>
+                <div class="score-status score-status--ft">FT</div>
+              </div>
+              <div class="score-team score-team--right">
+                <div class="team-logo team-logo--white">OM</div>
+                <span class="team-name">Marseille</span>
+              </div>
+            </div>
+            <div class="score-footer">Parc des Princes, Paris</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CLASSEMENTS ========== -->
+    <section class="rankings-section" id="rankings">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Classements</h2>
+          <a href="#" class="see-all">Tous les classements →</a>
+        </div>
+        <div class="rankings-grid">
+
+          <!-- Top 14 -->
+          <div class="ranking-table fade-in">
+            <div class="ranking-header">
+              <h3 class="ranking-title">
+                <span class="ranking-icon">🏉</span>
+                Top 14 — Saison 2025/26
+              </h3>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Club</th>
+                  <th>Pts</th>
+                  <th>V</th>
+                  <th>D</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="rank-top3 rank-1">
+                  <td><span class="rank-num">1</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#E63946"></span>Toulouse</td>
+                  <td><strong>82</strong></td>
+                  <td>18</td>
+                  <td>4</td>
+                </tr>
+                <tr class="rank-top3 rank-2">
+                  <td><span class="rank-num">2</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#4ECDC4"></span>La Rochelle</td>
+                  <td><strong>74</strong></td>
+                  <td>16</td>
+                  <td>6</td>
+                </tr>
+                <tr class="rank-top3 rank-3">
+                  <td><span class="rank-num">3</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#6EC6F5"></span>Racing 92</td>
+                  <td><strong>71</strong></td>
+                  <td>15</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-num">4</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#F4D35E"></span>Clermont</td>
+                  <td><strong>68</strong></td>
+                  <td>14</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-num">5</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#FF6B35"></span>Bordeaux-B.</td>
+                  <td><strong>65</strong></td>
+                  <td>13</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-num">6</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#2D6A4F"></span>Stade Français</td>
+                  <td><strong>60</strong></td>
+                  <td>12</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-num">7</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#9B59B6"></span>Montpellier</td>
+                  <td><strong>58</strong></td>
+                  <td>11</td>
+                  <td>11</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-num">8</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#E67E22"></span>Lyon</td>
+                  <td><strong>54</strong></td>
+                  <td>10</td>
+                  <td>12</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pro D2 -->
+          <div class="ranking-table fade-in">
+            <div class="ranking-header">
+              <h3 class="ranking-title">
+                <span class="ranking-icon">🏉</span>
+                Pro D2 — Saison 2025/26
+              </h3>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Club</th>
+                  <th>Pts</th>
+                  <th>V</th>
+                  <th>D</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="rank-top3 rank-1">
+                  <td><span class="rank-num">1</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#E63946"></span>Brive</td>
+                  <td><strong>88</strong></td>
+                  <td>20</td>
+                  <td>2</td>
+                </tr>
+                <tr class="rank-top3 rank-2">
+                  <td><span class="rank-num">2</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#3498DB"></span>Perpignan</td>
+                  <td><strong>79</strong></td>
+                  <td>17</td>
+                  <td>5</td>
+                </tr>
+                <tr class="rank-top3 rank-3">
+                  <td><span class="rank-num">3</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#27AE60"></span>Agen</td>
+                  <td><strong>72</strong></td>
+                  <td>15</td>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-num">4</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#F39C12"></span>Oyonnax</td>
+                  <td><strong>68</strong></td>
+                  <td>14</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-num">5</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#8E44AD"></span>Colomiers</td>
+                  <td><strong>63</strong></td>
+                  <td>13</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-num">6</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#16A085"></span>Nevers</td>
+                  <td><strong>59</strong></td>
+                  <td>12</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-num">7</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#C0392B"></span>Grenoble</td>
+                  <td><strong>54</strong></td>
+                  <td>11</td>
+                  <td>11</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-num">8</span></td>
+                  <td class="team-cell"><span class="team-dot" style="background:#2C3E50"></span>Aurillac</td>
+                  <td><strong>49</strong></td>
+                  <td>9</td>
+                  <td>13</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CALENDRIER ========== -->
+    <section class="calendar-section" id="calendar">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Prochains Matchs</h2>
+          <a href="#" class="see-all">Calendrier complet →</a>
+        </div>
+        <div class="calendar-scroll">
+          <div class="calendar-track">
+
+            <div class="calendar-card fade-in">
+              <div class="cal-date">
+                <span class="cal-day">14</span>
+                <span class="cal-month">JUIN</span>
+              </div>
+              <div class="cal-comp">🏆 Champions Cup — Finale</div>
+              <div class="cal-match">
+                <span>Toulouse</span>
+                <span class="cal-vs">VS</span>
+                <span>Leinster</span>
+              </div>
+              <div class="cal-time">17h00</div>
+            </div>
+
+            <div class="calendar-card fade-in">
+              <div class="cal-date">
+                <span class="cal-day">15</span>
+                <span class="cal-month">JUIN</span>
+              </div>
+              <div class="cal-comp">🏉 Top 14 — Finale</div>
+              <div class="cal-match">
+                <span>La Rochelle</span>
+                <span class="cal-vs">VS</span>
+                <span>Racing 92</span>
+              </div>
+              <div class="cal-time">21h00</div>
+            </div>
+
+            <div class="calendar-card fade-in">
+              <div class="cal-date">
+                <span class="cal-day">21</span>
+                <span class="cal-month">JUIN</span>
+              </div>
+              <div class="cal-comp">🇫🇷 Test Match</div>
+              <div class="cal-match">
+                <span>XV de France</span>
+                <span class="cal-vs">VS</span>
+                <span>Australie</span>
+              </div>
+              <div class="cal-time">20h45</div>
+            </div>
+
+            <div class="calendar-card fade-in">
+              <div class="cal-date">
+                <span class="cal-day">28</span>
+                <span class="cal-month">JUIN</span>
+              </div>
+              <div class="cal-comp">⚽ Euro Qualif.</div>
+              <div class="cal-match">
+                <span>France</span>
+                <span class="cal-vs">VS</span>
+                <span>Espagne</span>
+              </div>
+              <div class="cal-time">20h45</div>
+            </div>
+
+            <div class="calendar-card fade-in">
+              <div class="cal-date">
+                <span class="cal-day">5</span>
+                <span class="cal-month">JUIL</span>
+              </div>
+              <div class="cal-comp">🚴 Tour de France J1</div>
+              <div class="cal-match">
+                <span>Départ</span>
+                <span class="cal-vs">—</span>
+                <span>Florence</span>
+              </div>
+              <div class="cal-time">13h00</div>
+            </div>
+
+            <div class="calendar-card fade-in">
+              <div class="cal-date">
+                <span class="cal-day">12</span>
+                <span class="cal-month">JUIL</span>
+              </div>
+              <div class="cal-comp">🎾 Wimbledon — QF</div>
+              <div class="cal-match">
+                <span>Alcaraz</span>
+                <span class="cal-vs">VS</span>
+                <span>Sinner</span>
+              </div>
+              <div class="cal-time">14h30</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== VIDEOS ========== -->
+    <section class="videos-section" id="videos">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Vidéos à la une</h2>
+          <a href="#" class="see-all">Toutes les vidéos →</a>
+        </div>
+        <div class="videos-grid">
+
+          <div class="video-card fade-in">
+            <div class="video-thumb video-thumb--rugby">
+              <span class="video-emoji">🏆</span>
+              <button class="play-btn" aria-label="Lire la vidéo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+              <span class="video-duration">12:34</span>
+            </div>
+            <div class="video-info">
+              <span class="video-tag">Champions Cup</span>
+              <h4 class="video-title">Résumé Toulouse vs Leinster — Demi-finale aller</h4>
+              <span class="video-views">142 000 vues · Il y a 2 jours</span>
+            </div>
+          </div>
+
+          <div class="video-card fade-in">
+            <div class="video-thumb video-thumb--france">
+              <span class="video-emoji">🇫🇷</span>
+              <button class="play-btn" aria-label="Lire la vidéo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+              <span class="video-duration">18:07</span>
+            </div>
+            <div class="video-info">
+              <span class="video-tag">Analyse Tactique</span>
+              <h4 class="video-title">Analyse tactique : comment le XV de France neutralise le jeu irlandais</h4>
+              <span class="video-views">89 500 vues · Il y a 3 jours</span>
+            </div>
+          </div>
+
+          <div class="video-card fade-in">
+            <div class="video-thumb video-thumb--football">
+              <span class="video-emoji">⚽</span>
+              <button class="play-btn" aria-label="Lire la vidéo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+              <span class="video-duration">6:22</span>
+            </div>
+            <div class="video-info">
+              <span class="video-tag">Ligue 1</span>
+              <h4 class="video-title">Tous les buts du Classique PSG 3-1 OM</h4>
+              <span class="video-views">521 000 vues · Il y a 4 jours</span>
+            </div>
+          </div>
+
+          <div class="video-card fade-in">
+            <div class="video-thumb video-thumb--cyclisme">
+              <span class="video-emoji">🚴</span>
+              <button class="play-btn" aria-label="Lire la vidéo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </button>
+              <span class="video-duration">9:48</span>
+            </div>
+            <div class="video-info">
+              <span class="video-tag">Tour de France</span>
+              <h4 class="video-title">Pogacar fait l'Alpe d'Huez seul — Le résumé de l'étape 12</h4>
+              <span class="video-views">378 000 vues · Il y a 5 jours</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-inner fade-in">
+          <div class="newsletter-text">
+            <span class="newsletter-sup">RESTEZ CONNECTÉ</span>
+            <h2 class="newsletter-title">Restez dans la mêlée</h2>
+            <p class="newsletter-desc">Recevez chaque matin l'essentiel de l'actualité sportive directement dans votre boîte mail.</p>
+            <div class="newsletter-trust">
+              <div class="trust-avatars">
+                <div class="trust-av" style="background:#E63946">S</div>
+                <div class="trust-av" style="background:#2D6A4F">A</div>
+                <div class="trust-av" style="background:#457B9D">T</div>
+                <div class="trust-av" style="background:#F4A261">M</div>
+                <div class="trust-av" style="background:#9B59B6">R</div>
+              </div>
+              <span class="trust-text">50 000+ supporters nous font confiance</span>
+            </div>
+          </div>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <div class="form-group">
+              <input type="email" class="form-input" placeholder="votre@email.fr" id="emailInput" aria-label="Votre adresse email" required />
+              <button type="submit" class="btn-subscribe">S'abonner</button>
+            </div>
+            <p class="form-notice">Pas de spam. Désabonnement en 1 clic.</p>
+            <p class="form-success" id="formSuccess" hidden>Merci ! Vous êtes inscrit.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-col footer-col--brand">
+          <a href="#" class="nav-logo footer-logo">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M22 12C22 12 19 6 12 6C5 6 2 12 2 12" stroke="#E63946" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="3" fill="#E63946"/>
+              <path d="M2 12C2 12 5 18 12 18C19 18 22 12 22 12" stroke="#E63946" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="1.2" fill="#fff"/>
+            </svg>
+            <span class="logo-text">Score<span class="logo-accent">Pulse</span></span>
+          </a>
+          <p class="footer-desc">Le média sportif français de référence. Scores en direct, analyses approfondies et actualités de tous les sports.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.7a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sports -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Sports</h4>
+          <ul class="footer-links">
+            <li><a href="#">Rugby — Top 14</a></li>
+            <li><a href="#">Rugby — Champions Cup</a></li>
+            <li><a href="#">Rugby — XV de France</a></li>
+            <li><a href="#">Football — Ligue 1</a></li>
+            <li><a href="#">Tennis — Grand Chelem</a></li>
+            <li><a href="#">Cyclisme — Tour de France</a></li>
+            <li><a href="#">Basketball — Betclic Élite</a></li>
+          </ul>
+        </div>
+
+        <!-- À propos -->
+        <div class="footer-col">
+          <h4 class="footer-heading">À propos</h4>
+          <ul class="footer-links">
+            <li><a href="#">Qui sommes-nous ?</a></li>
+            <li><a href="#">Notre équipe</a></li>
+            <li><a href="#">Nous contacter</a></li>
+            <li><a href="#">Publicité</a></li>
+            <li><a href="#">Abonnement Premium</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+
+        <!-- App / Newsletter -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Applications</h4>
+          <ul class="footer-links">
+            <li><a href="#">App iOS</a></li>
+            <li><a href="#">App Android</a></li>
+            <li><a href="#">Flux RSS</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+          <div class="footer-app-badges">
+            <a href="#" class="app-badge">
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.9 14.4l-1.4 1.4-3.5-3.5-3.5 3.5-1.4-1.4 3.5-3.5-3.5-3.5 1.4-1.4 3.5 3.5 3.5-3.5 1.4 1.4-3.5 3.5 3.5 3.5z"/></svg>
+              App Store
+            </a>
+            <a href="#" class="app-badge">
+              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.9 14.4l-1.4 1.4-3.5-3.5-3.5 3.5-1.4-1.4 3.5-3.5-3.5-3.5 1.4-1.4 3.5 3.5 3.5-3.5 1.4 1.4-3.5 3.5 3.5 3.5z"/></svg>
+              Google Play
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 ScorePulse. Tous droits réservés.</span>
+        <span>Fait avec passion pour le sport français 🏉</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

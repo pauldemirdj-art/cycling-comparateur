@@ -7,20 +7,20 @@
    0. CSS Custom Properties
    ============================================================ */
 :root {
-  /* Colors */
-  --color-cream:        #F5F0E8;
-  --color-cream-dark:   #EDE8DC;
-  --color-cream-darker: #E3DCCF;
-  --color-ink:          #1A1208;
-  --color-ink-light:    #2E2416;
-  --color-ink-mid:      #4A3C2A;
-  --color-ink-muted:    #7A6A52;
-  --color-bordeaux:     #6B1E2E;
-  --color-bordeaux-dark:#4E1520;
-  --color-bordeaux-light:#8B3040;
-  --color-gold:         #B8860B;
-  --color-gold-light:   #D4A017;
-  --color-forest:       #2D5016;
+  /* Colors — Marine & Blanc */
+  --color-cream:        #FFFFFF;
+  --color-cream-dark:   #122348;
+  --color-cream-darker: #0F1D3D;
+  --color-ink:          #FFFFFF;
+  --color-ink-light:    #E8EDF5;
+  --color-ink-mid:      #A8B8D0;
+  --color-ink-muted:    #6A82A0;
+  --color-bordeaux:     #D4AF37;
+  --color-bordeaux-dark:#B8941E;
+  --color-bordeaux-light:#E8C84A;
+  --color-gold:         #D4AF37;
+  --color-gold-light:   #E8C84A;
+  --color-forest:       #D4AF37;
 
   /* Typography */
   --font-display:  'Playfair Display', Georgia, serif;
@@ -45,8 +45,8 @@
   --radius-md: 4px;
 
   /* Shadows */
-  --shadow-card:  0 2px 12px rgba(26, 18, 8, 0.08), 0 1px 4px rgba(26, 18, 8, 0.05);
-  --shadow-hover: 0 8px 32px rgba(26, 18, 8, 0.14), 0 2px 8px rgba(26, 18, 8, 0.08);
+  --shadow-card:  0 2px 12px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.25);
 
   /* Transitions */
   --transition-base: 0.22s ease;
@@ -70,13 +70,9 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-cream);
+  background-color: #0B1D3A;
   color: var(--color-ink);
   line-height: 1.75;
-  /* Subtle paper texture using SVG noise */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.028'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 300px 300px;
 }
 
 img, svg {
@@ -141,8 +137,9 @@ button {
    4. Top Bar
    ============================================================ */
 .top-bar {
-  background: var(--color-bordeaux);
-  color: rgba(245, 240, 232, 0.88);
+  background: #0B1D3A;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  color: rgba(212, 175, 55, 0.9);
   font-family: var(--font-ui);
   font-size: 0.72rem;
   font-weight: 400;
@@ -160,16 +157,16 @@ button {
   position: sticky;
   top: 0;
   z-index: 900;
-  background: rgba(245, 240, 232, 0.94);
+  background: rgba(11, 29, 58, 0.96);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(107, 30, 46, 0.12);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
   transition: background var(--transition-base), box-shadow var(--transition-base);
 }
 
 .nav.scrolled {
-  background: rgba(245, 240, 232, 0.98);
-  box-shadow: 0 2px 16px rgba(26, 18, 8, 0.1);
+  background: rgba(11, 29, 58, 0.99);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
 }
 
 .nav-inner {
@@ -269,7 +266,7 @@ button {
 
 .nav-search:hover {
   color: var(--color-bordeaux);
-  background: rgba(107, 30, 46, 0.08);
+  background: rgba(212, 175, 55, 0.08);
 }
 
 .btn-subscribe {
@@ -278,7 +275,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #fff;
+  color: #0B1D3A;
   background: var(--color-bordeaux);
   padding: 0.5rem 1.1rem;
   border-radius: var(--radius-sm);
@@ -327,7 +324,7 @@ button {
   position: fixed;
   inset: 0;
   z-index: 850;
-  background: var(--color-cream);
+  background: #122348;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -359,7 +356,7 @@ button {
 
 .mobile-menu-close:hover {
   color: var(--color-bordeaux);
-  background: rgba(107, 30, 46, 0.08);
+  background: rgba(212, 175, 55, 0.08);
 }
 
 .mobile-menu nav {
@@ -423,14 +420,14 @@ button {
 
 .badge--anatomie {
   color: var(--color-bordeaux);
-  background: rgba(107, 30, 46, 0.1);
-  border: 1px solid rgba(107, 30, 46, 0.2);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .badge--enquete {
   color: var(--color-ink-light);
-  background: rgba(26, 18, 8, 0.08);
-  border: 1px solid rgba(26, 18, 8, 0.15);
+  background: rgba(11, 29, 58, 0.08);
+  border: 1px solid rgba(11, 29, 58, 0.15);
 }
 
 .badge--epopee {
@@ -492,7 +489,7 @@ button {
   /* Rugby stadium at dusk: dark purples, warm oranges, mist */
   background:
     radial-gradient(ellipse at 70% 20%, rgba(255, 160, 60, 0.22) 0%, transparent 55%),
-    radial-gradient(ellipse at 30% 80%, rgba(107, 30, 46, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 80%, rgba(212, 175, 55, 0.35) 0%, transparent 50%),
     radial-gradient(ellipse at 60% 60%, rgba(80, 40, 100, 0.28) 0%, transparent 60%),
     radial-gradient(ellipse at 20% 30%, rgba(40, 20, 60, 0.4) 0%, transparent 55%),
     linear-gradient(165deg,
@@ -557,7 +554,7 @@ button {
 .hero-standfirst {
   font-family: var(--font-body);
   font-size: clamp(0.95rem, 1.6vw, 1.1rem);
-  color: rgba(245, 240, 232, 0.82);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.7;
   margin-bottom: var(--space-lg);
   max-width: 600px;
@@ -570,16 +567,16 @@ button {
   gap: 0.4rem 0.8rem;
   font-family: var(--font-ui);
   font-size: 0.8rem;
-  color: rgba(245, 240, 232, 0.65);
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: var(--space-xl);
 }
 
 .hero-author strong {
-  color: rgba(245, 240, 232, 0.88);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .hero-sep {
-  color: rgba(245, 240, 232, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .btn-hero {
@@ -619,11 +616,11 @@ button {
 
 /* Article Cards */
 .article-card {
-  background: var(--color-cream);
+  background: #122348;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  border: 1px solid rgba(26, 18, 8, 0.07);
+  border: 1px solid rgba(11, 29, 58, 0.07);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
   display: flex;
   flex-direction: column;
@@ -658,7 +655,7 @@ button {
 
 .card-image--toulon {
   background:
-    radial-gradient(ellipse at 50% 30%, rgba(107, 30, 46, 0.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 30%, rgba(212, 175, 55, 0.5) 0%, transparent 55%),
     radial-gradient(ellipse at 70% 70%, rgba(30, 30, 80, 0.3) 0%, transparent 50%),
     linear-gradient(160deg, #100510, #2a0a18, #1a0510, #0d0808);
 }
@@ -717,7 +714,7 @@ button {
   justify-content: space-between;
   margin-top: var(--space-md);
   padding-top: var(--space-md);
-  border-top: 1px solid rgba(26, 18, 8, 0.08);
+  border-top: 1px solid rgba(11, 29, 58, 0.08);
   gap: var(--space-sm);
 }
 
@@ -732,7 +729,7 @@ button {
 }
 
 .card-sep {
-  color: rgba(26, 18, 8, 0.25);
+  color: rgba(11, 29, 58, 0.25);
 }
 
 .card-actions {
@@ -756,7 +753,7 @@ button {
 
 .btn-like:hover {
   color: var(--color-bordeaux);
-  background: rgba(107, 30, 46, 0.07);
+  background: rgba(212, 175, 55, 0.07);
 }
 
 .btn-like.is-liked {
@@ -805,7 +802,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(245, 240, 232, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 0.5rem;
 }
 
@@ -825,7 +822,7 @@ button {
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(245, 240, 232, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: var(--space-lg);
 }
 
@@ -833,7 +830,7 @@ button {
   font-family: var(--font-body);
   font-size: 1.05rem;
   font-style: italic;
-  color: rgba(245, 240, 232, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.75;
 }
 
@@ -847,16 +844,16 @@ button {
   display: grid;
   grid-template-columns: 340px 1fr;
   gap: 0;
-  background: rgba(245, 240, 232, 0.06);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid rgba(245, 240, 232, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform var(--transition-base), background var(--transition-base);
 }
 
 .anatomie-card:hover {
   transform: translateY(-4px);
-  background: rgba(245, 240, 232, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .anatomie-image {
@@ -908,7 +905,7 @@ button {
 .anatomie-excerpt {
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: rgba(245, 240, 232, 0.75);
+  color: rgba(255, 255, 255, 0.75);
   line-height: 1.75;
   flex: 1;
 }
@@ -918,13 +915,13 @@ button {
   align-items: center;
   justify-content: space-between;
   padding-top: var(--space-md);
-  border-top: 1px solid rgba(245, 240, 232, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   gap: var(--space-md);
   flex-wrap: wrap;
 }
 
 .anatomie-footer .card-meta {
-  color: rgba(245, 240, 232, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .anatomie-link {
@@ -948,7 +945,7 @@ button {
    ============================================================ */
 .portraits {
   padding-block: var(--space-3xl);
-  background: var(--color-cream);
+  background: #122348;
 }
 
 .portraits-grid {
@@ -958,10 +955,10 @@ button {
 }
 
 .portrait-card {
-  background: var(--color-cream);
+  background: #122348;
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid rgba(26, 18, 8, 0.07);
+  border: 1px solid rgba(11, 29, 58, 0.07);
   box-shadow: var(--shadow-card);
   transition: transform var(--transition-base), box-shadow var(--transition-base);
   display: flex;
@@ -988,7 +985,7 @@ button {
   left: 0;
   right: 0;
   height: 50%;
-  background: linear-gradient(to top, rgba(26, 18, 8, 0.4), transparent);
+  background: linear-gradient(to top, rgba(11, 29, 58, 0.4), transparent);
 }
 
 .portrait-image--chabal {
@@ -1081,7 +1078,7 @@ button {
    12. Pull Quote / Editorial Statement
    ============================================================ */
 .pull-quote {
-  background: var(--color-cream);
+  background: #122348;
   padding-block: var(--space-3xl);
   position: relative;
 }
@@ -1093,7 +1090,7 @@ button {
   left: var(--container-pad);
   right: var(--container-pad);
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(107, 30, 46, 0.3) 20%, rgba(107, 30, 46, 0.3) 80%, transparent);
+  background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.3) 20%, rgba(212, 175, 55, 0.3) 80%, transparent);
 }
 
 .pull-quote::before { top: 0; }
@@ -1164,18 +1161,18 @@ button {
   gap: var(--space-xl);
   align-items: start;
   padding-block: var(--space-xl);
-  border-bottom: 1px solid rgba(26, 18, 8, 0.1);
+  border-bottom: 1px solid rgba(11, 29, 58, 0.1);
   transition: background var(--transition-base);
   border-radius: var(--radius-sm);
   padding-inline: var(--space-md);
 }
 
 .enquete-item:first-child {
-  border-top: 1px solid rgba(26, 18, 8, 0.1);
+  border-top: 1px solid rgba(11, 29, 58, 0.1);
 }
 
 .enquete-item:hover {
-  background: rgba(245, 240, 232, 0.6);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .enquete-number {
@@ -1266,7 +1263,7 @@ button {
 .abonnement-manifesto p {
   font-family: var(--font-body);
   font-size: 0.95rem;
-  color: rgba(245, 240, 232, 0.78);
+  color: rgba(255, 255, 255, 0.78);
   line-height: 1.8;
 }
 
@@ -1288,13 +1285,13 @@ button {
 }
 
 .plan--free {
-  background: rgba(245, 240, 232, 0.06);
-  border: 1px solid rgba(245, 240, 232, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .plan--premium {
-  background: rgba(107, 30, 46, 0.35);
-  border: 1px solid rgba(107, 30, 46, 0.6);
+  background: rgba(212, 175, 55, 0.35);
+  border: 1px solid rgba(212, 175, 55, 0.6);
 }
 
 .plan-badge-top {
@@ -1342,7 +1339,7 @@ button {
   font-family: var(--font-ui);
   font-size: 0.78rem;
   font-weight: 400;
-  color: rgba(245, 240, 232, 0.55);
+  color: rgba(255, 255, 255, 0.55);
   vertical-align: baseline;
 }
 
@@ -1356,7 +1353,7 @@ button {
 .plan-features li {
   font-family: var(--font-ui);
   font-size: 0.82rem;
-  color: rgba(245, 240, 232, 0.75);
+  color: rgba(255, 255, 255, 0.75);
   padding-left: 1.2rem;
   position: relative;
   line-height: 1.4;
@@ -1386,12 +1383,12 @@ button {
 
 .btn-plan--free {
   color: var(--color-cream);
-  border: 1px solid rgba(245, 240, 232, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   background: transparent;
 }
 
 .btn-plan--free:hover {
-  background: rgba(245, 240, 232, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-1px);
 }
 
@@ -1410,14 +1407,14 @@ button {
   grid-column: 1 / -1;
   text-align: center;
   padding-top: var(--space-xl);
-  border-top: 1px solid rgba(245, 240, 232, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .abonnement-email-label {
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-style: italic;
-  color: rgba(245, 240, 232, 0.65);
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: var(--space-lg);
 }
 
@@ -1433,8 +1430,8 @@ button {
   font-family: var(--font-ui);
   font-size: 0.85rem;
   color: var(--color-cream);
-  background: rgba(245, 240, 232, 0.08);
-  border: 1px solid rgba(245, 240, 232, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-sm);
   padding: 0.75rem 1rem;
   outline: none;
@@ -1442,12 +1439,12 @@ button {
 }
 
 .email-input::placeholder {
-  color: rgba(245, 240, 232, 0.35);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .email-input:focus {
-  border-color: rgba(107, 30, 46, 0.6);
-  background: rgba(245, 240, 232, 0.12);
+  border-color: rgba(212, 175, 55, 0.6);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .btn-email {
@@ -1473,7 +1470,7 @@ button {
 .email-disclaimer {
   font-family: var(--font-ui);
   font-size: 0.72rem;
-  color: rgba(245, 240, 232, 0.35);
+  color: rgba(255, 255, 255, 0.35);
   margin-top: var(--space-sm);
 }
 
@@ -1481,9 +1478,9 @@ button {
    15. Footer
    ============================================================ */
 .footer {
-  background: var(--color-cream);
+  background: #122348;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  border-top: 1px solid rgba(26, 18, 8, 0.1);
+  border-top: 1px solid rgba(11, 29, 58, 0.1);
   padding-top: var(--space-3xl);
   padding-bottom: var(--space-xl);
 }
@@ -1493,7 +1490,7 @@ button {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: var(--space-2xl);
   padding-bottom: var(--space-2xl);
-  border-bottom: 1px solid rgba(26, 18, 8, 0.08);
+  border-bottom: 1px solid rgba(11, 29, 58, 0.08);
 }
 
 .footer-logo {

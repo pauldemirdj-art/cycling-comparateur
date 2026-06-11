@@ -1,3 +1,6 @@
 {
-  "rootDirectory": "sports-media"
+  "rewrites": [
+    { "source": "/", "destination": "/sports-media/index.html" },
+    { "source": "/(.*)", "destination": "/sports-media/$1" }
+  ]
 }

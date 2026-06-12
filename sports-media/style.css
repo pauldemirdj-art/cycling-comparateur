@@ -486,22 +486,9 @@ button {
 .hero-image {
   position: absolute;
   inset: 0;
-  /* Rugby stadium at dusk: dark purples, warm oranges, mist */
-  background:
-    radial-gradient(ellipse at 70% 20%, rgba(255, 160, 60, 0.22) 0%, transparent 55%),
-    radial-gradient(ellipse at 30% 80%, rgba(201, 149, 42, 0.35) 0%, transparent 50%),
-    radial-gradient(ellipse at 60% 60%, rgba(80, 40, 100, 0.28) 0%, transparent 60%),
-    radial-gradient(ellipse at 20% 30%, rgba(40, 20, 60, 0.4) 0%, transparent 55%),
-    linear-gradient(165deg,
-      #1a0d1f 0%,
-      #2e1235 18%,
-      #3d1a28 32%,
-      #1e1530 48%,
-      #2a1a3a 60%,
-      #3b1c20 72%,
-      #1c1018 88%,
-      #140c10 100%
-    );
+  background-image: url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center 30%;
 }
 
 .hero-overlay {
@@ -641,23 +628,21 @@ button {
 }
 
 .card-image--lomu {
-  background:
-    radial-gradient(ellipse at 40% 30%, rgba(180, 100, 20, 0.4) 0%, transparent 60%),
-    linear-gradient(145deg, #1a0a05, #3d1a08, #2a1205, #1d1510);
+  background-image: url("https://images.unsplash.com/photo-1544216717-3bbf52512659?auto=format&fit=crop&w=800&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
 .card-image--france {
-  background:
-    radial-gradient(ellipse at 60% 20%, rgba(30, 60, 120, 0.5) 0%, transparent 55%),
-    radial-gradient(ellipse at 30% 70%, rgba(200, 20, 30, 0.3) 0%, transparent 50%),
-    linear-gradient(150deg, #0d1a2e, #1a2a4a, #0e1520, #1a0d12);
+  background-image: url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
 .card-image--toulon {
-  background:
-    radial-gradient(ellipse at 50% 30%, rgba(201, 149, 42, 0.5) 0%, transparent 55%),
-    radial-gradient(ellipse at 70% 70%, rgba(30, 30, 80, 0.3) 0%, transparent 50%),
-    linear-gradient(160deg, #100510, #2a0a18, #1a0510, #0d0808);
+  background-image: url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=800&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
 .card-body {
@@ -865,16 +850,15 @@ button {
 }
 
 .anatomie-image--allblacks {
-  background:
-    radial-gradient(ellipse at 50% 30%, rgba(0, 80, 0, 0.3) 0%, transparent 60%),
-    linear-gradient(135deg, #050c05, #0a180a, #080e08, #030803);
+  background-image: url("https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
 .anatomie-image--psg {
-  background:
-    radial-gradient(ellipse at 60% 20%, rgba(0, 40, 150, 0.4) 0%, transparent 55%),
-    radial-gradient(ellipse at 30% 70%, rgba(180, 30, 30, 0.25) 0%, transparent 50%),
-    linear-gradient(145deg, #030510, #080c20, #040510, #020408);
+  background-image: url("https://images.unsplash.com/photo-1551958425-7fc8d1cbe67b?auto=format&fit=crop&w=900&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
 .anatomie-body {
@@ -990,29 +974,27 @@ button {
 }
 
 .portrait-image--chabal {
-  background:
-    radial-gradient(ellipse at 50% 15%, rgba(100, 60, 20, 0.5) 0%, transparent 55%),
-    linear-gradient(170deg, #1a0d05, #2e1810, #1a1008, #0d0805);
+  background-image: url("https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=600&q=80");
+  background-size: cover;
+  background-position: center top;
 }
 
 .portrait-image--riner {
-  background:
-    radial-gradient(ellipse at 40% 20%, rgba(20, 80, 180, 0.3) 0%, transparent 50%),
-    linear-gradient(160deg, #0a0d18, #12182e, #0a0f18, #050810);
+  background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
 .portrait-image--mauresmo {
-  background:
-    radial-gradient(ellipse at 60% 20%, rgba(180, 120, 20, 0.3) 0%, transparent 55%),
-    radial-gradient(ellipse at 30% 60%, rgba(30, 80, 30, 0.3) 0%, transparent 50%),
-    linear-gradient(155deg, #080d08, #141a10, #0d1208, #080a05);
+  background-image: url("https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=600&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
 .portrait-image--hinault {
-  background:
-    radial-gradient(ellipse at 50% 20%, rgba(200, 160, 30, 0.3) 0%, transparent 50%),
-    radial-gradient(ellipse at 30% 70%, rgba(30, 30, 80, 0.2) 0%, transparent 50%),
-    linear-gradient(150deg, #100e08, #1e1c10, #141208, #0a0a05);
+  background-image: url("https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80");
+  background-size: cover;
+  background-position: center;
 }
 
 .portrait-body {

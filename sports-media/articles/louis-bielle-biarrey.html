@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Louis Bielle-Biarrey : l'ailier qui a décidé que la ligne d'en-but était trop loin pour s'arrêter — L'Épopée</title>
+  <meta name="description" content="Il court plus vite que les défenseurs ne pensent. Il marque plus que les statistiques ne l'expliquent. Portrait de Louis Bielle-Biarrey, le phénomène bordelais qui est en train de réécrire ce que peut faire un ailier de rugby." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/sports-media/style.css" />
+  <style>
+    /* ── Article-specific styles ── */
+    .article-hero {
+      position: relative;
+      height: clamp(420px, 60vh, 700px);
+      overflow: hidden;
+      background-image: url("https://picsum.photos/seed/bielle-biarrey-hero/1600/900");
+      background-size: cover;
+      background-position: center 30%;
+    }
+    .article-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,6,2,0.88) 0%, rgba(10,6,2,0.4) 50%, rgba(10,6,2,0.1) 100%);
+    }
+    .article-hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-3xl) var(--container-pad) var(--space-2xl);
+      max-width: 860px;
+      margin-inline: auto;
+    }
+    .article-kicker {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-lg);
+    }
+    .article-standfirst {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: rgba(255,255,255,0.82);
+      line-height: 1.65;
+      max-width: 680px;
+      margin-bottom: var(--space-xl);
+    }
+    .article-byline {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      flex-wrap: wrap;
+    }
+    .article-byline strong { color: rgba(255,255,255,0.9); }
+    .article-byline-sep { color: rgba(255,255,255,0.3); }
+
+    /* Article body */
+    .article-wrapper {
+      max-width: 720px;
+      margin-inline: auto;
+      padding: var(--space-3xl) var(--container-pad);
+    }
+    .article-body p {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--color-ink);
+      margin-bottom: var(--space-xl);
+    }
+    .article-body p:first-of-type::first-letter {
+      font-family: var(--font-display);
+      font-size: 4.2em;
+      font-weight: 900;
+      color: var(--color-bordeaux);
+      float: left;
+      line-height: 0.72;
+      margin-right: 0.08em;
+      margin-top: 0.1em;
+    }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.25;
+      margin-top: var(--space-3xl);
+      margin-bottom: var(--space-lg);
+      letter-spacing: -0.01em;
+    }
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-top: var(--space-2xl);
+      margin-bottom: var(--space-md);
+    }
+
+    /* Pull quote */
+    .article-pullquote {
+      border-left: 3px solid var(--color-bordeaux);
+      padding: var(--space-lg) var(--space-xl);
+      margin: var(--space-2xl) 0;
+      background: var(--color-cream-dark);
+    }
+    .article-pullquote p {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-style: italic;
+      color: var(--color-ink);
+      line-height: 1.5;
+      margin-bottom: var(--space-sm) !important;
+    }
+    .article-pullquote cite {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    /* Inline image */
+    .article-image {
+      margin: var(--space-2xl) 0;
+    }
+    .article-image img,
+    .article-image .img-placeholder {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+      background-image: url("https://picsum.photos/seed/bielle-biarrey-action/900/420");
+      background-size: cover;
+      background-position: center;
+    }
+    .article-image figcaption {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      margin-top: var(--space-sm);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-cream-darker);
+    }
+
+    /* Stats box */
+    .article-stats {
+      background: var(--color-cream-dark);
+      border: 1px solid var(--color-cream-darker);
+      padding: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+    .article-stats-title {
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      margin-bottom: var(--space-lg);
+    }
+    .article-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: var(--space-lg);
+    }
+    .stat-item { text-align: center; }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--color-bordeaux);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      color: var(--color-ink-mid);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: var(--space-xs);
+      display: block;
+    }
+
+    /* Article footer */
+    .article-footer {
+      border-top: 1px solid var(--color-cream-darker);
+      margin-top: var(--space-3xl);
+      padding-top: var(--space-xl);
+    }
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+    }
+    .article-tag {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      border: 1px solid var(--color-bordeaux);
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+    }
+    .article-author-bio {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: flex-start;
+      background: var(--color-cream-dark);
+      padding: var(--space-xl);
+    }
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-image: url("https://picsum.photos/seed/author-antoine/56/56");
+      background-size: cover;
+      flex-shrink: 0;
+    }
+    .author-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ink);
+    }
+    .author-desc {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--color-ink-mid);
+      line-height: 1.6;
+      margin-top: 0.25rem;
+    }
+
+    /* Related articles */
+    .related {
+      background: var(--color-cream-dark);
+      padding: var(--space-3xl) var(--container-pad);
+    }
+    .related-inner {
+      max-width: 860px;
+      margin-inline: auto;
+    }
+    .related-title {
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      margin-bottom: var(--space-xl);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-xl);
+    }
+    .related-card {
+      background: #fff;
+      border: 1px solid var(--color-cream-darker);
+      overflow: hidden;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .related-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    .related-card-img {
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+    }
+    .related-card-body { padding: var(--space-lg); }
+    .related-card-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.35;
+      margin-bottom: var(--space-sm);
+    }
+    .related-card-title a { color: inherit; text-decoration: none; transition: color var(--transition-base); }
+    .related-card-title a:hover { color: var(--color-bordeaux); }
+    .related-card-meta {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      color: var(--color-ink-muted);
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      padding: var(--space-md) var(--container-pad);
+      border-bottom: 1px solid var(--color-cream-darker);
+      display: block;
+      max-width: 100%;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.9rem; }
+      .article-wrapper { padding: var(--space-2xl) var(--container-pad); }
+      .article-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <div class="top-bar">
+    <span>Le sport a toujours eu ses épopées. On les raconte.</span>
+  </div>
+
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="/sports-media/index.html" class="nav-logo" aria-label="L'Épopée — accueil">
+        <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" fill="#C9952A" opacity="0.15"/>
+          <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#C9952A" stroke-width="1.4"/>
+          <path d="M10.5 28 Q16 26 21.5 28" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+        </svg>
+        <span class="nav-logo-text">L'Épopée</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/sports-media/index.html#portraits" class="nav-link">Portraits</a></li>
+        <li><a href="/sports-media/index.html#anatomies" class="nav-link">Anatomies</a></li>
+        <li><a href="/sports-media/index.html#enquetes" class="nav-link">Enquêtes</a></li>
+        <li><a href="/sports-media/index.html#epopees" class="nav-link">Épopées</a></li>
+        <li><a href="/sports-media/index.html#about" class="nav-link">À propos</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="/sports-media/index.html#abonnement" class="btn-subscribe">S'abonner</a>
+      </div>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <a href="/sports-media/index.html" class="back-link">← Retour à L'Épopée</a>
+
+  <!-- HERO -->
+  <header class="article-hero">
+    <div class="article-hero-overlay"></div>
+    <div class="article-hero-content">
+      <div class="article-kicker">
+        <span class="badge badge--portrait">Portrait</span>
+        <span class="badge badge--epopee">Rugby</span>
+      </div>
+      <h1 class="article-title">Louis Bielle-Biarrey : l'ailier qui a décidé que la ligne d'en-but était trop loin pour s'arrêter</h1>
+      <p class="article-standfirst">À 22 ans, il est déjà l'un des ailiers les plus dévastateurs du rugby mondial. Mais derrière les statistiques et les essais insensés, il y a une histoire plus complexe — celle d'un garçon de Bordeaux qui a appris très tôt que la vitesse seule ne suffit pas.</p>
+      <div class="article-byline">
+        <span>Par <strong>Antoine Ferreira</strong></span>
+        <span class="article-byline-sep">·</span>
+        <time datetime="2026-06-12">12 juin 2026</time>
+        <span class="article-byline-sep">·</span>
+        <span>16 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTICLE BODY -->
+  <main>
+    <article class="article-wrapper">
+      <div class="article-body">
+
+        <p>Il y a des joueurs qu'on regarde courir et qu'on admire. Et puis il y a Louis Bielle-Biarrey, qu'on regarde courir et qu'on ne comprend pas. Pas parce qu'il fait quelque chose de mystérieux — au contraire, c'est d'une simplicité désarmante : il prend le ballon, il accélère, et les défenseurs internationaux deviennent soudainement des spectateurs. Comme si la physique, pour lui, fonctionnait avec un léger décalage vers l'impossible.</p>
+
+        <p>En cette saison 2025-2026, l'ailier de l'Union Bordeaux Bègles et du XV de France a inscrit des essais qui ont fait le tour du monde. Pas des essais de chance, ni des essais de simple vitesse. Des essais construits dans l'espace d'un battement de cils, dans l'intervalle entre deux intentions défensives, dans cette fraction de seconde où la décision d'un ailier d'élite sépare le génie de l'ordinaire. Mais l'histoire de Bielle-Biarrey n'est pas que celle d'un talent tombé du ciel. C'est aussi l'histoire d'un travail, d'un choix, et d'une question posée très tôt : comment devient-on vraiment dangereux ?</p>
+
+        <div class="article-stats">
+          <div class="article-stats-title">Bielle-Biarrey en chiffres — Saison 2025-2026</div>
+          <div class="article-stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">18</span>
+              <span class="stat-label">Essais en Top 14</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Essais en Champions Cup</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">12</span>
+              <span class="stat-label">Sélections XV de France</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">22</span>
+              <span class="stat-label">Ans</span>
+            </div>
+          </div>
+        </div>
+
+        <h2>Bordeaux comme origine, pas comme destin</h2>
+
+        <p>Louis Bielle-Biarrey est né à Bordeaux en 2002, dans une ville où le rugby est une religion civile autant qu'un sport. L'UBB, club formateur, l'a pris en charge très jeune. Ce n'est pas rare dans le rugby professionnel français. Ce qui est plus rare, c'est la façon dont il a traversé ce système sans en devenir le produit générique. Beaucoup de jeunes ailiers formés dans les grandes académies sortent avec les mêmes qualités — vitesse, explosivité, capacité à déborder. Bielle-Biarrey est sorti avec quelque chose de plus difficile à enseigner : l'instinct de faire mal.</p>
+
+        <p>Son formateur à l'UBB, Jean-Paul Doussain, qui l'a côtoyé en équipe espoir, décrit un joueur «qui ne regardait jamais les touches comme des limites, mais comme des informations». Une façon de dire que là où d'autres voient un couloir, Bielle-Biarrey voit une conversation entre l'espace disponible et le temps qu'il lui reste. C'est une différence de nature, pas de degré.</p>
+
+        <figure class="article-image">
+          <div class="img-placeholder" role="img" aria-label="Louis Bielle-Biarrey en action avec l'UBB"></div>
+          <figcaption>Louis Bielle-Biarrey lors d'un match de Top 14 avec l'Union Bordeaux Bègles, saison 2025-2026.</figcaption>
+        </figure>
+
+        <h2>La vitesse comme langage, pas comme argument</h2>
+
+        <p>Le problème avec les joueurs très rapides au rugby, c'est que leur vitesse devient rapidement leur seule carte. Les défenses le savent, s'organisent en conséquence, éloignent la balle de l'ailier rapide et le neutralisent par l'ennui. Bielle-Biarrey a compris ce piège avant même d'y tomber. Sa vitesse est réelle — on parle d'un temps de course sur 40 mètres qui fait pâlir des sprinters — mais c'est son jeu à l'arrêt qui le rend vraiment dangereux. Ses appuis courts, sa capacité à changer de direction sans perte de vitesse, son sens du moment pour demander le ballon.</p>
+
+        <div class="article-pullquote">
+          <p>« Louis ne court pas vite vers l'avant. Il court vite vers l'espace qui n'existe pas encore. C'est très différent. »</p>
+          <cite>— Un préparateur physique de l'UBB</cite>
+        </div>
+
+        <p>Ce que révèle l'analyse vidéo de ses essais, c'est une constante troublante : dans les trois secondes qui précèdent chaque essai, Bielle-Biarrey ne regarde presque jamais le ballon. Il regarde la défense. Il lit les trajectoires, anticipe les couvertures, calcule les angles avant même que la décision de passe ne soit prise par son demi de mêlée. Quand le ballon arrive dans ses mains, il sait déjà où il va. Les défenseurs, eux, découvrent où il va une demi-seconde trop tard.</p>
+
+        <h2>Le XV de France : entrer dans un monde différent</h2>
+
+        <p>Sa première sélection avec le XV de France est arrivée comme une évidence pour les observateurs et comme une surprise pour lui. «Je pensais que j'avais encore du chemin à faire», a-t-il confié dans l'une de ses rares interviews longues. «Je n'avais pas encore vécu assez de finales perdues pour comprendre ce que représentait le maillot bleu.» C'est une phrase d'une maturité inhabituelle pour un joueur de 21 ans, et elle dit quelque chose d'essentiel sur la façon dont Bielle-Biarrey conçoit le sport : comme une accumulation d'expériences, pas comme une collection de performances.</p>
+
+        <p>Sous Fabien Galthié, il a trouvé un système qui l'utilise à la fois comme finisseur et comme perturbateur. Le sélectionneur a eu l'intelligence de ne pas le cantonner à l'aile droite, mais de lui donner des libertés de mouvement qui désorganisent les défenses adverses. Quand Bielle-Biarrey peut se retrouver en position de premier centre dans certaines situations de jeu, c'est un cauchemar défensif — parce que les défenses ne savent pas s'il va fixer, déborder ou passer.</p>
+
+        <figure class="article-image" style="background-image: url('https://picsum.photos/seed/france-rugby-match/900/420'); background-size: cover; background-position: center; height: 420px; margin: var(--space-2xl) 0;">
+        </figure>
+        <p style="font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); margin-top: calc(-1 * var(--space-xl)); margin-bottom: var(--space-2xl); padding-top: var(--space-sm); border-top: 1px solid var(--color-cream-darker);">Bielle-Biarrey lors du Tournoi des Six Nations 2026 contre l'Angleterre.</p>
+
+        <h2>Ce que Bielle-Biarrey dit du rugby de demain</h2>
+
+        <p>Il y a quelque chose de symptomatique dans l'émergence de Bielle-Biarrey au plus haut niveau mondial. Son profil — ailier technique, rapide mais pas monodimensionnel, capable de participer au jeu général comme de finir — correspond exactement à ce que le rugby de haut niveau cherche depuis une décennie. Le sport s'est profondément transformé : les défenses sont plus organisées, les espaces plus rares, les fenêtres de jeu plus courtes. Pour qu'un ailier existe encore dans ce contexte, il doit être beaucoup plus qu'un sprinter.</p>
+
+        <p>Bielle-Biarrey est la réponse vivante à cette évolution. Son jeu suggère que l'ailier du futur n'est pas celui qui court le plus vite, mais celui qui pense le plus vite. Et dans cette course-là — la course de l'intelligence — il est pour l'instant sans concurrence directe en France.</p>
+
+        <div class="article-pullquote">
+          <p>« Dans dix ans, on dira peut-être que Bielle-Biarrey a changé la façon dont on évalue un ailier. Pas par ses essais — par les essais qu'il a rendus possibles pour les autres. »</p>
+          <cite>— Observateur technique, Fédération Française de Rugby</cite>
+        </div>
+
+        <h2>L'homme derrière l'ailier</h2>
+
+        <p>Rencontrer Louis Bielle-Biarrey en dehors du terrain, c'est croiser quelqu'un d'une discrétion presque déconcertante pour quelqu'un de son niveau de visibilité. Pas de grande déclaration, pas de show médiatique. Il parle de sa famille, du Pays Basque où il passe ses vacances, de la musique — il joue de la guitare, a-t-on appris, avec une régularité qui force le respect chez un joueur de son calendrier. Et il parle du rugby avec une précision chirurgicale qui trahit une intimité profonde avec son sport.</p>
+
+        <p>Ce qu'il a compris, et qu'il formule avec une clarté rare, c'est que la différence entre un bon ailier et un ailier exceptionnel ne se mesure pas dans les matchs gagnés. Elle se mesure dans les matchs perdus — dans la façon dont on revient, dont on apprend, dont on transforme la défaite en information utilisable. Bielle-Biarrey a perdu des finales. Il en a tiré des leçons que ses statistiques ne racontent pas, mais que son jeu, de semaine en semaine, révèle.</p>
+
+        <p>Il n'a que 22 ans. Et il a déjà l'air de quelqu'un qui sait exactement où il va.</p>
+
+      </div>
+
+      <footer class="article-footer">
+        <div class="article-tags">
+          <span class="article-tag">Rugby</span>
+          <span class="article-tag">Portrait</span>
+          <span class="article-tag">XV de France</span>
+          <span class="article-tag">Top 14</span>
+          <span class="article-tag">UBB</span>
+          <span class="article-tag">Ailier</span>
+        </div>
+        <div class="article-author-bio">
+          <div class="author-avatar"></div>
+          <div>
+            <div class="author-name">Antoine Ferreira</div>
+            <p class="author-desc">Journaliste rugby à L'Épopée depuis 2021. Ancien chroniqueur à So Foot, il couvre le rugby professionnel français et international avec une obsession pour les mécanismes tactiques et les trajectoires humaines.</p>
+          </div>
+        </div>
+      </footer>
+    </article>
+
+    <!-- RELATED ARTICLES -->
+    <section class="related">
+      <div class="related-inner">
+        <h2 class="related-title">À lire aussi</h2>
+        <div class="related-grid">
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/lomu-portrait/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="#">Jonah Lomu, l'homme qui a changé le rugby malgré lui</a></h3>
+              <div class="related-card-meta">Portrait · 18 min</div>
+            </div>
+          </div>
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/xv-france-finale/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="#">Pourquoi le XV de France perd toujours les finales qu'il mérite de gagner</a></h3>
+              <div class="related-card-meta">Anatomie · 14 min</div>
+            </div>
+          </div>
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/toulouse-rugby/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="#">Comment Toulouse a construit une dynastie en redéfinissant l'identité du rugby français</a></h3>
+              <div class="related-card-meta">Épopée · 22 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/sports-media/index.html" class="footer-logo">
+            <svg class="footer-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" fill="#C9952A" opacity="0.15"/>
+              <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+              <line x1="16" y1="23" x2="16" y2="29" stroke="#C9952A" stroke-width="1.4"/>
+              <path d="M10.5 28 Q16 26 21.5 28" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+            </svg>
+            <span class="footer-logo-text">L'Épopée</span>
+          </a>
+          <p class="footer-tagline">Le sport mérite mieux que des dépêches</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Rubriques</h4>
+          <ul class="footer-links">
+            <li><a href="/sports-media/index.html#portraits">Portraits</a></li>
+            <li><a href="/sports-media/index.html#anatomies">Anatomies</a></li>
+            <li><a href="/sports-media/index.html#enquetes">Enquêtes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">À propos</h4>
+          <ul class="footer-links">
+            <li><a href="#">Notre manifeste</a></li>
+            <li><a href="#">La rédaction</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 L'Épopée — Journalisme de fond sportif.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/sports-media/script.js"></script>
+</body>
+</html>

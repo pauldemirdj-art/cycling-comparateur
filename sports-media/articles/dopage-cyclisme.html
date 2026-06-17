@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le dopage au cyclisme : ce que l'affaire Armstrong n'a pas révélé — L'Épopée</title>
+  <meta name="description" content="La confession d'Armstrong en 2013 a donné l'impression que l'ère du dopage était close. Elle n'avait révélé qu'une fraction de la vérité. Enquête sur le système que personne ne voulait voir." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/sports-media/style.css" />
+  <style>
+    /* ── Article-specific styles ── */
+    .article-hero {
+      position: relative;
+      height: clamp(420px, 60vh, 700px);
+      overflow: hidden;
+      background-image: url("https://picsum.photos/seed/cycling-race-peloton/1600/900");
+      background-size: cover;
+      background-position: center 30%;
+    }
+    .article-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,6,2,0.88) 0%, rgba(10,6,2,0.4) 50%, rgba(10,6,2,0.1) 100%);
+    }
+    .article-hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-3xl) var(--container-pad) var(--space-2xl);
+      max-width: 860px;
+      margin-inline: auto;
+    }
+    .article-kicker {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-lg);
+    }
+    .article-standfirst {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: rgba(255,255,255,0.82);
+      line-height: 1.65;
+      max-width: 680px;
+      margin-bottom: var(--space-xl);
+    }
+    .article-byline {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      flex-wrap: wrap;
+    }
+    .article-byline strong { color: rgba(255,255,255,0.9); }
+    .article-byline-sep { color: rgba(255,255,255,0.3); }
+
+    /* Article body */
+    .article-wrapper {
+      max-width: 720px;
+      margin-inline: auto;
+      padding: var(--space-3xl) var(--container-pad);
+    }
+    .article-body p {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--color-ink);
+      margin-bottom: var(--space-xl);
+    }
+    .article-body p:first-of-type::first-letter {
+      font-family: var(--font-display);
+      font-size: 4.2em;
+      font-weight: 900;
+      color: var(--color-bordeaux);
+      float: left;
+      line-height: 0.72;
+      margin-right: 0.08em;
+      margin-top: 0.1em;
+    }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.25;
+      margin-top: var(--space-3xl);
+      margin-bottom: var(--space-lg);
+      letter-spacing: -0.01em;
+    }
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-top: var(--space-2xl);
+      margin-bottom: var(--space-md);
+    }
+
+    /* Pull quote */
+    .article-pullquote {
+      border-left: 3px solid var(--color-bordeaux);
+      padding: var(--space-lg) var(--space-xl);
+      margin: var(--space-2xl) 0;
+      background: var(--color-cream-dark);
+    }
+    .article-pullquote p {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-style: italic;
+      color: var(--color-ink);
+      line-height: 1.5;
+      margin-bottom: var(--space-sm) !important;
+    }
+    .article-pullquote cite {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    /* Inline image */
+    .article-image {
+      margin: var(--space-2xl) 0;
+    }
+    .article-image img,
+    .article-image .img-placeholder {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+      background-image: url("https://picsum.photos/seed/cycling-race-peloton-action/900/420");
+      background-size: cover;
+      background-position: center;
+    }
+    .article-image figcaption {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      margin-top: var(--space-sm);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-cream-darker);
+    }
+
+    /* Stats box */
+    .article-stats {
+      background: var(--color-cream-dark);
+      border: 1px solid var(--color-cream-darker);
+      padding: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+    .article-stats-title {
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      margin-bottom: var(--space-lg);
+    }
+    .article-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: var(--space-lg);
+    }
+    .stat-item { text-align: center; }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--color-bordeaux);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      color: var(--color-ink-mid);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: var(--space-xs);
+      display: block;
+    }
+
+    /* Article footer */
+    .article-footer {
+      border-top: 1px solid var(--color-cream-darker);
+      margin-top: var(--space-3xl);
+      padding-top: var(--space-xl);
+    }
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+    }
+    .article-tag {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      border: 1px solid var(--color-bordeaux);
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+    }
+    .article-author-bio {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: flex-start;
+      background: var(--color-cream-dark);
+      padding: var(--space-xl);
+    }
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-image: url("https://picsum.photos/seed/author-jeanbaptiste/56/56");
+      background-size: cover;
+      flex-shrink: 0;
+    }
+    .author-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ink);
+    }
+    .author-desc {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--color-ink-mid);
+      line-height: 1.6;
+      margin-top: 0.25rem;
+    }
+
+    /* Related articles */
+    .related {
+      background: var(--color-cream-dark);
+      padding: var(--space-3xl) var(--container-pad);
+    }
+    .related-inner {
+      max-width: 860px;
+      margin-inline: auto;
+    }
+    .related-title {
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      margin-bottom: var(--space-xl);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-xl);
+    }
+    .related-card {
+      background: #fff;
+      border: 1px solid var(--color-cream-darker);
+      overflow: hidden;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .related-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    .related-card-img {
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+    }
+    .related-card-body { padding: var(--space-lg); }
+    .related-card-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.35;
+      margin-bottom: var(--space-sm);
+    }
+    .related-card-title a { color: inherit; text-decoration: none; transition: color var(--transition-base); }
+    .related-card-title a:hover { color: var(--color-bordeaux); }
+    .related-card-meta {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      color: var(--color-ink-muted);
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      padding: var(--space-md) var(--container-pad);
+      border-bottom: 1px solid var(--color-cream-darker);
+      display: block;
+      max-width: 100%;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.9rem; }
+      .article-wrapper { padding: var(--space-2xl) var(--container-pad); }
+      .article-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <div class="top-bar">
+    <span>Le sport a toujours eu ses épopées. On les raconte.</span>
+  </div>
+
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="/sports-media/index.html" class="nav-logo" aria-label="L'Épopée — accueil">
+        <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" fill="#C9952A" opacity="0.15"/>
+          <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#C9952A" stroke-width="1.4"/>
+          <path d="M10.5 28 Q16 26 21.5 28" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+        </svg>
+        <span class="nav-logo-text">L'Épopée</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/sports-media/index.html#portraits" class="nav-link">Portraits</a></li>
+        <li><a href="/sports-media/index.html#anatomies" class="nav-link">Anatomies</a></li>
+        <li><a href="/sports-media/index.html#enquetes" class="nav-link">Enquêtes</a></li>
+        <li><a href="/sports-media/index.html#epopees" class="nav-link">Épopées</a></li>
+        <li><a href="/sports-media/index.html#about" class="nav-link">À propos</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="/sports-media/index.html#abonnement" class="btn-subscribe">S'abonner</a>
+      </div>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <a href="/sports-media/index.html" class="back-link">← Retour à L'Épopée</a>
+
+  <!-- HERO -->
+  <header class="article-hero">
+    <div class="article-hero-overlay"></div>
+    <div class="article-hero-content">
+      <div class="article-kicker">
+        <span class="badge badge--enquete">Enquête</span>
+        <span class="badge badge--epopee">Cyclisme</span>
+      </div>
+      <h1 class="article-title">Le dopage au cyclisme : ce que l'affaire Armstrong n'a pas révélé</h1>
+      <p class="article-standfirst">En janvier 2013, Lance Armstrong avoue à Oprah Winfrey ce que tout le monde savait. Le monde du cyclisme pousse un soupir de soulagement : un coupable désigné, un bouc émissaire parfait, et un système entier qui peut continuer à regarder ailleurs.</p>
+      <div class="article-byline">
+        <span>Par <strong>Jean-Baptiste Moreau</strong></span>
+        <span class="article-byline-sep">·</span>
+        <time datetime="2026-06-10">10 juin 2026</time>
+        <span class="article-byline-sep">·</span>
+        <span>31 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTICLE BODY -->
+  <main>
+    <article class="article-wrapper">
+      <div class="article-body">
+
+        <p>Lance Armstrong n'a pas inventé le dopage dans le cyclisme. Il l'a perfectionné, industrialisé, et surtout défendu avec une agressivité qui a fini par devenir son propre aveu. Mais quand il s'est finalement assis face à Oprah Winfrey en janvier 2013 pour confesser ce que des années de journalisme d'investigation avaient établi, quelque chose de pervers s'est produit : l'affaire Armstrong est devenue la clôture narrative d'une histoire qui, en réalité, ne faisait que commencer à être comprise.</p>
+
+        <p>Car le dopage dans le cyclisme professionnel des années 1990 et 2000 n'est pas l'histoire d'un homme, ni même d'une équipe. C'est l'histoire d'un sport entier qui a choisi, à tous les niveaux — coureurs, directeurs sportifs, médecins, dirigeants, institutions — de regarder ailleurs pendant que l'EPO transformait le peloton en quelque chose qui n'avait plus grand-chose à voir avec un sport humain.</p>
+
+        <div class="article-stats">
+          <div class="article-stats-title">Le dopage dans le cyclisme — repères chiffrés</div>
+          <div class="article-stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Tours de France retirés à Armstrong</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">200+</span>
+              <span class="stat-label">Coureurs sanctionnés 1998–2013</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">11</span>
+              <span class="stat-label">Tours gagnés par des coureurs impliqués</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2008</span>
+              <span class="stat-label">Introduction du passeport biologique</span>
+            </div>
+          </div>
+        </div>
+
+        <h2>L'ère EPO : quand tout le peloton volait</h2>
+
+        <p>L'érythropoïétine — l'EPO — est apparue dans le peloton professionnel à la fin des années 1980. Son effet est simple et radical : en stimulant la production de globules rouges, elle augmente la capacité de transport de l'oxygène dans le sang, améliorant l'endurance de manière spectaculaire. Dans un sport comme le cyclisme, où les différences entre champions et challengers se jouent à quelques dizaines de secondes sur trois semaines de course, l'EPO n'était pas un avantage. C'était une condition de survie dans le peloton.</p>
+
+        <p>Les témoignages de coureurs de l'époque, recueillis dans des procédures judiciaires, des autobiographies tardives et des documentaires, convergent tous vers le même constat : dans les années 1990, refuser l'EPO, c'était accepter de perdre son contrat. Pas de gagner moins. De disparaître. Les équipes qui ne dopaient pas leurs coureurs perdaient des sponsors, des contrats télévisés, des chances de podium. L'EPO n'était pas une tricherie individuelle. C'était le standard industriel d'un secteur entier.</p>
+
+        <div class="article-pullquote">
+          <p>« On ne m'a jamais demandé si je voulais me doper. On m'a expliqué comment ça marchait, ce que ça coûtait, et ce que ça rapportait. C'était une conversation professionnelle. »</p>
+          <cite>— Coureur professionnel des années 1990, témoignage anonyme, rapport USADA 2012</cite>
+        </div>
+
+        <p>Ce contexte est fondamental pour comprendre pourquoi la focalisation sur Armstrong — aussi méritée soit-elle — a faussé la lecture de l'histoire. Armstrong dopait. Mais ses adversaires sur le Tour de France aussi. Les équipes qui l'ont battu avant sa domination dopaient. Les équipes qui ont dominé après lui dopaient. Isoler Armstrong comme le grand méchant d'une époque permet de ne pas poser la vraie question : comment un système entier a-t-il pu fonctionner ainsi pendant vingt ans ?</p>
+
+        <h2>L'affaire Festina 1998 : le premier tremblement de terre</h2>
+
+        <p>Le Tour de France 1998 restera dans l'histoire comme l'édition qui aurait dû tout changer. Le 8 juillet, à Neuville-en-Ferrain, les douaniers français arrêtent Willy Voet, soigneur de l'équipe Festina, avec dans sa voiture 234 doses d'EPO, 80 doses d'hormone de croissance, 160 doses de testostérone et une quantité astronomique d'autres produits dopants. C'est la première fois que le trafic de dopage organisé dans le peloton s'étale en pleine lumière, saisie physique à l'appui.</p>
+
+        <p>La réaction du cyclisme professionnel aurait pu être de saisir cette occasion pour un nettoyage radical. Elle ne le fut pas. L'équipe Festina est exclue du Tour, son directeur sportif Bruno Roussel avoue un programme de dopage structuré. Richard Virenque, star française de l'équipe et favori du public, nie obstinément pendant des années avant d'avouer en 2000. La leçon que le cyclisme a tirée de Festina n'était pas "arrêtons de doper". C'était "soyons plus discrets".</p>
+
+        <figure class="article-image">
+          <div class="img-placeholder" role="img" aria-label="Le peloton du Tour de France dans les années 2000"></div>
+          <figcaption>Le peloton professionnel des années 1990-2000 : des performances extraordinaires construites sur un secret que tout le monde partageait.</figcaption>
+        </figure>
+
+        <h2>L'UCI et la complicité institutionnelle</h2>
+
+        <p>L'Union Cycliste Internationale, sous la présidence de Hein Verbruggen de 1991 à 2005, joue un rôle que l'histoire officielle du cyclisme préfère encore minimiser. Plusieurs procédures judiciaires et enquêtes journalistiques ont établi que des résultats de tests positifs ont été gérés discrètement, que des amendes ont remplacé des suspensions, que des champions ont bénéficié de "dispenses thérapeutiques" accordées rétroactivement. L'UCI n'était pas neutre dans le système de dopage de l'époque. Elle en était, à tout le moins, la gardienne complaisante.</p>
+
+        <div class="article-pullquote">
+          <p>« Le problème avec le dopage dans le cyclisme, c'est que tout le monde savait. Les journalistes savaient. Les organisateurs savaient. L'UCI savait. Tout le monde a choisi le spectacle. »</p>
+          <cite>— Jean-Baptiste Moreau, L'Épopée</cite>
+        </div>
+
+        <p>Le rapport de l'Agence Mondiale Antidopage commandé après les révélations Armstrong a pudiquement conclu que l'UCI avait "manqué d'indépendance" dans la gestion des contrôles antidopage. C'est une formulation diplomatique pour décrire ce que des dizaines de témoins décrivent comme une protection active des coureurs vedettes, une suppression de résultats compromettants, et une gestion des scandales guidée par les intérêts financiers du sport plutôt que par son intégrité.</p>
+
+        <h2>Le passeport biologique et l'ère du micro-dopage</h2>
+
+        <p>L'introduction du passeport biologique en 2008 a marqué une rupture réelle. En suivant les valeurs hématologiques d'un coureur sur la durée, plutôt qu'en cherchant une substance spécifique dans un échantillon ponctuel, le passeport a rendu les anciennes méthodes de dopage massif beaucoup plus risquées. Les performances se sont effondrées sur les grandes ascensions. Le cyclisme a recommencé à ressembler à un sport humain.</p>
+
+        <p>Mais conclure que le dopage a disparu serait naïf. Les méthodes ont évolué vers ce que les experts appellent le "micro-dopage" : des doses infimes, sous les seuils de détection, administrées avec une précision médicale qui maximise l'effet tout en minimisant le risque de contrôle positif. S'y ajoutent la manipulation de l'altitude — stages en hauteur combinés à des techniques d'acclimatation aux effets similaires à l'EPO — et des produits de récupération qui accélèrent la régénération musculaire sans entrer dans la liste des interdictions.</p>
+
+        <div class="article-pullquote">
+          <p>« Le dopage n'a pas disparu. Il est devenu tellement sophistiqué qu'on ne sait plus très bien où finit la préparation légale et où commence la triche. C'est le but. »</p>
+          <cite>— Chercheur en pharmacologie sportive, université de Lausanne</cite>
+        </div>
+
+        <p>Il y a aussi une question que personne n'ose poser clairement : parmi les coureurs qui n'ont jamais été contrôlés positifs à l'ère Armstrong, combien étaient réellement propres ? L'analyse statistique des performances de l'époque — montées chronométrées, puissances mesurées, comparaisons avec les décennies précédentes et suivantes — révèle des anomalies que les experts de la physiologie sportive peinent à expliquer par l'entraînement seul. Certains coureurs "clean" de l'ère EPO l'étaient peut-être simplement parce que leur méthode de dopage était meilleure, pas parce qu'ils n'en utilisaient pas.</p>
+
+      </div>
+
+      <footer class="article-footer">
+        <div class="article-tags">
+          <span class="article-tag">Cyclisme</span>
+          <span class="article-tag">Enquête</span>
+          <span class="article-tag">Dopage</span>
+          <span class="article-tag">Armstrong</span>
+          <span class="article-tag">Tour de France</span>
+          <span class="article-tag">EPO</span>
+        </div>
+        <div class="article-author-bio">
+          <div class="author-avatar"></div>
+          <div>
+            <div class="author-name">Jean-Baptiste Moreau</div>
+            <p class="author-desc">Grand reporter à L'Épopée, spécialiste du cyclisme et des affaires de corruption sportive. Il a suivi dix Tours de France et collaboré à plusieurs enquêtes primées sur les dérives du sport professionnel européen.</p>
+          </div>
+        </div>
+      </footer>
+    </article>
+
+    <!-- RELATED ARTICLES -->
+    <section class="related">
+      <div class="related-inner">
+        <h2 class="related-title">À lire aussi</h2>
+        <div class="related-grid">
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/psg-champions-league/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="/sports-media/articles/psg-ligue-des-champions.html">Pourquoi le Paris Saint-Germain n'a jamais su gagner la Ligue des Champions</a></h3>
+              <div class="related-card-meta">Anatomie · 19 min</div>
+            </div>
+          </div>
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/agents-rugby-pro/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="/sports-media/articles/agents-rugby.html">Comment les agents ont pris le contrôle du rugby professionnel</a></h3>
+              <div class="related-card-meta">Enquête · 24 min</div>
+            </div>
+          </div>
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/bielle-biarrey-hero/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="/sports-media/articles/louis-bielle-biarrey.html">Louis Bielle-Biarrey : l'ailier qui a décidé que la ligne d'en-but était trop loin pour s'arrêter</a></h3>
+              <div class="related-card-meta">Portrait · 16 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/sports-media/index.html" class="footer-logo">
+            <svg class="footer-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" fill="#C9952A" opacity="0.15"/>
+              <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+              <line x1="16" y1="23" x2="16" y2="29" stroke="#C9952A" stroke-width="1.4"/>
+              <path d="M10.5 28 Q16 26 21.5 28" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+            </svg>
+            <span class="footer-logo-text">L'Épopée</span>
+          </a>
+          <p class="footer-tagline">Le sport mérite mieux que des dépêches</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Rubriques</h4>
+          <ul class="footer-links">
+            <li><a href="/sports-media/index.html#portraits">Portraits</a></li>
+            <li><a href="/sports-media/index.html#anatomies">Anatomies</a></li>
+            <li><a href="/sports-media/index.html#enquetes">Enquêtes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">À propos</h4>
+          <ul class="footer-links">
+            <li><a href="#">Notre manifeste</a></li>
+            <li><a href="#">La rédaction</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 L'Épopée — Journalisme de fond sportif.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/sports-media/script.js"></script>
+</body>
+</html>

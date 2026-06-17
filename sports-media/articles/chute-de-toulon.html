@@ -4,18 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La chute de Toulon : autopsie d'un empire qui s'est effondré — L'Épopée</title>
-  <meta name="description" content="Trois Coupes d'Europe, des stars mondiales, et puis l'effondrement financier. Comment le RC Toulon de Mourad Boudjellal a construit le club le plus spectaculaire du rugby français — et pourquoi il n'a pas pu tenir." />
+  <meta name="description" content="Trois Coupes d'Europe en trois ans. Des stars mondiales à chaque poste. Un projet sportif qui semblait indestructible. Et puis le silence, la relégation, les dettes. Comment un club peut-il tout avoir et tout perdre en l'espace d'une décennie ?" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/sports-media/style.css" />
   <style>
-    /* ── Article-specific styles ── */
     .article-hero {
       position: relative;
       height: clamp(420px, 60vh, 700px);
       overflow: hidden;
-      background-image: url("https://picsum.photos/seed/toulon-stade-mayol/1600/900");
+      background-image: url("https://picsum.photos/seed/toulon-chute/1600/900");
       background-size: cover;
       background-position: center 30%;
     }
@@ -26,317 +25,60 @@
     }
     .article-hero-content {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 0; left: 0; right: 0;
       padding: var(--space-3xl) var(--container-pad) var(--space-2xl);
       max-width: 860px;
       margin-inline: auto;
     }
-    .article-kicker {
-      display: flex;
-      align-items: center;
-      gap: var(--space-md);
-      margin-bottom: var(--space-lg);
-    }
-    .article-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.1;
-      color: #fff;
-      letter-spacing: -0.02em;
-      margin-bottom: var(--space-lg);
-    }
-    .article-standfirst {
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-      color: rgba(255,255,255,0.82);
-      line-height: 1.65;
-      max-width: 680px;
-      margin-bottom: var(--space-xl);
-    }
-    .article-byline {
-      display: flex;
-      align-items: center;
-      gap: var(--space-lg);
-      font-family: var(--font-ui);
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.65);
-      flex-wrap: wrap;
-    }
+    .article-kicker { display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-lg); }
+    .article-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.1; color: #fff; letter-spacing: -0.02em; margin-bottom: var(--space-lg); }
+    .article-standfirst { font-family: var(--font-body); font-size: clamp(1rem, 1.8vw, 1.2rem); color: rgba(255,255,255,0.82); line-height: 1.65; max-width: 680px; margin-bottom: var(--space-xl); }
+    .article-byline { display: flex; align-items: center; gap: var(--space-lg); font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.65); flex-wrap: wrap; }
     .article-byline strong { color: rgba(255,255,255,0.9); }
     .article-byline-sep { color: rgba(255,255,255,0.3); }
-
-    /* Article body */
-    .article-wrapper {
-      max-width: 720px;
-      margin-inline: auto;
-      padding: var(--space-3xl) var(--container-pad);
-    }
-    .article-body p {
-      font-family: var(--font-body);
-      font-size: 1.05rem;
-      line-height: 1.85;
-      color: var(--color-ink);
-      margin-bottom: var(--space-xl);
-    }
-    .article-body p:first-of-type::first-letter {
-      font-family: var(--font-display);
-      font-size: 4.2em;
-      font-weight: 900;
-      color: var(--color-bordeaux);
-      float: left;
-      line-height: 0.72;
-      margin-right: 0.08em;
-      margin-top: 0.1em;
-    }
-    .article-body h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.25;
-      margin-top: var(--space-3xl);
-      margin-bottom: var(--space-lg);
-      letter-spacing: -0.01em;
-    }
-    .article-body h3 {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      margin-top: var(--space-2xl);
-      margin-bottom: var(--space-md);
-    }
-
-    /* Pull quote */
-    .article-pullquote {
-      border-left: 3px solid var(--color-bordeaux);
-      padding: var(--space-lg) var(--space-xl);
-      margin: var(--space-2xl) 0;
-      background: var(--color-cream-dark);
-    }
-    .article-pullquote p {
-      font-family: var(--font-display);
-      font-size: clamp(1.15rem, 2vw, 1.45rem);
-      font-style: italic;
-      color: var(--color-ink);
-      line-height: 1.5;
-      margin-bottom: var(--space-sm) !important;
-    }
-    .article-pullquote cite {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-ink-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-style: normal;
-    }
-
-    /* Inline image */
-    .article-image {
-      margin: var(--space-2xl) 0;
-    }
-    .article-image img,
-    .article-image .img-placeholder {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-      background-image: url("https://picsum.photos/seed/toulon-coupe-europe/900/420");
-      background-size: cover;
-      background-position: center;
-    }
-    .article-image figcaption {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-ink-muted);
-      margin-top: var(--space-sm);
-      padding-top: var(--space-sm);
-      border-top: 1px solid var(--color-cream-darker);
-    }
-
-    /* Stats box */
-    .article-stats {
-      background: var(--color-cream-dark);
-      border: 1px solid var(--color-cream-darker);
-      padding: var(--space-xl);
-      margin: var(--space-2xl) 0;
-    }
-    .article-stats-title {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      margin-bottom: var(--space-lg);
-    }
-    .article-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: var(--space-lg);
-    }
+    .article-wrapper { max-width: 720px; margin-inline: auto; padding: var(--space-3xl) var(--container-pad); }
+    .article-body p { font-family: var(--font-body); font-size: 1.05rem; line-height: 1.85; color: var(--color-ink); margin-bottom: var(--space-xl); }
+    .article-body p:first-of-type::first-letter { font-family: var(--font-display); font-size: 4.2em; font-weight: 900; color: var(--color-bordeaux); float: left; line-height: 0.72; margin-right: 0.08em; margin-top: 0.1em; }
+    .article-body h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 700; color: var(--color-ink); line-height: 1.25; margin-top: var(--space-3xl); margin-bottom: var(--space-lg); letter-spacing: -0.01em; }
+    .article-pullquote { border-left: 3px solid var(--color-bordeaux); padding: var(--space-lg) var(--space-xl); margin: var(--space-2xl) 0; background: var(--color-cream-dark); }
+    .article-pullquote p { font-family: var(--font-display); font-size: clamp(1.15rem, 2vw, 1.45rem); font-style: italic; color: var(--color-ink); line-height: 1.5; margin-bottom: var(--space-sm) !important; }
+    .article-pullquote cite { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); letter-spacing: 0.08em; text-transform: uppercase; font-style: normal; }
+    .article-image { margin: var(--space-2xl) 0; }
+    .article-image img, .article-image .img-placeholder { width: 100%; height: 420px; object-fit: cover; display: block; background-image: url("https://picsum.photos/seed/toulon-stade/900/420"); background-size: cover; background-position: center; }
+    .article-image figcaption { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid var(--color-cream-darker); }
+    .article-stats { background: var(--color-cream-dark); border: 1px solid var(--color-cream-darker); padding: var(--space-xl); margin: var(--space-2xl) 0; }
+    .article-stats-title { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-bordeaux); margin-bottom: var(--space-lg); }
+    .article-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: var(--space-lg); }
     .stat-item { text-align: center; }
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--color-bordeaux);
-      line-height: 1;
-      display: block;
-    }
-    .stat-label {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      color: var(--color-ink-mid);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-top: var(--space-xs);
-      display: block;
-    }
-
-    /* Article footer */
-    .article-footer {
-      border-top: 1px solid var(--color-cream-darker);
-      margin-top: var(--space-3xl);
-      padding-top: var(--space-xl);
-    }
-    .article-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-xl);
-    }
-    .article-tag {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      border: 1px solid var(--color-bordeaux);
-      padding: 0.25rem 0.7rem;
-      border-radius: 2px;
-    }
-    .article-author-bio {
-      display: flex;
-      gap: var(--space-lg);
-      align-items: flex-start;
-      background: var(--color-cream-dark);
-      padding: var(--space-xl);
-    }
-    .author-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background-image: url("https://picsum.photos/seed/author-romain/56/56");
-      background-size: cover;
-      flex-shrink: 0;
-    }
-    .author-name {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-    }
-    .author-desc {
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      color: var(--color-ink-mid);
-      line-height: 1.6;
-      margin-top: 0.25rem;
-    }
-
-    /* Related articles */
-    .related {
-      background: var(--color-cream-dark);
-      padding: var(--space-3xl) var(--container-pad);
-    }
-    .related-inner {
-      max-width: 860px;
-      margin-inline: auto;
-    }
-    .related-title {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      margin-bottom: var(--space-xl);
-    }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: var(--space-xl);
-    }
-    .related-card {
-      background: #fff;
-      border: 1px solid var(--color-cream-darker);
-      overflow: hidden;
-      transition: transform var(--transition-base), box-shadow var(--transition-base);
-    }
-    .related-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-    }
-    .related-card-img {
-      height: 160px;
-      background-size: cover;
-      background-position: center;
-    }
+    .stat-number { font-family: var(--font-display); font-size: 2.4rem; font-weight: 900; color: var(--color-bordeaux); line-height: 1; display: block; }
+    .stat-label { font-family: var(--font-ui); font-size: 0.72rem; color: var(--color-ink-mid); letter-spacing: 0.06em; text-transform: uppercase; margin-top: var(--space-xs); display: block; }
+    .article-footer { border-top: 1px solid var(--color-cream-darker); margin-top: var(--space-3xl); padding-top: var(--space-xl); }
+    .article-tags { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-xl); }
+    .article-tag { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-bordeaux); border: 1px solid var(--color-bordeaux); padding: 0.25rem 0.7rem; border-radius: 2px; }
+    .article-author-bio { display: flex; gap: var(--space-lg); align-items: flex-start; background: var(--color-cream-dark); padding: var(--space-xl); }
+    .author-avatar { width: 56px; height: 56px; border-radius: 50%; background-image: url("https://picsum.photos/seed/author-romain/56/56"); background-size: cover; flex-shrink: 0; }
+    .author-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--color-ink); }
+    .author-desc { font-family: var(--font-body); font-size: 0.85rem; color: var(--color-ink-mid); line-height: 1.6; margin-top: 0.25rem; }
+    .related { background: var(--color-cream-dark); padding: var(--space-3xl) var(--container-pad); }
+    .related-inner { max-width: 860px; margin-inline: auto; }
+    .related-title { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-bordeaux); margin-bottom: var(--space-xl); }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-xl); }
+    .related-card { background: #fff; border: 1px solid var(--color-cream-darker); overflow: hidden; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .related-card-img { height: 160px; background-size: cover; background-position: center; }
     .related-card-body { padding: var(--space-lg); }
-    .related-card-title {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.35;
-      margin-bottom: var(--space-sm);
-    }
+    .related-card-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--color-ink); line-height: 1.35; margin-bottom: var(--space-sm); }
     .related-card-title a { color: inherit; text-decoration: none; transition: color var(--transition-base); }
     .related-card-title a:hover { color: var(--color-bordeaux); }
-    .related-card-meta {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      color: var(--color-ink-muted);
-    }
-
-    /* Back link */
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      padding: var(--space-md) var(--container-pad);
-      border-bottom: 1px solid var(--color-cream-darker);
-      display: block;
-      max-width: 100%;
-    }
+    .related-card-meta { font-family: var(--font-ui); font-size: 0.72rem; color: var(--color-ink-muted); }
+    .back-link { display: block; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-bordeaux); padding: var(--space-md) var(--container-pad); border-bottom: 1px solid var(--color-cream-darker); max-width: 100%; }
     .back-link:hover { text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      .article-title { font-size: 1.9rem; }
-      .article-wrapper { padding: var(--space-2xl) var(--container-pad); }
-      .article-stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (max-width: 768px) { .article-title { font-size: 1.9rem; } .article-wrapper { padding: var(--space-2xl) var(--container-pad); } .article-stats-grid { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
-
   <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
-
-  <div class="top-bar">
-    <span>Le sport a toujours eu ses épopées. On les raconte.</span>
-  </div>
-
+  <div class="top-bar"><span>Le sport a toujours eu ses épopées. On les raconte.</span></div>
   <nav class="nav" id="mainNav">
     <div class="nav-inner">
       <a href="/sports-media/index.html" class="nav-logo" aria-label="L'Épopée — accueil">
@@ -363,10 +105,7 @@
       </button>
     </div>
   </nav>
-
   <a href="/sports-media/index.html" class="back-link">← Retour à L'Épopée</a>
-
-  <!-- HERO -->
   <header class="article-hero">
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
@@ -375,139 +114,147 @@
         <span class="badge badge--epopee">Rugby</span>
       </div>
       <h1 class="article-title">La chute de Toulon : autopsie d'un empire qui s'est effondré</h1>
-      <p class="article-standfirst">Wilkinson, Habana, Giteau, O'Driscoll : pendant cinq ans, le RC Toulon a été le club le plus extravagant du rugby mondial. Puis la facture est arrivée. Enquête sur la mécanique d'un effondrement annoncé.</p>
+      <p class="article-standfirst">Trois Coupes d'Europe en trois ans. Des stars mondiales à chaque poste. Un projet sportif qui semblait indestructible. Et puis le silence, la relégation, les dettes. Comment un club peut-il tout avoir et tout perdre en l'espace d'une décennie ?</p>
       <div class="article-byline">
         <span>Par <strong>Romain Duval</strong></span>
         <span class="article-byline-sep">·</span>
-        <time datetime="2026-05-28">28 mai 2026</time>
+        <time>8 juin 2026</time>
         <span class="article-byline-sep">·</span>
         <span>20 min de lecture</span>
       </div>
     </div>
   </header>
-
-  <!-- ARTICLE BODY -->
   <main>
     <article class="article-wrapper">
       <div class="article-body">
 
-        <p>En 2009, quand Mourad Boudjellal rachète le RC Toulon pour une somme symbolique, le club végète en Pro D2 avec un budget de misère et un stade Mayol qui se vide. Onze ans plus tard, quand il revend ses parts et quitte le club, Toulon a remporté trois Coupes d'Europe consécutives, a fait jouer les plus grands noms du rugby mondial sur la Rade, et se retrouve au bord de l'asphyxie financière. Entre ces deux moments, il y a l'une des expériences les plus folles, les plus enthousiasmantes et les plus instructives de l'histoire du sport professionnel français.</p>
-
-        <p>L'histoire de Toulon sous Boudjellal est celle d'un homme qui a décidé que l'argent pouvait acheter non seulement des joueurs, mais une identité, une époque, un moment dans l'histoire d'un sport. Il n'avait pas tort. Le problème, c'est que cet achat s'est fait à crédit — et que le rugby professionnel, contrairement à certains sports, ne pardonne pas longtemps les dérives financières. Même quand elles produisent de la beauté.</p>
+        <p>Il y a des clubs de sport qui construisent leur grandeur sur des décennies de culture, de formation, de transmission. Et il y a le RC Toulon version Boudjellal : une grandeur achetée en quelques saisons, spectaculaire, insolente, inoubliable — et précaire comme une flamme dans le vent. Entre 2013 et 2015, Toulon a remporté trois Coupes d'Europe consécutives, un exploit que personne d'autre n'avait réalisé dans l'histoire du rugby professionnel. Dix ans plus tard, le club cherchait à retrouver sa place en Top 14. Ce n'est pas un accident. C'est le résultat prévisible d'un modèle qui n'avait aucune chance de durer.</p>
 
         <div class="article-stats">
-          <div class="article-stats-title">RC Toulon — L'ère Boudjellal en chiffres</div>
+          <div class="article-stats-title">RC Toulon — L'empire et la chute</div>
           <div class="article-stats-grid">
             <div class="stat-item">
               <span class="stat-number">3</span>
               <span class="stat-label">Coupes d'Europe consécutives</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">1</span>
-              <span class="stat-label">Titre Top 14</span>
+              <span class="stat-number">+40M€</span>
+              <span class="stat-label">Dépensés en transferts (2011–2015)</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">80M€+</span>
-              <span class="stat-label">Masse salariale cumulée au pic</span>
+              <span class="stat-number">2018</span>
+              <span class="stat-label">Quasi-relégation</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">–60%</span>
-              <span class="stat-label">Budget après la vente (2020)</span>
+              <span class="stat-number">2022</span>
+              <span class="stat-label">Retour en Top 14</span>
             </div>
           </div>
         </div>
 
-        <h2>L'argent comme vision du monde</h2>
+        <h2>Mourad Boudjellal et le rêve de grandeur</h2>
 
-        <p>Pour comprendre ce que Boudjellal a fait à Toulon, il faut comprendre ce qu'il était avant le rugby. Éditeur de bandes dessinées — Soleil Productions — il a une sensibilité d'homme de spectacle, une culture du personnage, une conviction que ce qui attire le public c'est d'abord une histoire. Et l'histoire qu'il veut raconter avec le RC Toulon est simple : ce club, dans cette ville de la Méditerranée qui a toujours eu une identité forte mais jamais les moyens de ses ambitions, va accueillir les plus grands joueurs du monde.</p>
+        <p>En 2006, Mourad Boudjellal rachète le RC Toulon, alors en Pro D2, pour une somme modeste. Sa fortune, construite dans l'édition de bandes dessinées avec Soleil Productions, lui permet de rêver grand — très grand. Sa vision est explicite et décomplexée : faire de Toulon le Real Madrid du rugby. Il commence à recruter des légendes du rugby mondial en fin de carrière, des noms qui font l'histoire : Jonah Lomu, Tana Umaga, Rupeni Caucaunibuca. Ces premières recrues ne gagnent pas de titres, mais elles ancrent l'image d'un club qui ne joue pas dans la même catégorie que les autres. Toulon est différent. Toulon est un spectacle.</p>
 
-        <p>Les premières recrues — Jonah Lomu en 2009, déjà diminué par la maladie mais toujours un symbole absolu, puis Tana Umaga — sont davantage des déclarations d'intention que des investissements sportifs. Boudjellal achète des noms, des mythes, des histoires. Puis vient Sonny Bill Williams, et la mécanique s'emballe vraiment. Wilkinson arrive en 2009 également, chassé de Newcastle par les blessures et la désillusion anglaise. Il trouve à Toulon un public qui l'adopte immédiatement, une chaleur méditerranéenne qui contraste avec la froideur du rugby anglais, et un projet qui lui redonne envie de jouer.</p>
+        <p>La montée en Top 14 en 2009 ouvre une nouvelle phase. Boudjellal comprend que le rugby de haut niveau nécessite des joueurs de haut niveau en âge de produire, pas des monuments en bout de carrière. Il recrute Jonny Wilkinson, trente et un ans, toujours capable de performances de classe mondiale malgré ses blessures à répétition. Le demi d'ouverture anglais devient immédiatement le symbole d'une ambition différente : Toulon ne recrute pas pour la notoriété, mais pour gagner. Les titres de Champions Cup vont valider cette stratégie au-delà de tout ce qu'on aurait pu imaginer.</p>
 
-        <p>La liste des joueurs qui passent par Toulon entre 2009 et 2015 ressemble à un All-Star Game imaginaire : Matt Giteau, Bryan Habana, Brian O'Driscoll, Steffon Armitage, Juan Martín Fernández Lobbe. À son pic, l'effectif de Toulon compte simultanément plusieurs internationaux de cinq nations différentes dans le premier quinze. Le budget explose, la masse salariale atteint des sommets jamais vus dans le rugby européen, et le Stade Mayol redevient l'un des endroits les plus électriques du rugby mondial.</p>
-
-        <div class="article-pullquote">
-          <p>« Boudjellal ne gérait pas un club de rugby. Il produisait un spectacle. La différence, c'est que le spectacle s'arrête quand l'argent manque. Un club de rugby, lui, continue d'exister. »</p>
-          <cite>— Dirigeant de Top 14, témoignage anonyme</cite>
-        </div>
-
-        <h2>Trois coupes et une dette</h2>
-
-        <p>Entre 2013 et 2015, le RC Toulon réalise quelque chose que personne n'avait fait avant et que personne n'a refait depuis : trois victoires consécutives en Heineken Cup puis European Champions Cup. En 2013, ils battent Clermont 16 à 15 à Dublin dans une finale haletante. En 2014, c'est Saracens qui tombe 23 à 6 à Cardiff. En 2015, nouveau duel contre Clermont à Twickenham, victoire 24 à 18. Wilkinson soulève le trophée les trois fois. C'est une épopée sportive réelle, indiscutable, que les chiffres ne suffiront jamais à raconter complètement.</p>
-
-        <p>Mais pendant que les trophées s'accumulent dans les vitrines du Stade Mayol, la Direction Nationale du Contrôle de Gestion envoie des avertissements de plus en plus sérieux. La masse salariale de Toulon représente à son pic une proportion du budget total qui dépasse largement les ratios recommandés. Le club fonctionne essentiellement sur la conviction que les succès sportifs vont générer suffisamment de revenus — droits télévisés, billetterie, sponsors — pour absorber les coûts. Cette conviction est fausse.</p>
+        <p>Mais il y a dans cette vision quelque chose d'intrinsèquement fragile : elle repose entièrement sur la volonté et les moyens d'un seul homme. Il n'existe pas à Toulon, en 2009 ou 2012, de structure capable de faire tourner le club sans Boudjellal. Pas de directoire, pas de modèle économique pérenne, pas de plan de succession. C'est un projet personnel déguisé en projet de club. Tant que l'homme est là, le projet tient. Dès qu'il vacille, tout vacille avec lui.</p>
 
         <figure class="article-image">
-          <div class="img-placeholder" role="img" aria-label="Le RC Toulon en finale de Coupe d'Europe"></div>
-          <figcaption>Le RC Toulon lors de la finale de la Heineken Cup 2013 à Dublin — le premier des trois titres consécutifs.</figcaption>
+          <div class="img-placeholder"></div>
+          <figcaption>Le Stade Mayol de Toulon lors d'une soirée européenne, saison 2013-2014.</figcaption>
         </figure>
 
-        <h2>L'effondrement en accéléré</h2>
+        <h2>Les années d'or : Wilkinson, Habana, Giteau</h2>
 
-        <p>À partir de 2016, la mécanique se grippe. Les grands joueurs vieillissent ou partent — Wilkinson prend sa retraite en 2014, Habana suit en 2017. Les résultats sportifs se dégradent. Les sponsors, qui avaient afflué pendant les années de gloire, commencent à reconsidérer leurs engagements. Et les dettes, elles, ne se dégradent pas : elles s'accumulent.</p>
+        <p>Entre 2011 et 2015, Toulon signe ce qui constitue probablement le recrutement le plus spectaculaire de l'histoire du rugby professionnel. Jonny Wilkinson, héros du Mondial anglais 2003, impose sa rigueur légendaire et ses coups de pied d'une précision chirurgicale. Bryan Habana, ailier springbok parmi les plus rapides jamais vus sur un terrain, apporte sa vitesse et son sens du sacrifice. Matt Giteau, demi de mêlée australien d'une intelligence de jeu rare, organise le jeu avec une fluidité qui rend les adversaires fous. Brian O'Driscoll, en fin de carrière, apporte l'expérience et le charisme d'un joueur qui a tout vu, tout gagné.</p>
 
-        <p>La DNCG multiplie les mises en garde entre 2016 et 2019. Les comptes du club sont déficitaires, la trésorerie est tendue, les délais de paiement aux joueurs et aux prestataires s'allongent. Boudjellal réagit comme il a toujours réagi : en cherchant de nouveaux financements, en tentant de recruter des joueurs susceptibles de relancer l'intérêt médiatique, en pariant sur le fait que le nom de Toulon suffit encore à attirer des partenaires. Ces paris ne tiennent plus.</p>
+        <p>Les résultats sont à la hauteur des ambitions. Toulon remporte la Champions Cup en 2013 face à Clermont (16-15), une finale d'une intensité rare disputée à Dublin. En 2014, le club récidive contre Saracens (23-6), une victoire nette et sans appel qui efface les doutes sur la durabilité du projet. En 2015, troisième titre consécutif contre Clermont (24-18), confirmant ce que personne n'avait jamais réussi dans l'histoire du rugby européen. Le Stade Mayol est en feu à chaque match européen. Toulon est devenu le club de rugby le plus populaire au monde, ses maillots vendus en Australie, en Nouvelle-Zélande, au Japon.</p>
+
+        <p>Ce que personne ne dit assez, c'est que ces équipes gagnaient aussi grâce à une alchimie collective fragile et précieuse : des joueurs en fin de carrière, portés par une dernière ambition, débarrassés de toute ego-politique, jouant ensemble comme si c'était leur dernier défi. Wilkinson en particulier incarnait cette éthique — travailleur acharné, humble, collectif jusqu'à l'os. Sa présence tirait le niveau du vestiaire vers le haut. Quand il est parti en 2014, quelque chose de subtil mais d'irremplaçable est parti avec lui.</p>
 
         <div class="article-pullquote">
-          <p>« Quand le dernier titre est arrivé en 2015, on était déjà en train de construire sur du sable. Tout le monde le savait, personne ne voulait le dire à voix haute. »</p>
-          <cite>— Ancien joueur du RC Toulon, 2013-2017</cite>
+          <p>«Boudjellal a construit quelque chose de magnifique et d'impossible à durer. On n'a pas vu un tel alignement de talent depuis, et on n'en reverra probablement jamais.»</p>
+          <cite>— Un directeur sportif adverse (anonyme)</cite>
         </div>
 
-        <p>En 2020, Mourad Boudjellal cède ses parts. L'actionnaire qui reprend le club hérite d'une situation financière dégradée et d'un vestiaire qui a perdu les joueurs emblématiques sans avoir réussi à construire une relève crédible. Le budget est taillé de 60%. Des joueurs que le club ne peut plus payer partent en urgence. L'effectif, qui comptait quelques années plus tôt parmi les plus onéreux d'Europe, ressemble soudain à n'importe quel effectif de milieu de tableau du Top 14.</p>
+        <h2>Les fissures invisibles</h2>
 
-        <p>Ce qui reste, au-delà des trophées et de la nostalgie, c'est une leçon sur la nature des empires sportifs construits sur la dépense plutôt que sur la structure. Toulon a prouvé qu'il était possible, en injectant suffisamment d'argent et en recrutant les bons joueurs au bon moment, de dominer le rugby européen pendant trois ans. Il a aussi prouvé que cette domination, si elle n'est pas accompagnée d'une infrastructure financière solide, d'une formation interne et d'une stratégie de long terme, s'effondre aussi vite qu'elle s'est construite. L'empire de Boudjellal a duré exactement le temps que l'argent a tenu. Pas un match de plus.</p>
+        <p>Derrière la gloire, les fissures apparaissent dès la saison 2014-2015. La masse salariale est devenue incontrôlable : des sources proches du club évoquent des chiffres qui représentent plus de 80 % des revenus totaux, un ratio que nulle ligue professionnelle sérieuse ne considère comme viable. Les joueurs stars vieillissent ensemble, et le club n'a pas eu la politique de recrutement suffisamment anticipatrice pour préparer la transition. Boudjellal commence à se lasser, à regarder vers d'autres horizons — il sera candidat à la présidence de la FFF en 2017. Son attention se détourne.</p>
+
+        <p>Des sources internes évoquent des vestiaires fractionnés, des clans qui se forment selon les nationalités — les Australiens d'un côté, les Sud-Africains de l'autre, les Français perdus entre les deux. Ce n'est pas de la haine, c'est de l'indifférence — pire, dans un vestiaire. Des joueurs recrutés pour leur palmarès individuel n'ont pas tous la capacité de se fondre dans un collectif quand les résultats ne suivent plus. Les habitudes du succès — les primes, les fêtes, les apparitions médiatiques — deviennent des distractions quand il faut remettre les bouchées doubles.</p>
+
+        <p>Le recrutement de remplacement est mal calibré. Les joueurs qui arrivent pour succéder aux stars sont, pour la plupart, de bons joueurs de Top 14 — pas des joueurs capables de reproduire le niveau européen que le club avait atteint. L'écart entre les attentes — nourries par trois titres consécutifs — et la réalité d'un effectif en transition crée une pression impossible à gérer pour le staff technique. Les entraîneurs se succèdent. Les systèmes changent. L'identité de jeu, qui avait été la force du club en 2013-2015, se dilue puis disparaît.</p>
+
+        <h2>La descente aux enfers</h2>
+
+        <p>2016 : Toulon rate les demi-finales de Top 14 pour la première fois depuis des années. La déception est réelle mais gérée — on parle de cycle naturel, de transition. 2017 : la saison est catastrophique. Le club termine dans la deuxième moitié du classement. Les stars sont parties ou sur le départ. Boudjellal multiplie les déclarations contradictoires, attaque publiquement ses propres entraîneurs, crée une instabilité que les joueurs ressentent dans leur quotidien. La confiance entre le président et son staff s'effrite dans des disputes publiques qui n'auraient jamais dû quitter les couloirs du club.</p>
+
+        <p>2018 marque le point de rupture : Toulon frôle la relégation, sauvé in extremis lors des dernières journées. La dette s'est accumulée en silence — les dépenses pharaoniques des années d'or ont été financées en partie à crédit, avec l'hypothèse implicite que les succès européens continueraient à générer des revenus suffisants. Ils ne l'ont pas fait. Les droits télé, les droits à l'image, les contrats de sponsoring : tout était calibré sur une équipe qui gagnait. Une équipe qui perd n'a plus les mêmes revenus, mais elle garde les mêmes charges. Le modèle mathématique ne tient plus.</p>
+
+        <p>Boudjellal cède finalement ses parts en 2020, dans un contexte de pandémie qui rend les valorisations impossibles et les investisseurs frileux. Les repreneurs héritent d'une situation financière délicate et d'un club qui a perdu son identité. La reconstruction prend des années. Le retour en Top 14 en 2022 est vécu comme une délivrance, non comme un point de départ vers de nouveaux sommets. Toulon existe à nouveau. Mais l'empire, lui, n'existe plus.</p>
+
+        <div class="article-pullquote">
+          <p>«Le vestiaire de 2014 n'était plus le même qu'en 2013. L'argent avait changé les relations.»</p>
+          <cite>— Un international ayant joué à Toulon (anonyme)</cite>
+        </div>
+
+        <h2>Ce que Toulon a enseigné au rugby professionnel</h2>
+
+        <p>La leçon de Toulon est aujourd'hui enseignée dans les formations en management sportif comme un cas d'école inverse : ce qu'il ne faut pas faire. On ne peut pas construire un club de rugby sur des stars individuelles — on construit un club sur une culture, une formation, une identité collective qui survit aux départs. Les clubs qui durent — Toulouse, Leinster, Saracens malgré ses propres crises — ont en commun une culture collective forte, des académies qui forment des joueurs imprégnés d'un style de jeu, des structures capables de fonctionner indépendamment de la personnalité d'un président ou d'un joueur.</p>
+
+        <p>Toulon a fait l'inverse à chaque étape. Pas d'académie sérieuse. Pas de culture institutionnelle. Un vestiaire de mercenaires talentueux, réunis par un homme qui aimait le rugby comme il aimait les bandes dessinées — avec passion, avec extravagance, sans calcul à long terme. Cette façon d'aimer le rugby a produit les plus belles nuits de Mayol. Elle a aussi produit l'effondrement le plus brutal que le rugby professionnel français ait connu depuis la professionnalisation de 1995.</p>
+
+        <p>Ce qui reste de l'aventure Toulon, c'est une série de souvenirs magnifiques et une dette financière que des joueurs n'ont jamais eu à rembourser. C'est aussi, pour tous les dirigeants du sport professionnel, un rappel utile : le talent peut tout. Sauf durer. Ça, c'est une question de structure. Et la structure, Toulon ne l'a jamais construite.</p>
 
       </div>
-
       <footer class="article-footer">
         <div class="article-tags">
           <span class="article-tag">Rugby</span>
           <span class="article-tag">Enquête</span>
           <span class="article-tag">RC Toulon</span>
-          <span class="article-tag">Boudjellal</span>
-          <span class="article-tag">Champions Cup</span>
-          <span class="article-tag">Top 14</span>
+          <span class="article-tag">Coupe d'Europe</span>
+          <span class="article-tag">Mourad Boudjellal</span>
+          <span class="article-tag">Wilkinson</span>
         </div>
         <div class="article-author-bio">
           <div class="author-avatar"></div>
           <div>
             <div class="author-name">Romain Duval</div>
-            <p class="author-desc">Grand reporter à L'Épopée, spécialiste de l'économie du sport et des coulisses du rugby professionnel. Auteur d'enquêtes sur la gouvernance des clubs français, il suit le Top 14 depuis quinze ans.</p>
+            <p class="author-desc">Grand reporter à L'Épopée depuis 2019. Il a couvert dix saisons de Top 14 et trois Coupes du monde. Spécialiste des coulisses du rugby professionnel français et de l'économie du sport.</p>
           </div>
         </div>
       </footer>
     </article>
-
-    <!-- RELATED ARTICLES -->
     <section class="related">
       <div class="related-inner">
         <h2 class="related-title">À lire aussi</h2>
         <div class="related-grid">
           <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/agents-rugby/600/300');"></div>
+            <div class="related-card-body">
+              <div class="related-card-title"><a href="/sports-media/articles/agents-rugby.html">Comment les agents ont pris le contrôle du rugby professionnel</a></div>
+              <div class="related-card-meta">Enquête · 24 min</div>
+            </div>
+          </div>
+          <div class="related-card">
             <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/lomu-portrait/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/jonah-lomu.html">Jonah Lomu, l'homme qui a changé le rugby malgré lui</a></h3>
+              <div class="related-card-title"><a href="/sports-media/articles/jonah-lomu.html">Jonah Lomu, l'homme qui a changé le rugby malgré lui</a></div>
               <div class="related-card-meta">Portrait · 18 min</div>
             </div>
           </div>
           <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/xv-france-finals-hero/600/300');"></div>
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/all-blacks-nz/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/xv-de-france-finales.html">Pourquoi le XV de France perd toujours les finales qu'il mérite de gagner</a></h3>
-              <div class="related-card-meta">Anatomie · 14 min</div>
-            </div>
-          </div>
-          <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/bielle-biarrey-hero/600/300');"></div>
-            <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/louis-bielle-biarrey.html">Louis Bielle-Biarrey : l'ailier qui a décidé que la ligne d'en-but était trop loin pour s'arrêter</a></h3>
-              <div class="related-card-meta">Portrait · 16 min</div>
+              <div class="related-card-title"><a href="/sports-media/articles/all-blacks-2015.html">L'anatomie d'une invincibilité : les All Blacks 2015</a></div>
+              <div class="related-card-meta">Anatomie · 25 min</div>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
-
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -544,7 +291,6 @@
       </div>
     </div>
   </footer>
-
   <script src="/sports-media/script.js"></script>
 </body>
 </html>

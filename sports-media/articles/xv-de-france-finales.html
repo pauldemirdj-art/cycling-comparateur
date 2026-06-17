@@ -4,18 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pourquoi le XV de France perd toujours les finales qu'il mérite de gagner — L'Épopée</title>
-  <meta name="description" content="1987, 1999, 2011, 2023 : quatre finales de Coupe du Monde, zéro titre. L'anatomie d'une malédiction française qui n'est pas que statistique." />
+  <meta name="description" content="1987, 1999, 2011, 2023 — la liste des finales perdues est aussi longue que douloureuse. Mais ce n'est pas une malédiction ni une question de talent. C'est une structure psychologique, une relation au risque, une façon d'habiter les grands moments qui se transmet de génération en génération." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/sports-media/style.css" />
   <style>
-    /* ── Article-specific styles ── */
     .article-hero {
       position: relative;
       height: clamp(420px, 60vh, 700px);
       overflow: hidden;
-      background-image: url("https://picsum.photos/seed/xv-france-finals-hero/1600/900");
+      background-image: url("https://picsum.photos/seed/xv-france-finals/1600/900");
       background-size: cover;
       background-position: center 30%;
     }
@@ -26,317 +25,60 @@
     }
     .article-hero-content {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 0; left: 0; right: 0;
       padding: var(--space-3xl) var(--container-pad) var(--space-2xl);
       max-width: 860px;
       margin-inline: auto;
     }
-    .article-kicker {
-      display: flex;
-      align-items: center;
-      gap: var(--space-md);
-      margin-bottom: var(--space-lg);
-    }
-    .article-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.1;
-      color: #fff;
-      letter-spacing: -0.02em;
-      margin-bottom: var(--space-lg);
-    }
-    .article-standfirst {
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-      color: rgba(255,255,255,0.82);
-      line-height: 1.65;
-      max-width: 680px;
-      margin-bottom: var(--space-xl);
-    }
-    .article-byline {
-      display: flex;
-      align-items: center;
-      gap: var(--space-lg);
-      font-family: var(--font-ui);
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.65);
-      flex-wrap: wrap;
-    }
+    .article-kicker { display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-lg); }
+    .article-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.1; color: #fff; letter-spacing: -0.02em; margin-bottom: var(--space-lg); }
+    .article-standfirst { font-family: var(--font-body); font-size: clamp(1rem, 1.8vw, 1.2rem); color: rgba(255,255,255,0.82); line-height: 1.65; max-width: 680px; margin-bottom: var(--space-xl); }
+    .article-byline { display: flex; align-items: center; gap: var(--space-lg); font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.65); flex-wrap: wrap; }
     .article-byline strong { color: rgba(255,255,255,0.9); }
     .article-byline-sep { color: rgba(255,255,255,0.3); }
-
-    /* Article body */
-    .article-wrapper {
-      max-width: 720px;
-      margin-inline: auto;
-      padding: var(--space-3xl) var(--container-pad);
-    }
-    .article-body p {
-      font-family: var(--font-body);
-      font-size: 1.05rem;
-      line-height: 1.85;
-      color: var(--color-ink);
-      margin-bottom: var(--space-xl);
-    }
-    .article-body p:first-of-type::first-letter {
-      font-family: var(--font-display);
-      font-size: 4.2em;
-      font-weight: 900;
-      color: var(--color-bordeaux);
-      float: left;
-      line-height: 0.72;
-      margin-right: 0.08em;
-      margin-top: 0.1em;
-    }
-    .article-body h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.25;
-      margin-top: var(--space-3xl);
-      margin-bottom: var(--space-lg);
-      letter-spacing: -0.01em;
-    }
-    .article-body h3 {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      margin-top: var(--space-2xl);
-      margin-bottom: var(--space-md);
-    }
-
-    /* Pull quote */
-    .article-pullquote {
-      border-left: 3px solid var(--color-bordeaux);
-      padding: var(--space-lg) var(--space-xl);
-      margin: var(--space-2xl) 0;
-      background: var(--color-cream-dark);
-    }
-    .article-pullquote p {
-      font-family: var(--font-display);
-      font-size: clamp(1.15rem, 2vw, 1.45rem);
-      font-style: italic;
-      color: var(--color-ink);
-      line-height: 1.5;
-      margin-bottom: var(--space-sm) !important;
-    }
-    .article-pullquote cite {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-ink-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-style: normal;
-    }
-
-    /* Inline image */
-    .article-image {
-      margin: var(--space-2xl) 0;
-    }
-    .article-image img,
-    .article-image .img-placeholder {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-      background-image: url("https://picsum.photos/seed/france-rugby-final/900/420");
-      background-size: cover;
-      background-position: center;
-    }
-    .article-image figcaption {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-ink-muted);
-      margin-top: var(--space-sm);
-      padding-top: var(--space-sm);
-      border-top: 1px solid var(--color-cream-darker);
-    }
-
-    /* Stats box */
-    .article-stats {
-      background: var(--color-cream-dark);
-      border: 1px solid var(--color-cream-darker);
-      padding: var(--space-xl);
-      margin: var(--space-2xl) 0;
-    }
-    .article-stats-title {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      margin-bottom: var(--space-lg);
-    }
-    .article-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: var(--space-lg);
-    }
+    .article-wrapper { max-width: 720px; margin-inline: auto; padding: var(--space-3xl) var(--container-pad); }
+    .article-body p { font-family: var(--font-body); font-size: 1.05rem; line-height: 1.85; color: var(--color-ink); margin-bottom: var(--space-xl); }
+    .article-body p:first-of-type::first-letter { font-family: var(--font-display); font-size: 4.2em; font-weight: 900; color: var(--color-bordeaux); float: left; line-height: 0.72; margin-right: 0.08em; margin-top: 0.1em; }
+    .article-body h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 700; color: var(--color-ink); line-height: 1.25; margin-top: var(--space-3xl); margin-bottom: var(--space-lg); letter-spacing: -0.01em; }
+    .article-pullquote { border-left: 3px solid var(--color-bordeaux); padding: var(--space-lg) var(--space-xl); margin: var(--space-2xl) 0; background: var(--color-cream-dark); }
+    .article-pullquote p { font-family: var(--font-display); font-size: clamp(1.15rem, 2vw, 1.45rem); font-style: italic; color: var(--color-ink); line-height: 1.5; margin-bottom: var(--space-sm) !important; }
+    .article-pullquote cite { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); letter-spacing: 0.08em; text-transform: uppercase; font-style: normal; }
+    .article-image { margin: var(--space-2xl) 0; }
+    .article-image img, .article-image .img-placeholder { width: 100%; height: 420px; object-fit: cover; display: block; background-image: url("https://picsum.photos/seed/france-rugby-final/900/420"); background-size: cover; background-position: center; }
+    .article-image figcaption { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid var(--color-cream-darker); }
+    .article-stats { background: var(--color-cream-dark); border: 1px solid var(--color-cream-darker); padding: var(--space-xl); margin: var(--space-2xl) 0; }
+    .article-stats-title { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-bordeaux); margin-bottom: var(--space-lg); }
+    .article-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: var(--space-lg); }
     .stat-item { text-align: center; }
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--color-bordeaux);
-      line-height: 1;
-      display: block;
-    }
-    .stat-label {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      color: var(--color-ink-mid);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-top: var(--space-xs);
-      display: block;
-    }
-
-    /* Article footer */
-    .article-footer {
-      border-top: 1px solid var(--color-cream-darker);
-      margin-top: var(--space-3xl);
-      padding-top: var(--space-xl);
-    }
-    .article-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-xl);
-    }
-    .article-tag {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      border: 1px solid var(--color-bordeaux);
-      padding: 0.25rem 0.7rem;
-      border-radius: 2px;
-    }
-    .article-author-bio {
-      display: flex;
-      gap: var(--space-lg);
-      align-items: flex-start;
-      background: var(--color-cream-dark);
-      padding: var(--space-xl);
-    }
-    .author-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background-image: url("https://picsum.photos/seed/author-sophie/56/56");
-      background-size: cover;
-      flex-shrink: 0;
-    }
-    .author-name {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-    }
-    .author-desc {
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      color: var(--color-ink-mid);
-      line-height: 1.6;
-      margin-top: 0.25rem;
-    }
-
-    /* Related articles */
-    .related {
-      background: var(--color-cream-dark);
-      padding: var(--space-3xl) var(--container-pad);
-    }
-    .related-inner {
-      max-width: 860px;
-      margin-inline: auto;
-    }
-    .related-title {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      margin-bottom: var(--space-xl);
-    }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: var(--space-xl);
-    }
-    .related-card {
-      background: #fff;
-      border: 1px solid var(--color-cream-darker);
-      overflow: hidden;
-      transition: transform var(--transition-base), box-shadow var(--transition-base);
-    }
-    .related-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-    }
-    .related-card-img {
-      height: 160px;
-      background-size: cover;
-      background-position: center;
-    }
+    .stat-number { font-family: var(--font-display); font-size: 2.4rem; font-weight: 900; color: var(--color-bordeaux); line-height: 1; display: block; }
+    .stat-label { font-family: var(--font-ui); font-size: 0.72rem; color: var(--color-ink-mid); letter-spacing: 0.06em; text-transform: uppercase; margin-top: var(--space-xs); display: block; }
+    .article-footer { border-top: 1px solid var(--color-cream-darker); margin-top: var(--space-3xl); padding-top: var(--space-xl); }
+    .article-tags { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-xl); }
+    .article-tag { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-bordeaux); border: 1px solid var(--color-bordeaux); padding: 0.25rem 0.7rem; border-radius: 2px; }
+    .article-author-bio { display: flex; gap: var(--space-lg); align-items: flex-start; background: var(--color-cream-dark); padding: var(--space-xl); }
+    .author-avatar { width: 56px; height: 56px; border-radius: 50%; background-image: url("https://picsum.photos/seed/author-sophie/56/56"); background-size: cover; flex-shrink: 0; }
+    .author-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--color-ink); }
+    .author-desc { font-family: var(--font-body); font-size: 0.85rem; color: var(--color-ink-mid); line-height: 1.6; margin-top: 0.25rem; }
+    .related { background: var(--color-cream-dark); padding: var(--space-3xl) var(--container-pad); }
+    .related-inner { max-width: 860px; margin-inline: auto; }
+    .related-title { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-bordeaux); margin-bottom: var(--space-xl); }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-xl); }
+    .related-card { background: #fff; border: 1px solid var(--color-cream-darker); overflow: hidden; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .related-card-img { height: 160px; background-size: cover; background-position: center; }
     .related-card-body { padding: var(--space-lg); }
-    .related-card-title {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.35;
-      margin-bottom: var(--space-sm);
-    }
+    .related-card-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--color-ink); line-height: 1.35; margin-bottom: var(--space-sm); }
     .related-card-title a { color: inherit; text-decoration: none; transition: color var(--transition-base); }
     .related-card-title a:hover { color: var(--color-bordeaux); }
-    .related-card-meta {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      color: var(--color-ink-muted);
-    }
-
-    /* Back link */
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      padding: var(--space-md) var(--container-pad);
-      border-bottom: 1px solid var(--color-cream-darker);
-      display: block;
-      max-width: 100%;
-    }
+    .related-card-meta { font-family: var(--font-ui); font-size: 0.72rem; color: var(--color-ink-muted); }
+    .back-link { display: block; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-bordeaux); padding: var(--space-md) var(--container-pad); border-bottom: 1px solid var(--color-cream-darker); max-width: 100%; }
     .back-link:hover { text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      .article-title { font-size: 1.9rem; }
-      .article-wrapper { padding: var(--space-2xl) var(--container-pad); }
-      .article-stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (max-width: 768px) { .article-title { font-size: 1.9rem; } .article-wrapper { padding: var(--space-2xl) var(--container-pad); } .article-stats-grid { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
-
   <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
-
-  <div class="top-bar">
-    <span>Le sport a toujours eu ses épopées. On les raconte.</span>
-  </div>
-
+  <div class="top-bar"><span>Le sport a toujours eu ses épopées. On les raconte.</span></div>
   <nav class="nav" id="mainNav">
     <div class="nav-inner">
       <a href="/sports-media/index.html" class="nav-logo" aria-label="L'Épopée — accueil">
@@ -363,40 +105,33 @@
       </button>
     </div>
   </nav>
-
   <a href="/sports-media/index.html" class="back-link">← Retour à L'Épopée</a>
-
-  <!-- HERO -->
   <header class="article-hero">
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <div class="article-kicker">
-        <span class="badge badge--anatomie">Anatomie</span>
+        <span class="badge badge--enquete">Anatomie</span>
         <span class="badge badge--epopee">Rugby</span>
       </div>
       <h1 class="article-title">Pourquoi le XV de France perd toujours les finales qu'il mérite de gagner</h1>
-      <p class="article-standfirst">1987, 1999, 2011, 2023 : quatre finales de Coupe du Monde, zéro titre. Ce n'est pas une malédiction. C'est une structure psychologique, une façon d'être au rugby qui produit du génie en demi-finale et de la paralysie en finale.</p>
+      <p class="article-standfirst">1987, 1999, 2011, 2023 — la liste des finales perdues est aussi longue que douloureuse. Mais ce n'est pas une malédiction ni une question de talent. C'est une structure psychologique, une relation au risque, une façon d'habiter les grands moments qui se transmet de génération en génération.</p>
       <div class="article-byline">
         <span>Par <strong>Sophie Marchand</strong></span>
         <span class="article-byline-sep">·</span>
-        <time datetime="2026-06-05">5 juin 2026</time>
+        <time>10 juin 2026</time>
         <span class="article-byline-sep">·</span>
         <span>14 min de lecture</span>
       </div>
     </div>
   </header>
-
-  <!-- ARTICLE BODY -->
   <main>
     <article class="article-wrapper">
       <div class="article-body">
 
-        <p>Il existe, dans le rugby français, une question que tout le monde pose et que personne ne veut vraiment entendre répondre. Elle ressemble à une plaisanterie d'initiés mais elle contient une vérité structurelle qui hante la fédération depuis près de quarante ans : pourquoi le XV de France, capable des performances les plus éblouissantes du rugby mondial, s'effondre-t-il systématiquement quand le titre est à portée de main ? Quatre finales de Coupe du Monde. Quatre défaites. Un score agrégé de 80 à 56. Et la sensation persistante que chacune de ces défaites aurait pu — aurait dû — se terminer autrement.</p>
-
-        <p>Ce n'est pas une question de talent. Les joueurs français qui ont disputé ces finales comptent parmi les meilleurs de leur génération : Serge Blanco en 1987, Christophe Dominici en 1999, Thierry Dusautoir en 2011, Antoine Dupont en 2023. Ce n'est pas non plus une question de préparation physique, ni d'encadrement technique. C'est quelque chose de plus difficile à nommer — quelque chose qui tient à la fois à la culture du rugby français, à la psychologie collective de l'équipe nationale, et à une certaine conception du jeu qui produit de la beauté mais pas nécessairement de la victoire au moment où elle compte le plus.</p>
+        <p>Il existe dans le rugby français une tradition que nulle autre nation ne partage à ce degré : celle de produire les plus belles performances du tournoi, les remontées les plus spectaculaires, les individus les plus brillants — et de rentrer chez soi sans le trophée. Depuis 1987, le XV de France a disputé quatre finales de Coupe du monde. Il n'en a gagné aucune. Ce bilan ne s'explique pas par un manque de talent — les équipes françaises en finale étaient, dans plusieurs cas, parmi les meilleures que le pays ait jamais produites. Il s'explique par quelque chose de plus profond, de plus structurel : une relation particulière à la victoire elle-même, une psychologie collective qui s'épanouit dans l'adversité et se paralyse dans l'évidence.</p>
 
         <div class="article-stats">
-          <div class="article-stats-title">Le XV de France en finales de Coupe du Monde</div>
+          <div class="article-stats-title">XV de France en finale de Coupe du monde</div>
           <div class="article-stats-grid">
             <div class="stat-item">
               <span class="stat-number">4</span>
@@ -404,83 +139,93 @@
             </div>
             <div class="stat-item">
               <span class="stat-number">0</span>
-              <span class="stat-label">Titres remportés</span>
+              <span class="stat-label">Titres mondiaux</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">3×</span>
-              <span class="stat-label">3e place (1986, 2011, 2015)</span>
+              <span class="stat-number">3</span>
+              <span class="stat-label">Trophées du meilleur joueur malgré la défaite</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">1 pt</span>
-              <span class="stat-label">Écart en 2023</span>
+              <span class="stat-number">1987</span>
+              <span class="stat-label">Première finale perdue</span>
             </div>
           </div>
         </div>
 
-        <h2>1987–2023 : quatre fois le même scénario</h2>
+        <h2>1987 : la finale fondatrice et la naissance d'un mythe douloureux</h2>
 
-        <p>La première finale, en 1987 à Auckland, ressemble avec le recul à une répétition générale. La Nouvelle-Zélande de David Kirk et Michael Jones écrase la France 29 à 9 dans un match qui ne laisse aucune ambiguïté. Les All Blacks de cette première édition sont tout simplement meilleurs, plus rodés, mieux préparés pour l'instant de vérité. L'équipe de France, brillante lors des phases de poule, se retrouve sans solution face à l'intensité kiwi. C'est une défaite acceptable — mais elle installe un premier modèle.</p>
+        <p>Auckland, 20 juin 1987. Le XV de France affronte la Nouvelle-Zélande dans la première finale de l'histoire de la Coupe du monde. Pour comprendre ce qui se passe ce soir-là, il faut d'abord revenir à ce qui s'est passé cinq jours plus tôt : la demi-finale contre l'Australie, victoire 30-24 après une remontée venue de nulle part, le rugby total dans sa forme la plus pure, Serge Blanco marquant l'essai de la victoire à la dernière minute dans un angle impossible. Ce match-là est entré dans le panthéon de l'histoire sportive mondiale. Il a aussi épuisé — physiquement et émotionnellement — une équipe qui avait tout donné.</p>
 
-        <p>Douze ans plus tard, en 1999 à Cardiff, le scénario devient plus cruel. L'Australie de John Eales bat la France 35 à 12 dans une finale que les Bleus n'arrivent jamais à aborder avec la liberté qui les avait portés face aux All Blacks en demi-finale, dans ce qui reste l'un des plus grands matchs de l'histoire du rugby. Cette demi-finale gagnée contre toute attente — la France renverse un déficit de 24 à 10 en seconde période — libère une énergie qui, paradoxalement, se retourne contre elle sept jours plus tard. Comme si la beauté du miracle de Cardiff avait épuisé quelque chose d'essentiel.</p>
+        <p>Face aux All Blacks dans la finale, les Bleus sont présents physiquement mais absents mentalement. La défaite 29-9 est sévère, nette, sans discussion. Mais dans la mémoire collective, c'est la demi-finale qui reste, pas la finale. Et c'est là que naît quelque chose d'important : pour la première fois, le rugby français établit inconsciemment une hiérarchie des émotions dans laquelle le match impossible — celui où tout le monde vous donne perdant, celui qui demande l'exploit absolu — compte davantage que le match décisif. L'exploit a une charge émotionnelle que la victoire attendue n'a pas. Le lendemain de la finale, les journaux français ont passé plus de colonnes sur la demi-finale que sur la défaite elle-même.</p>
 
-        <div class="article-pullquote">
-          <p>« On jouait notre meilleur rugby quand on n'avait rien à perdre. Dès qu'on avait tout à gagner, quelque chose se bloquait. On ne savait pas encore comment nommer cette chose. »</p>
-          <cite>— Un membre du staff du XV de France, Coupe du Monde 1999</cite>
-        </div>
-
-        <p>2011 est la finale qui fait encore le plus mal. En Nouvelle-Zélande, face aux All Blacks de Richie McCaw, la France dispute ce qui restera peut-être la finale la plus serrée de l'histoire du rugby mondial. Défaite 8 à 7, avec un penalty manqué par François Trinh-Duc dans les dernières minutes qui aurait pu tout changer. Un seul point d'écart, face à ce qui est considéré comme l'une des meilleures équipes jamais constituées. La France avait dominé par moments, défendu avec une férocité remarquable, et perdu quand même — sur ce moment de flottement entre la raison et l'instinct qu'est un tir au but à longue portée en finale de Coupe du Monde.</p>
-
-        <p>En 2023, à Saint-Denis, c'est la défaite la plus contemporaine et peut-être la plus philosophiquement complexe. L'Afrique du Sud remporte sa quatrième Coupe du Monde 29 à 28, dans un match où Antoine Dupont a tout fait — et où tout n'a pas suffi. Un seul point, encore. Une équipe de France qui joue devant son public, avec le meilleur joueur du monde dans ses rangs, et qui perd quand même. Le scénario n'est plus une coïncidence. C'est un pattern.</p>
+        <p>Cette équipe de 1987 ne savait pas qu'elle posait les fondations d'un mythe douloureux. Serge Blanco, Philippe Sella, Didier Camberabero : des joueurs d'une génération extraordinaire, capables de produire un rugby que personne d'autre ne jouait à cette époque. Mais le rugby français de ce temps — façonné par les clubs, par la culture du Midi, par une esthétique du jeu héritée du rugby de village — n'avait pas encore développé les outils mentaux pour gérer la pression de la victoire programmée. Perdre en jouant bien n'était pas une honte. C'était presque, dans cette culture-là, une forme de dignité intacte.</p>
 
         <figure class="article-image">
-          <div class="img-placeholder" role="img" aria-label="XV de France en finale de Coupe du Monde"></div>
-          <figcaption>Les Bleus lors de la finale de la Coupe du Monde 2023 face à l'Afrique du Sud, au Stade de France.</figcaption>
+          <div class="img-placeholder"></div>
+          <figcaption>Le XV de France lors de la finale de la Coupe du monde 1999.</figcaption>
         </figure>
 
-        <h2>Le fardeau du beau jeu</h2>
+        <h2>1999 : la demie qui tue la finale</h2>
 
-        <p>Pour comprendre ce qui se passe en finale, il faut d'abord comprendre ce que le rugby français représente culturellement — pour ceux qui le jouent autant que pour ceux qui le regardent. En France, le rugby n'est pas seulement un sport. C'est une esthétique. On parle de «jeu à la française» comme on parlerait d'une école de peinture ou d'un courant littéraire : quelque chose qui a une forme, une couleur, une intention qui le distingue du rugby anglosaxon ou sud-africain. Ce jeu valorise l'improvisation, la prise de risque, la transformation du chaos en opportunité.</p>
+        <p>La Coupe du monde 1999 en Grande-Bretagne reste le cas d'école le plus parfait de ce phénomène. En demi-finale à Twickenham, la France affronte les All Blacks, favoris absolus. À 24-10, la partie semble pliée. Et alors commence l'une des remontées les plus stupéfiantes de l'histoire du rugby mondial : Christophe Lamaison inscrit 28 points, des essais surgissent de la ferveur pure, une équipe qui joue comme si elle avait décidé collectivement que perdre ce soir-là était impossible. Victoire finale 43-31. Les joueurs français pleurent sur le terrain. Le monde du rugby est sous le choc — aucune équipe n'avait jamais remporté un match de Coupe du monde après avoir été menée de quatorze points face aux Néo-Zélandais.</p>
 
-        <p>Cette identité est une force immense dans les matchs à enjeu secondaire. Elle crée des moments de génie imprévisibles, des essais qui semblent surgir de nulle part, une capacité à renverser des situations qui semblaient désespérées. C'est ce qui donne à l'équipe de France cette capacité à battre n'importe qui n'importe quel jour. Mais en finale, cette même identité se retourne contre elle. Car le beau jeu suppose une certaine légèreté — une disponibilité à l'erreur créatrice, une tolérance au risque. Et en finale de Coupe du Monde, le risque non maîtrisé se paie comptant.</p>
+        <p>Une semaine plus tard, face à l'Australie en finale à Cardiff, la France s'effondre 6-35. L'écart est abyssal, brutal, incompréhensible pour qui avait regardé la demi-finale. Mais l'explication n'est pas tactique : les Wallabies ne sont pas une équipe qui devrait dominer à ce point un XV de France qui venait de battre les All Blacks. Ce qui s'est passé, c'est quelque chose que les psychologues du sport appellent le «pic émotionnel précoce» : une équipe qui a atteint la limite absolue de ses ressources mentales dans le match précédent n'a plus accès à ce réservoir dans le match suivant. Les Bleus avaient tout brûlé contre la Nouvelle-Zélande. La finale est arrivée comme une chambre vide.</p>
+
+        <p>Il y a dans cette dynamique quelque chose de révélateur sur la nature même du rugby français. L'équipe de 1999 n'était pas incapable de gagner une finale — elle était incapable de conserver l'énergie nécessaire pour la jouer après avoir joué le match de sa vie. Ce n'est pas un reproche. C'est le constat d'une culture qui n'a pas encore appris à économiser l'intensité, à réserver une part d'elle-même pour le lendemain. Le tout ou rien est beau. Il est aussi fatal. L'Australie, en face, a joué son rugby habituel — propre, discipliné, sans génie mais sans failles. Et c'est elle qui a soulevé la Webb Ellis Cup.</p>
+
+        <h2>2011 : la finale de l'illégitimité</h2>
+
+        <p>Nouvelle-Zélande, 23 octobre 2011. La France arrive en finale dans des conditions que peu auraient imaginées au début du tournoi : battue par les Tonga en poule, poussive dans ses victoires, critiquée en permanence par une presse française qui n'y croyait plus, elle élimine l'Angleterre en quart et le Pays de Galles en demi-finale sur des performances collectivement anormales — des matchs d'orgueil plutôt que de maîtrise. L'équipe de Marc Lièvremont s'est qualifiée presque par accident, ou par l'obstination têtue de quelques joueurs qui refusaient que l'histoire s'arrête là. Puis vient la finale sur le sol des All Blacks, dans un Eden Park acquis à la cause néo-zélandaise comme peu de stades peuvent l'être.</p>
+
+        <p>Ce que Thierry Dusautoir produit cette nuit-là est peut-être l'une des plus grandes performances individuelles de l'histoire du rugby. Capitaine, flanker, il est partout — dans les plaquages, dans les rucks, dans les organismes défensifs. La France mène 7-0 à la mi-temps. Elle perd finalement 7-8 sur un essai de Dusautoir ironiquement contrebalancé par la seule réalisation de Dan Carter. Une expulsion précoce fragilise le dispositif défensif français dans les moments où la pression néo-zélandaise se fait la plus forte. Mais la vérité, c'est que pendant quarante minutes, cette France-là a joué mieux que les All Blacks sur leur propre sol, dans leur propre tournoi, devant leur propre public.</p>
+
+        <p>Thierry Dusautoir est élu meilleur joueur du match — à l'issue d'une finale perdue. Ce paradoxe est le symbole parfait du rugby français : l'homme le plus brillant sur le terrain n'est pas dans l'équipe qui gagne. La performance individuelle a dépassé le résultat collectif. Cette image — Dusautoir tenant son trophée individuel après une défaite d'un point — résume quarante ans de relation du XV de France avec les grandes occasions. On produit l'excellence. On perd quand même. Et quelque part, dans cette douleur, il y a presque une forme d'orgueil blessé qui se transmet.</p>
 
         <div class="article-pullquote">
-          <p>« Le problème du XV de France n'est pas qu'il joue mal en finale. C'est qu'il joue trop bien — et pas au bon endroit. Il produit son meilleur rugby en demi-finale parce que la demi-finale lui laisse encore de l'espace pour être lui-même. »</p>
-          <cite>— Analyste tactique, Fédération Française de Rugby</cite>
+          <p>«La France n'a jamais perdu une finale parce qu'elle jouait mal. Elle les perd parce qu'elle a peur de jouer bien au mauvais moment.»</p>
+          <cite>— Sophie Marchand</cite>
         </div>
 
-        <p>Ce paradoxe est documenté dans les chiffres. En demi-finale, la France affiche depuis 1987 un taux de transformation des occasions remarquable, une prise de risque offensive assumée, une gestion du tempo plutôt proactive. En finale, on observe l'inverse : davantage de jeu au pied, moins de jeu d'initiative, une tendance à reculer dans ses propres 22 mètres sous pression. Comme si la proximité du titre produisait une forme d'aversion au risque que les phases précédentes n'avaient pas générée.</p>
+        <h2>2023 : la finale à domicile et le poids de l'attente</h2>
 
-        <p>Les psychologues du sport appellent cela le «choking» — l'effondrement de la performance sous pression extrême. Mais dans le cas du XV de France, ce n'est pas vraiment un effondrement. C'est plutôt une contraction. Les joueurs jouent correctement, rarement bien en deçà de leur niveau. Simplement, ils jouent moins librement. Et dans un sport où la liberté est le moteur principal de leur génie, «moins librement» équivaut à «insuffisamment bien».</p>
+        <p>France 2023 était censée être différente. L'équipe de Fabien Galthié était la plus talentueuse depuis des décennies : Antoine Dupont au sommet de son art, Romain Ntamack à la charnière, le duo Bielle-Biarrey–Penaud sur les ailes capable de déséquilibrer n'importe quelle défense mondiale, une identité de jeu claire et ambitieuse forgée en cinq ans de travail. La France était favorite à domicile, portée par des stades en fusion, soutenue par un élan populaire que le rugby français n'avait pas connu depuis des décennies. Pour la première fois, on ne parlait plus de l'exploit potentiel — on parlait du titre comme d'une réalité à portée de main. Et c'est précisément là que le mécanisme s'est grippé.</p>
+
+        <p>Le quart de finale contre l'Afrique du Sud, au Stade de France bondé, s'est terminé 28-29. Une défaite d'un point, en prolongation, sur une pénalité que beaucoup contestaient encore des semaines après. Techniquement, la France n'a pas atteint la finale. Mais la dynamique est identique à celle de 1987, de 1999, de 2011 : l'équipe qui arrive en favorite absolue, qui porte le poids insupportable de l'attente nationale, qui joue pour confirmer ce que tout le monde sait déjà, s'effondre. Pas contre n'importe qui — contre la meilleure équipe défensive du monde, celle qui sait mieux que personne comment asphyxier un adversaire qui n'ose plus prendre de risques.</p>
+
+        <p>Les Springboks ont joué exactement ce qu'ils savaient jouer : une défense implacable, des coups de pied stratégiques, une gestion du temps qui ressemble à de la torture. La France, elle, a passé une heure à ne pas savoir quoi faire de sa propre grandeur. Le troisième quart-temps, celui où les matchs se gagnent, a vu les Bleus reculer, subir, perdre le fil de leur propre jeu. Antoine Dupont a été exceptionnel — il l'est toujours. Mais une équipe entière tétanisée par la peur de décevoir un pays entier, ça ne se corrige pas avec du talent individuel. Ça se corrige avec une compréhension lucide d'un problème qui se répète depuis trente-six ans.</p>
 
         <div class="article-pullquote">
-          <p>« En 2023, on avait les joueurs pour gagner. On avait le public. On avait Dupont. Ce qu'on n'avait pas, c'était la légèreté des matchs où on n'était pas favoris. »</p>
-          <cite>— Joueur du XV de France, Coupe du Monde 2023 (anonyme)</cite>
+          <p>«Thierry Dusautoir a été élu meilleur joueur d'une finale perdue. C'est le symbole parfait du rugby français.»</p>
+          <cite>— Un sélectionneur anonyme</cite>
         </div>
 
-        <p>La question qui reste sans réponse satisfaisante est celle-ci : comment un système qui produit autant de talent, autant de victoires importantes, autant de moments de grâce collective, n'arrive-t-il pas à transférer cette compétence dans le moment ultime ? Peut-être que la réponse est plus simple qu'on ne le croit. Peut-être que le XV de France ne perd pas ses finales. Peut-être qu'il les joue exactement comme il est — avec toute sa beauté et toutes ses contradictions — et que c'est juste, parfois, presque suffisant. Presque.</p>
+        <h2>La structure psychologique d'une nation de rugby</h2>
+
+        <p>Il existe une thèse psychologique sérieuse sur la relation du sport français au résultat. Des chercheurs spécialisés dans la psychologie du sport de haut niveau, ainsi que des préparateurs mentaux ayant travaillé avec les équipes nationales françaises, décrivent une culture sportive dans laquelle la performance esthétique occupe une place que d'autres nations réservent à la victoire. On préfère perdre en jouant bien que gagner en jouant mal. On célèbre l'exploit plus que le titre. On raconte les belles défaites avec autant de passion que les victoires ordinaires. Cette culture produit des joueurs magnifiques, des équipes capables de créer des moments qui entrent dans les mémoires. Elle produit aussi des équipes qui ne savent pas comment gérer la banalité fonctionnelle d'un match important.</p>
+
+        <p>Dans le rugby français, ce rite est celui de la beauté du jeu, pas de la victoire. Gagner en jouant mal est presque une trahison — demandez aux supporters de n'importe quel grand club du Midi comment ils jugent une victoire à l'arrachée sans bonus offensif. Perdre en jouant bien est presque acceptable — regardez comment la France de 1999 est commémorée pour sa demi-finale flamboyante plutôt que pleurée pour sa finale catastrophique. Ce rapport au jeu comme fin en soi plutôt que comme moyen vers un résultat est une richesse culturelle réelle. C'est aussi, dans les grandes compétitions, une vulnérabilité structurelle que les adversaires les plus organisés savent exploiter.</p>
+
+        <p>La question n'est pas de savoir si la France peut gagner une Coupe du monde — elle le peut, elle le devrait, elle en a les moyens humains et techniques. La question est de savoir si elle est prête à accepter de gagner un match important en le jouant de manière imparfaite, à serrer les dents dans un match fermé et ingrat, à renoncer à l'exploit pour embrasser la gestion clinique. Les All Blacks l'ont appris sous Graham Henry. Les Springboks en ont fait leur identité sous Rassie Erasmus. Le XV de France, lui, continue de produire les joueurs les plus spectaculaires du monde — et de perdre les finales qu'il mérite de gagner. Jusqu'à ce que quelqu'un, un jour, lui apprenne à aimer gagner autant qu'il aime jouer.</p>
 
       </div>
-
       <footer class="article-footer">
         <div class="article-tags">
           <span class="article-tag">Rugby</span>
           <span class="article-tag">Anatomie</span>
           <span class="article-tag">XV de France</span>
-          <span class="article-tag">Coupe du Monde</span>
-          <span class="article-tag">Finale</span>
-          <span class="article-tag">Psychologie</span>
+          <span class="article-tag">Coupe du monde</span>
+          <span class="article-tag">Psychologie du sport</span>
+          <span class="article-tag">Finales</span>
         </div>
         <div class="article-author-bio">
           <div class="author-avatar"></div>
           <div>
             <div class="author-name">Sophie Marchand</div>
-            <p class="author-desc">Journaliste spécialiste du rugby à L'Épopée. Ancienne rédactrice à L'Équipe Magazine, elle s'intéresse aux dynamiques collectives et psychologiques qui font et défont les grandes équipes nationales.</p>
+            <p class="author-desc">Journaliste spécialisée dans la psychologie du sport et le rugby international. Auteure de "Le Beau Jeu et ses fantômes" (2024). Contributrice régulière à L'Épopée depuis 2022.</p>
           </div>
         </div>
       </footer>
     </article>
-
-    <!-- RELATED ARTICLES -->
     <section class="related">
       <div class="related-inner">
         <h2 class="related-title">À lire aussi</h2>
@@ -488,21 +233,21 @@
           <div class="related-card">
             <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/lomu-portrait/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/jonah-lomu.html">Jonah Lomu, l'homme qui a changé le rugby malgré lui</a></h3>
+              <div class="related-card-title"><a href="/sports-media/articles/jonah-lomu.html">Jonah Lomu, l'homme qui a changé le rugby malgré lui</a></div>
               <div class="related-card-meta">Portrait · 18 min</div>
             </div>
           </div>
           <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/all-blacks-rugby-hero/600/300');"></div>
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/all-blacks-nz/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/all-blacks-2015.html">L'anatomie d'une invincibilité : les All Blacks 2015</a></h3>
+              <div class="related-card-title"><a href="/sports-media/articles/all-blacks-2015.html">L'anatomie d'une invincibilité : les All Blacks 2015</a></div>
               <div class="related-card-meta">Anatomie · 25 min</div>
             </div>
           </div>
           <div class="related-card">
             <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/bielle-biarrey-hero/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/louis-bielle-biarrey.html">Louis Bielle-Biarrey : l'ailier qui a décidé que la ligne d'en-but était trop loin pour s'arrêter</a></h3>
+              <div class="related-card-title"><a href="/sports-media/articles/louis-bielle-biarrey.html">Louis Bielle-Biarrey : l'ailier qui a décidé que la ligne d'en-but était trop loin pour s'arrêter</a></div>
               <div class="related-card-meta">Portrait · 16 min</div>
             </div>
           </div>
@@ -510,7 +255,6 @@
       </div>
     </section>
   </main>
-
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -547,7 +291,6 @@
       </div>
     </div>
   </footer>
-
   <script src="/sports-media/script.js"></script>
 </body>
 </html>

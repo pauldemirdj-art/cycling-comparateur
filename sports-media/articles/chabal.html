@@ -3,330 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sébastien Chabal : la bête, le mythe, l'homme blessé — L'Épopée</title>
-  <meta name="description" content="Derrière la crinière et les yeux noirs se cachait quelqu'un qui ne savait pas très bien comment habiter la légende qu'il était devenu. Portrait de Sébastien Chabal, figure la plus célèbre du rugby français, jamais jouée en finale de Coupe du monde." />
+  <title>Sébastien Chabal — Bientôt disponible — L'Épopée</title>
+  <meta name="description" content="Sébastien Chabal : La bête, le mythe, l'homme blessé. Portrait à venir sur L'Épopée." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/sports-media/style.css" />
   <style>
-    /* ── Article-specific styles ── */
-    .article-hero {
+    .coming-soon-hero {
       position: relative;
       height: clamp(420px, 60vh, 700px);
       overflow: hidden;
-      background-image: url("https://picsum.photos/seed/rugby-chabal-portrait/1600/900");
+      background-image: url("https://picsum.photos/seed/chabal-hero/1600/900");
       background-size: cover;
       background-position: center 30%;
     }
-    .article-hero-overlay {
+    .coming-soon-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(10,6,2,0.88) 0%, rgba(10,6,2,0.4) 50%, rgba(10,6,2,0.1) 100%);
+      background: linear-gradient(to top, rgba(10,6,2,0.92) 0%, rgba(10,6,2,0.5) 50%, rgba(10,6,2,0.15) 100%);
     }
-    .article-hero-content {
+    .coming-soon-content {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 0; left: 0; right: 0;
       padding: var(--space-3xl) var(--container-pad) var(--space-2xl);
       max-width: 860px;
       margin-inline: auto;
     }
-    .article-kicker {
-      display: flex;
-      align-items: center;
-      gap: var(--space-md);
-      margin-bottom: var(--space-lg);
-    }
-    .article-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.1;
-      color: #fff;
-      letter-spacing: -0.02em;
-      margin-bottom: var(--space-lg);
-    }
-    .article-standfirst {
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-      color: rgba(255,255,255,0.82);
-      line-height: 1.65;
-      max-width: 680px;
-      margin-bottom: var(--space-xl);
-    }
-    .article-byline {
-      display: flex;
-      align-items: center;
-      gap: var(--space-lg);
-      font-family: var(--font-ui);
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.65);
-      flex-wrap: wrap;
-    }
-    .article-byline strong { color: rgba(255,255,255,0.9); }
-    .article-byline-sep { color: rgba(255,255,255,0.3); }
-
-    /* Article body */
-    .article-wrapper {
-      max-width: 720px;
-      margin-inline: auto;
-      padding: var(--space-3xl) var(--container-pad);
-    }
-    .article-body p {
-      font-family: var(--font-body);
-      font-size: 1.05rem;
-      line-height: 1.85;
-      color: var(--color-ink);
-      margin-bottom: var(--space-xl);
-    }
-    .article-body p:first-of-type::first-letter {
-      font-family: var(--font-display);
-      font-size: 4.2em;
-      font-weight: 900;
-      color: var(--color-bordeaux);
-      float: left;
-      line-height: 0.72;
-      margin-right: 0.08em;
-      margin-top: 0.1em;
-    }
-    .article-body h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.25;
-      margin-top: var(--space-3xl);
-      margin-bottom: var(--space-lg);
-      letter-spacing: -0.01em;
-    }
-    .article-body h3 {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      margin-top: var(--space-2xl);
-      margin-bottom: var(--space-md);
-    }
-
-    /* Pull quote */
-    .article-pullquote {
-      border-left: 3px solid var(--color-bordeaux);
-      padding: var(--space-lg) var(--space-xl);
-      margin: var(--space-2xl) 0;
-      background: var(--color-cream-dark);
-    }
-    .article-pullquote p {
-      font-family: var(--font-display);
-      font-size: clamp(1.15rem, 2vw, 1.45rem);
-      font-style: italic;
-      color: var(--color-ink);
-      line-height: 1.5;
-      margin-bottom: var(--space-sm) !important;
-    }
-    .article-pullquote cite {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-ink-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-style: normal;
-    }
-
-    /* Inline image */
-    .article-image {
-      margin: var(--space-2xl) 0;
-    }
-    .article-image img,
-    .article-image .img-placeholder {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-      background-image: url("https://picsum.photos/seed/chabal-sale-sharks/900/420");
-      background-size: cover;
-      background-position: center;
-    }
-    .article-image figcaption {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-ink-muted);
-      margin-top: var(--space-sm);
-      padding-top: var(--space-sm);
-      border-top: 1px solid var(--color-cream-darker);
-    }
-
-    /* Stats box */
-    .article-stats {
-      background: var(--color-cream-dark);
-      border: 1px solid var(--color-cream-darker);
-      padding: var(--space-xl);
-      margin: var(--space-2xl) 0;
-    }
-    .article-stats-title {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      margin-bottom: var(--space-lg);
-    }
-    .article-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: var(--space-lg);
-    }
-    .stat-item { text-align: center; }
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--color-bordeaux);
-      line-height: 1;
-      display: block;
-    }
-    .stat-label {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      color: var(--color-ink-mid);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-top: var(--space-xs);
-      display: block;
-    }
-
-    /* Article footer */
-    .article-footer {
-      border-top: 1px solid var(--color-cream-darker);
-      margin-top: var(--space-3xl);
-      padding-top: var(--space-xl);
-    }
-    .article-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-xl);
-    }
-    .article-tag {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      border: 1px solid var(--color-bordeaux);
-      padding: 0.25rem 0.7rem;
-      border-radius: 2px;
-    }
-    .article-author-bio {
-      display: flex;
-      gap: var(--space-lg);
-      align-items: flex-start;
-      background: var(--color-cream-dark);
-      padding: var(--space-xl);
-    }
-    .author-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background-image: url("https://picsum.photos/seed/author-antoine/56/56");
-      background-size: cover;
-      flex-shrink: 0;
-    }
-    .author-name {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-    }
-    .author-desc {
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      color: var(--color-ink-mid);
-      line-height: 1.6;
-      margin-top: 0.25rem;
-    }
-
-    /* Related articles */
-    .related {
-      background: var(--color-cream-dark);
-      padding: var(--space-3xl) var(--container-pad);
-    }
-    .related-inner {
-      max-width: 860px;
-      margin-inline: auto;
-    }
-    .related-title {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      margin-bottom: var(--space-xl);
-    }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: var(--space-xl);
-    }
-    .related-card {
-      background: #fff;
-      border: 1px solid var(--color-cream-darker);
-      overflow: hidden;
-      transition: transform var(--transition-base), box-shadow var(--transition-base);
-    }
-    .related-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-    }
-    .related-card-img {
-      height: 160px;
-      background-size: cover;
-      background-position: center;
-    }
-    .related-card-body { padding: var(--space-lg); }
-    .related-card-title {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.35;
-      margin-bottom: var(--space-sm);
-    }
-    .related-card-title a { color: inherit; text-decoration: none; transition: color var(--transition-base); }
-    .related-card-title a:hover { color: var(--color-bordeaux); }
-    .related-card-meta {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      color: var(--color-ink-muted);
-    }
-
-    /* Back link */
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      padding: var(--space-md) var(--container-pad);
-      border-bottom: 1px solid var(--color-cream-darker);
-      display: block;
-      max-width: 100%;
-    }
+    .coming-soon-kicker { display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-lg); }
+    .coming-soon-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.1; color: #fff; letter-spacing: -0.02em; margin-bottom: var(--space-lg); }
+    .coming-soon-subtitle { font-family: var(--font-body); font-size: clamp(1rem, 1.8vw, 1.2rem); color: rgba(255,255,255,0.82); line-height: 1.65; max-width: 680px; font-style: italic; }
+    .coming-soon-body { max-width: 720px; margin-inline: auto; padding: var(--space-3xl) var(--container-pad); text-align: center; }
+    .coming-soon-label { display: inline-block; font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-bordeaux); border: 1px solid var(--color-bordeaux); padding: 0.4rem 1rem; border-radius: 2px; margin-bottom: var(--space-2xl); }
+    .coming-soon-message { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700; color: var(--color-ink); line-height: 1.25; margin-bottom: var(--space-xl); letter-spacing: -0.01em; }
+    .coming-soon-divider { width: 48px; height: 3px; background: var(--color-bordeaux); margin: var(--space-2xl) auto; }
+    .coming-soon-teaser { font-family: var(--font-body); font-size: 1.1rem; line-height: 1.85; color: var(--color-ink-mid); max-width: 560px; margin-inline: auto; margin-bottom: var(--space-2xl); }
+    .btn-return { display: inline-block; font-family: var(--font-ui); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--color-bordeaux); padding: 0.8rem 2rem; border-radius: 2px; text-decoration: none; transition: opacity 0.2s; }
+    .btn-return:hover { opacity: 0.85; }
+    .back-link { display: block; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-bordeaux); padding: var(--space-md) var(--container-pad); border-bottom: 1px solid var(--color-cream-darker); max-width: 100%; }
     .back-link:hover { text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      .article-title { font-size: 1.9rem; }
-      .article-wrapper { padding: var(--space-2xl) var(--container-pad); }
-      .article-stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (max-width: 768px) { .coming-soon-title { font-size: 1.9rem; } .coming-soon-body { padding: var(--space-2xl) var(--container-pad); } }
   </style>
 </head>
 <body>
@@ -366,146 +82,36 @@
 
   <a href="/sports-media/index.html" class="back-link">← Retour à L'Épopée</a>
 
-  <!-- HERO -->
-  <header class="article-hero">
-    <div class="article-hero-overlay"></div>
-    <div class="article-hero-content">
-      <div class="article-kicker">
+  <header class="coming-soon-hero">
+    <div class="coming-soon-overlay"></div>
+    <div class="coming-soon-content">
+      <div class="coming-soon-kicker">
         <span class="badge badge--portrait">Portrait</span>
         <span class="badge badge--epopee">Rugby</span>
       </div>
-      <h1 class="article-title">Sébastien Chabal : la bête, le mythe, l'homme blessé</h1>
-      <p class="article-standfirst">Derrière la crinière et les yeux noirs se cachait quelqu'un qui ne savait pas très bien comment habiter la légende qu'il était devenu. Portrait d'un joueur né en 1977, retraité en 2014, qui restera le rugbyman français le plus reconnu dans le monde — et qui n'a jamais joué de finale de Coupe du monde.</p>
-      <div class="article-byline">
-        <span>Par <strong>Antoine Ferreira</strong></span>
-        <span class="article-byline-sep">·</span>
-        <time datetime="2026-05-25">25 mai 2026</time>
-        <span class="article-byline-sep">·</span>
-        <span>15 min de lecture</span>
-      </div>
+      <h1 class="coming-soon-title">Sébastien Chabal : La bête, le mythe, l'homme blessé</h1>
+      <p class="coming-soon-subtitle">Derrière la crinière et le regard qui faisait trembler les tribunes adverses, il y avait une histoire plus complexe, plus humaine, plus douloureuse que l'icône ne le laissait paraître.</p>
     </div>
   </header>
 
-  <!-- ARTICLE BODY -->
   <main>
-    <article class="article-wrapper">
-      <div class="article-body">
+    <div class="coming-soon-body">
+      <div class="coming-soon-label">Portrait à venir</div>
 
-        <p>Il y a des sportifs qu'on reconnaît à leurs statistiques. Et puis il y a Sébastien Chabal, qu'on reconnaît à sa silhouette — les cheveux longs et noirs, la barbe dense, la stature de troisième ligne qui semble avoir été conçue pour faire peur. Le surnom «L'homme des cavernes» ne lui a pas été imposé : il a été forgé par l'accumulation d'images, de une de journaux, de publicités mondiales, d'une façon de courir qui semblait plus animale que technique. Mais le paradoxe de Chabal, c'est que sous ce mythe physique se cachait quelqu'un de beaucoup plus complexe — et peut-être plus vulnérable — que l'image ne le laissait croire.</p>
+      <p class="coming-soon-message">Sébastien Chabal : La bête, le mythe, l'homme blessé</p>
 
-        <div class="article-stats">
-          <div class="article-stats-title">Sébastien Chabal en chiffres</div>
-          <div class="article-stats-grid">
-            <div class="stat-item">
-              <span class="stat-number">62</span>
-              <span class="stat-label">Sélections France</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">230+</span>
-              <span class="stat-label">Apparitions en club</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">500K</span>
-              <span class="stat-label">Salaire annuel (pic, €)</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">3 ans</span>
-              <span class="stat-label">Rugbyman français le + googl</span>
-            </div>
-          </div>
-        </div>
+      <div class="coming-soon-divider"></div>
 
-        <h2>L'image comme prison dorée</h2>
+      <p class="coming-soon-teaser">
+        Cet article est en cours de rédaction. Disponible bientôt.
+      </p>
 
-        <p>Sébastien Chabal est né le 18 décembre 1977 à Romans-sur-Isère, dans la Drôme. Son parcours formateur est classique pour sa génération — Valence puis Bourgoin-Jallieu — avant que Sale Sharks, club anglais de premier plan, ne le recrute en 2004. C'est en Angleterre que l'image se construit. Les médias britanniques adorent les figures archétypales, et Chabal en est une d'une netteté rare : grand, barbu, avec un physique qui fait vendre des journaux et une efficacité dans le jeu aérien et dans les plaquages qui justifie objectivement la hype. Il devient rapidement le joueur étranger le plus suivi de la Premiership.</p>
+      <p class="coming-soon-teaser">
+        Il était le rugbyman le plus reconnaissable de sa génération — peut-être de toute l'histoire du rugby français. Partout dans le monde, sa silhouette, sa barbe, son regard suffisaient à identifier un sport entier. Mais ce portrait cherche autre chose : l'homme derrière le mythe, les blessures derrière la puissance, la carrière derrière l'image.
+      </p>
 
-        <p>Mais ce que les images ne montrent pas, c'est la façon dont cette construction médiatique a déformé la réalité de son jeu. Chabal n'était pas qu'une machine à plaquages. Il était un numéro 8 ou troisième ligne aile techniquement complet, capable de porter, de distribuer, de défendre sur plusieurs registres. Ses performances à Sale entre 2004 et 2008 le prouvent. La célébrité, en le réduisant à son apparence, a paradoxalement occulté ce qu'il faisait réellement sur le terrain. Son image a été plus célèbre que son rugby — et il a dû vivre avec ça.</p>
-
-        <div class="article-pullquote">
-          <p>« Je n'ai pas choisi d'être un personnage. Je me suis levé un matin et j'étais devenu quelque chose que je ne comprenais pas entièrement. »</p>
-          <cite>— Sébastien Chabal, entretien à L'Équipe Magazine, 2009</cite>
-        </div>
-
-        <figure class="article-image">
-          <div class="img-placeholder" role="img" aria-label="Sébastien Chabal avec le maillot de Sale Sharks en Premiership anglaise"></div>
-          <figcaption>Sébastien Chabal sous le maillot de Sale Sharks, où il a connu ses meilleures années européennes entre 2004 et 2008, avant de rejoindre le Racing Metro.</figcaption>
-        </figure>
-
-        <h2>La Coupe du monde 2007 et le tackle qui a tout résumé</h2>
-
-        <p>Si l'on devait choisir un seul moment pour symboliser la carrière de Chabal dans l'imaginaire collectif, ce serait le match France-Nouvelle-Zélande du 6 octobre 2007, lors de la Coupe du monde disputée en France. Au Millennium Stadium de Cardiff, dans ce quart de finale qui allait décider de l'avenir du tournoi, Chabal entre en jeu et place sur Rodney So'oialo un plaquage qui est encore, deux décennies plus tard, l'un des plus regardés de l'histoire du rugby sur YouTube. Le geste dure moins de deux secondes. Il a été vu des millions de fois.</p>
-
-        <p>Ce match, la France le gagna 20-18 — l'une des plus grandes victoires de son histoire contre les All Blacks, à la Coupe du monde. Chabal était au cœur de cette performance. Puis la France fut éliminée en demi-finale par l'Angleterre. Il n'y eut pas de finale. Et c'est là que réside l'une des ironies les plus douloureuses de sa carrière : l'homme dont l'image a traversé le monde grâce à la Coupe du monde 2007 n'a jamais disputé la finale de ce tournoi. Ni en 2007, ni en 2011, ni lors de ses autres participations. Le mythe Chabal est né d'une compétition qu'il n'a jamais gagnée.</p>
-
-        <figure class="article-image" style="background-image: url('https://picsum.photos/seed/france-nouvelle-zelande-2007/900/420'); background-size: cover; background-position: center; height: 420px; margin: var(--space-2xl) 0;">
-        </figure>
-        <p style="font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); margin-top: calc(-1 * var(--space-xl)); margin-bottom: var(--space-2xl); padding-top: var(--space-sm); border-top: 1px solid var(--color-cream-darker);">France-Nouvelle-Zélande, Coupe du monde 2007. Le plaquage de Chabal sur Rodney So'oialo reste l'une des images les plus partagées de l'histoire du rugby mondial.</p>
-
-        <h2>L'après : le mythe survit à l'homme</h2>
-
-        <p>Sébastien Chabal a raccroché les crampons en 2014, après une fin de carrière marquée par les blessures — au dos surtout, une pathologie chronique qui a progressivement réduit sa disponibilité internationale et limité ses performances. Le paradoxe est cruel : la puissance physique qui avait fait sa légende devenait la source de ses fragilités. Les impacts accumulés pendant quinze ans de rugby professionnel avaient un prix que les publicités ne mentionnaient pas.</p>
-
-        <p>Car il y a eu beaucoup de publicités. La marque Chabal a atteint un niveau de notoriété sans équivalent dans le rugby français. Des campagnes Xbox en Angleterre, des partenariats avec des marques automobiles, des apparitions dans des émissions de télévision grand public dans plusieurs pays. Pendant trois ans — entre 2007 et 2010 environ — il était le sportif français le plus googl à l'international, devant Zidane selon certaines métriques de l'époque. Ce succès commercial n'était pas qu'une distraction : il révèle quelque chose d'essentiel sur la façon dont le sport fabrique et consomme ses icônes. Chabal n'a pas construit ce mythe. Il l'a habité, souvent à contrecœur.</p>
-
-        <p>Aujourd'hui, Sébastien Chabal est consultant rugby sur les chaînes sportives françaises, ambassadeur de plusieurs marques, et reste une figure incontournable dès qu'il s'agit d'évoquer le rugby des années 2000. Sa gentillesse proverbiale hors du terrain — souvent évoquée par ses anciens coéquipiers comme un contraste saisissant avec l'image publique — n'a pas été démentie par sa reconversion médiatique. Il parle avec précision, avec humour, avec une forme de distance sur sa propre légende qui suggère qu'il a pris le temps de comprendre ce qui lui était arrivé. Ce n'est pas rien.</p>
-
-        <div class="article-pullquote">
-          <p>« Il avait l'air d'un homme des cavernes. Il raisonnait comme un joueur d'échecs. C'est cette contradiction que personne n'a jamais vraiment racontée. »</p>
-          <cite>— Un ancien coéquipier à Sale Sharks</cite>
-        </div>
-
-        <p>Ce que l'histoire de Chabal dit du sport, finalement, c'est que le mythe peut être plus grand que le sportif sans que ce soit une trahison. Le rugby mondial n'a pas produit un meilleur troisième ligne que lui à cette époque — mais il a produit de meilleurs troisièmes lignes moins célèbres. La célébrité n'est pas une mesure de la qualité. Elle est une mesure de ce qu'une époque cherche à voir. En 2006-2007, le monde du rugby cherchait un personnage. Il a trouvé Sébastien Chabal. Et Sébastien Chabal a fait ce qu'il pouvait avec ça.</p>
-
-      </div>
-
-      <footer class="article-footer">
-        <div class="article-tags">
-          <span class="article-tag">Rugby</span>
-          <span class="article-tag">Portrait</span>
-          <span class="article-tag">XV de France</span>
-          <span class="article-tag">Coupe du monde</span>
-          <span class="article-tag">Sale Sharks</span>
-          <span class="article-tag">Mythe</span>
-        </div>
-        <div class="article-author-bio">
-          <div class="author-avatar"></div>
-          <div>
-            <div class="author-name">Antoine Ferreira</div>
-            <p class="author-desc">Journaliste rugby à L'Épopée depuis 2021. Ancien chroniqueur à So Foot, il couvre le rugby professionnel français et international avec une obsession pour les mécanismes tactiques et les trajectoires humaines.</p>
-          </div>
-        </div>
-      </footer>
-    </article>
-
-    <!-- RELATED ARTICLES -->
-    <section class="related">
-      <div class="related-inner">
-        <h2 class="related-title">À lire aussi</h2>
-        <div class="related-grid">
-          <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/bielle-biarrey-hero/600/300');"></div>
-            <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/louis-bielle-biarrey.html">Louis Bielle-Biarrey : l'ailier qui a décidé que la ligne d'en-but était trop loin</a></h3>
-              <div class="related-card-meta">Portrait · 16 min</div>
-            </div>
-          </div>
-          <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/xv-france-finale/600/300');"></div>
-            <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/xv-de-france-finales.html">Pourquoi le XV de France perd toujours les finales qu'il mérite de gagner</a></h3>
-              <div class="related-card-meta">Anatomie · 14 min</div>
-            </div>
-          </div>
-          <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/all-blacks-2015/600/300');"></div>
-            <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/all-blacks-2015.html">L'anatomie d'une invincibilité : les All Blacks 2015</a></h3>
-              <div class="related-card-meta">Anatomie · 25 min</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <a href="/sports-media/index.html" class="btn-return">← Retour à L'Épopée</a>
+    </div>
   </main>
 
   <footer class="footer">

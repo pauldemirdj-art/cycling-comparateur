@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonah Lomu, l'homme qui a changé le rugby malgré lui — L'Épopée</title>
+  <meta name="description" content="Il ne cherchait pas à révolutionner un sport. Il cherchait simplement à exister — à courir, à franchir, à vivre dans le seul espace où sa puissance était célébrée plutôt que crainte. Et pourtant, en soixante-trois matchs internationaux, Jonah Lomu a reconfiguré les frontières du possible." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/sports-media/style.css" />
+  <style>
+    .article-hero {
+      position: relative;
+      height: clamp(420px, 60vh, 700px);
+      overflow: hidden;
+      background-image: url("https://picsum.photos/seed/lomu-portrait/1600/900");
+      background-size: cover;
+      background-position: center 30%;
+    }
+    .article-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,6,2,0.88) 0%, rgba(10,6,2,0.4) 50%, rgba(10,6,2,0.1) 100%);
+    }
+    .article-hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-3xl) var(--container-pad) var(--space-2xl);
+      max-width: 860px;
+      margin-inline: auto;
+    }
+    .article-kicker {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-lg);
+    }
+    .article-standfirst {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: rgba(255,255,255,0.82);
+      line-height: 1.65;
+      max-width: 680px;
+      margin-bottom: var(--space-xl);
+    }
+    .article-byline {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      flex-wrap: wrap;
+    }
+    .article-byline strong { color: rgba(255,255,255,0.9); }
+    .article-byline-sep { color: rgba(255,255,255,0.3); }
+
+    .article-wrapper {
+      max-width: 720px;
+      margin-inline: auto;
+      padding: var(--space-3xl) var(--container-pad);
+    }
+    .article-body p {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--color-ink);
+      margin-bottom: var(--space-xl);
+    }
+    .article-body p:first-of-type::first-letter {
+      font-family: var(--font-display);
+      font-size: 4.2em;
+      font-weight: 900;
+      color: var(--color-bordeaux);
+      float: left;
+      line-height: 0.72;
+      margin-right: 0.08em;
+      margin-top: 0.1em;
+    }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.25;
+      margin-top: var(--space-3xl);
+      margin-bottom: var(--space-lg);
+      letter-spacing: -0.01em;
+    }
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-top: var(--space-2xl);
+      margin-bottom: var(--space-md);
+    }
+
+    .article-pullquote {
+      border-left: 3px solid var(--color-bordeaux);
+      padding: var(--space-lg) var(--space-xl);
+      margin: var(--space-2xl) 0;
+      background: var(--color-cream-dark);
+    }
+    .article-pullquote p {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-style: italic;
+      color: var(--color-ink);
+      line-height: 1.5;
+      margin-bottom: var(--space-sm) !important;
+    }
+    .article-pullquote cite {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    .article-image {
+      margin: var(--space-2xl) 0;
+    }
+    .article-image img,
+    .article-image .img-placeholder {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+      background-image: url("https://picsum.photos/seed/lomu-1995/900/420");
+      background-size: cover;
+      background-position: center;
+    }
+    .article-image figcaption {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      margin-top: var(--space-sm);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-cream-darker);
+    }
+
+    .article-stats {
+      background: var(--color-cream-dark);
+      border: 1px solid var(--color-cream-darker);
+      padding: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+    .article-stats-title {
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      margin-bottom: var(--space-lg);
+    }
+    .article-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: var(--space-lg);
+    }
+    .stat-item { text-align: center; }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--color-bordeaux);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      color: var(--color-ink-mid);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: var(--space-xs);
+      display: block;
+    }
+
+    .article-footer {
+      border-top: 1px solid var(--color-cream-darker);
+      margin-top: var(--space-3xl);
+      padding-top: var(--space-xl);
+    }
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+    }
+    .article-tag {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      border: 1px solid var(--color-bordeaux);
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+    }
+    .article-author-bio {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: flex-start;
+      background: var(--color-cream-dark);
+      padding: var(--space-xl);
+    }
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-image: url("https://picsum.photos/seed/author-antoine/56/56");
+      background-size: cover;
+      flex-shrink: 0;
+    }
+    .author-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ink);
+    }
+    .author-desc {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--color-ink-mid);
+      line-height: 1.6;
+      margin-top: 0.25rem;
+    }
+
+    .related {
+      background: var(--color-cream-dark);
+      padding: var(--space-3xl) var(--container-pad);
+    }
+    .related-inner {
+      max-width: 860px;
+      margin-inline: auto;
+    }
+    .related-title {
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      margin-bottom: var(--space-xl);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-xl);
+    }
+    .related-card {
+      background: #fff;
+      border: 1px solid var(--color-cream-darker);
+      overflow: hidden;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .related-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    .related-card-img {
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+    }
+    .related-card-body { padding: var(--space-lg); }
+    .related-card-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.35;
+      margin-bottom: var(--space-sm);
+    }
+    .related-card-title a { color: inherit; text-decoration: none; transition: color var(--transition-base); }
+    .related-card-title a:hover { color: var(--color-bordeaux); }
+    .related-card-meta {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      color: var(--color-ink-muted);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      padding: var(--space-md) var(--container-pad);
+      border-bottom: 1px solid var(--color-cream-darker);
+      display: block;
+      max-width: 100%;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.9rem; }
+      .article-wrapper { padding: var(--space-2xl) var(--container-pad); }
+      .article-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <div class="top-bar">
+    <span>Le sport a toujours eu ses épopées. On les raconte.</span>
+  </div>
+
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="/sports-media/index.html" class="nav-logo" aria-label="L'Épopée — accueil">
+        <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" fill="#C9952A" opacity="0.15"/>
+          <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#C9952A" stroke-width="1.4"/>
+          <path d="M10.5 28 Q16 26 21.5 28" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+        </svg>
+        <span class="nav-logo-text">L'Épopée</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/sports-media/index.html#portraits" class="nav-link">Portraits</a></li>
+        <li><a href="/sports-media/index.html#anatomies" class="nav-link">Anatomies</a></li>
+        <li><a href="/sports-media/index.html#enquetes" class="nav-link">Enquêtes</a></li>
+        <li><a href="/sports-media/index.html#epopees" class="nav-link">Épopées</a></li>
+        <li><a href="/sports-media/index.html#about" class="nav-link">À propos</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="/sports-media/index.html#abonnement" class="btn-subscribe">S'abonner</a>
+      </div>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <a href="/sports-media/index.html" class="back-link">← Retour à L'Épopée</a>
+
+  <header class="article-hero">
+    <div class="article-hero-overlay"></div>
+    <div class="article-hero-content">
+      <div class="article-kicker">
+        <span class="badge badge--portrait">Portrait</span>
+        <span class="badge badge--epopee">Rugby</span>
+      </div>
+      <h1 class="article-title">Jonah Lomu, l'homme qui a changé le rugby malgré lui</h1>
+      <p class="article-standfirst">Il ne cherchait pas à révolutionner un sport. Il cherchait simplement à exister — à courir, à franchir, à vivre dans le seul espace où sa puissance était célébrée plutôt que crainte. Et pourtant, en soixante-trois matchs internationaux, Jonah Lomu a reconfiguré les frontières du possible.</p>
+      <div class="article-byline">
+        <span>Par <strong>Antoine Ferreira</strong></span>
+        <span class="article-byline-sep">·</span>
+        <time datetime="2026-06-15">15 juin 2026</time>
+        <span class="article-byline-sep">·</span>
+        <span>18 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-wrapper">
+      <div class="article-body">
+
+        <p>Il existe des athlètes qui dominent leur époque et des athlètes qui la transforment. Jonah Lomu appartient à la deuxième catégorie — et c'est précisément ce qui rend son histoire si particulière, si chargée d'une mélancolie douce-amère. Car lui ne cherchait pas à transformer quoi que ce soit. Il cherchait à jouer au rugby, simplement, dans le seul espace du monde où sa puissance physique n'était pas un problème à résoudre mais une qualité à exploiter. Et en faisant cela — en jouant, en courant, en franchissant — il a changé un sport pour toujours.</p>
+
+        <p>Soixante-trois sélections avec les All Blacks. Soixante essais en test-match. Deux Coupes du monde. Et une maladie rénale qui courait en parallèle de toute sa carrière, rongeant lentement un corps que les meilleurs défenseurs du monde ne parvenaient pas à arrêter. Le paradoxe Lomu tient dans cet espace impossible : l'homme le plus puissant de l'histoire du rugby était aussi l'un des plus fragiles.</p>
+
+        <div class="article-stats">
+          <div class="article-stats-title">Jonah Lomu — Carrière internationale</div>
+          <div class="article-stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">63</span>
+              <span class="stat-label">Sélections All Blacks</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">60</span>
+              <span class="stat-label">Essais en test-match</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2</span>
+              <span class="stat-label">Coupes du monde</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1995</span>
+              <span class="stat-label">L'année qui a tout changé</span>
+            </div>
+          </div>
+        </div>
+
+        <h2>Les origines tonganes d'un géant néo-zélandais</h2>
+
+        <p>Jonah Lomu est né le 12 mai 1975 à Auckland, dans une famille tonganaise installée à Mangere, banlieue pauvre du sud de la ville. La communauté pacifique y est nombreuse, les ressources rares, la foi chrétienne très présente. Son enfance est marquée par la discipline familiale et les contraintes économiques, mais aussi par une énergie physique que ses parents ne savent pas toujours quoi faire. À l'école, il est déjà plus grand, plus large, plus rapide que ses camarades — une anomalie que le système scolaire perçoit tantôt comme un avantage, tantôt comme une menace.</p>
+
+        <p>Il découvre le rugby très jeune, dans les rues d'abord, puis dans les clubs locaux. Les entraîneurs qui l'observent pour la première fois ont du mal à trouver les mots : il n'est pas seulement grand ou rapide — il est les deux simultanément, dans des proportions que le rugby amateur n'a jamais eu à gérer. À 17 ans, il joue déjà dans des catégories de seniors. À 19 ans, il devient le plus jeune joueur à avoir représenté les All Blacks. Ce record tient encore aujourd'hui.</p>
+
+        <p>Ce que ses formateurs décrivent, ceux qui l'ont vu grandir à Mangere et au Wesley College, c'est un garçon profondément timide en dehors du terrain. Quelqu'un qui parlait peu, écoutait beaucoup, et semblait trouver dans le rugby une langue qui lui convenait mieux que les mots. Le terrain était le seul endroit où personne ne lui demandait de se faire plus petit.</p>
+
+        <figure class="article-image">
+          <div class="img-placeholder" role="img" aria-label="Jonah Lomu en 1995"></div>
+          <figcaption>Jonah Lomu lors de la Coupe du monde 1995 en Afrique du Sud — la compétition qui a tout changé.</figcaption>
+        </figure>
+
+        <h2>1995 : le moment où le rugby a changé de siècle</h2>
+
+        <p>La Coupe du monde 1995 en Afrique du Sud est le cadre d'un des événements les plus improbables de l'histoire du sport. Le quart de finale entre la Nouvelle-Zélande et l'Angleterre, le 18 juin 1995 au Cap, reste l'une des performances individuelles les plus choquantes jamais enregistrées dans un sport collectif. Jonah Lomu, 20 ans, inscrit quatre essais en moins de quatre-vingts minutes. Les défenseurs anglais ne sont pas dépassés — ils sont physiquement renversés, débordés, annulés.</p>
+
+        <p>Mike Catt, le défenseur anglais renversé dans la séquence la plus vue de l'histoire du rugby, dira plus tard avec une honnêteté désarmante : «Il me rentrait dedans comme une voiture.» Will Carling, le capitaine anglais, avouera ne pas avoir su quoi faire, ni avant ni pendant ni après. Ce n'est pas seulement un match — c'est la démonstration que le rugby venait de changer d'ère. Un joueur de 1,96 mètre pour 119 kilogrammes capable de courir le 100 mètres en 10"8. Les défenseurs n'étaient pas équipés mentalement pour cette réalité.</p>
+
+        <p>Ce que ce match a révélé au monde — pas seulement au monde du rugby, mais au monde entier, parce que les images ont été diffusées partout — c'est qu'un sport peut changer en une après-midi. Avant le 18 juin 1995, le rugby était un sport de contact où la taille et la puissance étaient des avantages. Après cette date, il est devenu évident qu'une certaine combinaison de taille, de puissance et de vitesse pouvait rendre le contact lui-même obsolète. Lomu ne cherchait pas à contourner les défenseurs. Il les traversait.</p>
+
+        <div class="article-pullquote">
+          <p>«Je ne cherchais pas à blesser qui que ce soit. Je cherchais juste à aller au bout du terrain.»</p>
+          <cite>— Jonah Lomu</cite>
+        </div>
+
+        <h2>La maladie qui courait en parallèle</h2>
+
+        <p>Ce que le public ne savait pas en 1995, et n'apprendra que progressivement dans les années suivantes, c'est que Lomu souffrait depuis cette même année d'une néphropathie — une maladie rénale progressive qui allait ronger sa carrière de l'intérieur. Les symptômes sont d'abord discrets, la fatigue anormale que les entraîneurs mettent sur le compte des efforts de la Coupe du monde, les douleurs que Lomu minimise dans ses interviews. Mais la maladie avance.</p>
+
+        <p>Il joue malgré tout la Coupe du monde 1999 en Grande-Bretagne et inscrit huit essais — record du tournoi à l'époque. Mais les dialyses commencent, les hospitalisations se multiplient, les traitements s'alourdissent. En 2003, un ami lui offre un rein. Lomu accepte la greffe et reviendra jouer au rugby professionnel — ce qui, de l'avis de ses médecins, tient du prodige autant que de l'obstination. L'étendue de sa volonté force encore aujourd'hui l'admiration de ceux qui ont suivi son dossier médical.</p>
+
+        <p>Cette trajectoire — la gloire absolue en 1995, la maladie silencieuse, la greffe, le retour — dit quelque chose d'essentiel sur Lomu qui dépasse le sport. Il n'a jamais demandé de compassion. Il n'a jamais transformé sa maladie en récit héroïque destiné aux médias. Il a simplement continué à jouer tant qu'il pouvait, et quand il ne pouvait plus, il a attendu de pouvoir à nouveau.</p>
+
+        <h2>Ce que sa mort a confirmé</h2>
+
+        <p>Le 18 novembre 2015, Jonah Lomu meurt à 40 ans d'une crise cardiaque liée à ses complications rénales. Quelques semaines plus tôt, il avait participé au tirage au sort de la Coupe du monde 2015 — souriant, massif, semblant à des années de la mort. Les images de cette cérémonie, rétrospectivement, ont quelque chose d'insupportable. Il savait que sa santé était fragile. Le monde ne le savait pas encore.</p>
+
+        <p>La réaction à son décès a dépassé les frontières du rugby. Des hommages sont venus d'athlètes de disciplines entièrement différentes, de présidents, de musiciens. La Nouvelle-Zélande a pleuré comme elle pleure rarement l'un des siens. Mais ce n'est pas le deuil lui-même qui est instructif — c'est son universalité. Lomu était connu de personnes qui ne savaient pas distinguer un essai d'un drop. Il était entré dans la culture populaire mondiale d'une façon qu'aucun rugbyman avant lui n'avait réussi.</p>
+
+        <div class="article-pullquote">
+          <p>«Il était le premier joueur de rugby dont le monde entier connaissait le nom.»</p>
+          <cite>— Dan Carter</cite>
+        </div>
+
+        <h2>La globalisation d'un sport incarnée dans un homme</h2>
+
+        <p>Avant Lomu, le rugby était un sport confidentiel hors du monde anglophone — apprécié en France, en Argentine, au Pays de Galles, mais ignoré du reste du monde. Après 1995, les audiences télévisées ont explosé en France, au Japon, en Amérique latine. Des pays qui n'avaient jamais eu de programme de développement du rugby ont commencé à en créer. La Coupe du monde est passée d'un événement régional à un événement global, et Lomu en était la raison principale.</p>
+
+        <p>Sa popularité a précédé et accéléré la professionnalisation du sport en 1995 — décision prise par World Rugby en août de cette même année, quelques semaines après la fin de la Coupe du monde. Ce n'est pas un hasard. La démonstration de Lomu avait rendu évident que le rugby pouvait être spectaculaire, lisible, extrême — et donc commercial. Sans lui, la professionnalisation aurait peut-être pris encore quelques années.</p>
+
+        <p>Ce que Lomu a changé, en définitive, ce n'est pas seulement le rugby. C'est la façon dont le monde perçoit ce que peut être un athlète. Un homme de 1,96 mètre et 119 kilogrammes qui court plus vite que des sprinters de 70 kilogrammes — cette image a reconfiguré les imaginaires du possible. Et il l'a fait sans chercher à le faire, sans stratégie de marque ni plan de communication. Il a juste joué. Et le monde a regardé.</p>
+
+      </div>
+
+      <footer class="article-footer">
+        <div class="article-tags">
+          <span class="article-tag">Rugby</span>
+          <span class="article-tag">Portrait</span>
+          <span class="article-tag">All Blacks</span>
+          <span class="article-tag">Nouvelle-Zélande</span>
+          <span class="article-tag">Coupe du monde</span>
+          <span class="article-tag">Légende</span>
+        </div>
+        <div class="article-author-bio">
+          <div class="author-avatar"></div>
+          <div>
+            <div class="author-name">Antoine Ferreira</div>
+            <p class="author-desc">Journaliste rugby à L'Épopée depuis 2021. Ancien chroniqueur à So Foot, il couvre le rugby professionnel français et international avec une obsession pour les mécanismes tactiques et les trajectoires humaines.</p>
+          </div>
+        </div>
+      </footer>
+    </article>
+
+    <section class="related">
+      <div class="related-inner">
+        <h2 class="related-title">À lire aussi</h2>
+        <div class="related-grid">
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/xv-france-finale/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="/sports-media/articles/xv-de-france-finales.html">Pourquoi le XV de France perd toujours les finales qu'il mérite de gagner</a></h3>
+              <div class="related-card-meta">Anatomie · 14 min</div>
+            </div>
+          </div>
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/all-blacks-nz/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="/sports-media/articles/all-blacks-2015.html">L'anatomie d'une invincibilité : les All Blacks 2015</a></h3>
+              <div class="related-card-meta">Anatomie · 25 min</div>
+            </div>
+          </div>
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/toulon-stade/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="/sports-media/articles/chute-de-toulon.html">La chute de Toulon : autopsie d'un empire qui s'est effondré</a></h3>
+              <div class="related-card-meta">Enquête · 20 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/sports-media/index.html" class="footer-logo">
+            <svg class="footer-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" fill="#C9952A" opacity="0.15"/>
+              <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+              <line x1="16" y1="23" x2="16" y2="29" stroke="#C9952A" stroke-width="1.4"/>
+              <path d="M10.5 28 Q16 26 21.5 28" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+            </svg>
+            <span class="footer-logo-text">L'Épopée</span>
+          </a>
+          <p class="footer-tagline">Le sport mérite mieux que des dépêches</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Rubriques</h4>
+          <ul class="footer-links">
+            <li><a href="/sports-media/index.html#portraits">Portraits</a></li>
+            <li><a href="/sports-media/index.html#anatomies">Anatomies</a></li>
+            <li><a href="/sports-media/index.html#enquetes">Enquêtes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">À propos</h4>
+          <ul class="footer-links">
+            <li><a href="#">Notre manifeste</a></li>
+            <li><a href="#">La rédaction</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 L'Épopée — Journalisme de fond sportif.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/sports-media/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'homophobie dans le foot français : le silence qui dure — L'Épopée</title>
+  <meta name="description" content="Des dizaines de joueurs professionnels homosexuels évoluent dans les divisions françaises. Aucun n'a fait son coming-out. Vingt-cinq témoignages recueillis en trois ans dessinent la cartographie d'une institution qui n'est pas prête." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/sports-media/style.css" />
+  <style>
+    /* ── Article-specific styles ── */
+    .article-hero {
+      position: relative;
+      height: clamp(420px, 60vh, 700px);
+      overflow: hidden;
+      background-image: url("https://picsum.photos/seed/football-stadium-empty/1600/900");
+      background-size: cover;
+      background-position: center 30%;
+    }
+    .article-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,6,2,0.88) 0%, rgba(10,6,2,0.4) 50%, rgba(10,6,2,0.1) 100%);
+    }
+    .article-hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: var(--space-3xl) var(--container-pad) var(--space-2xl);
+      max-width: 860px;
+      margin-inline: auto;
+    }
+    .article-kicker {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-lg);
+    }
+    .article-standfirst {
+      font-family: var(--font-body);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: rgba(255,255,255,0.82);
+      line-height: 1.65;
+      max-width: 680px;
+      margin-bottom: var(--space-xl);
+    }
+    .article-byline {
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+      flex-wrap: wrap;
+    }
+    .article-byline strong { color: rgba(255,255,255,0.9); }
+    .article-byline-sep { color: rgba(255,255,255,0.3); }
+
+    /* Article body */
+    .article-wrapper {
+      max-width: 720px;
+      margin-inline: auto;
+      padding: var(--space-3xl) var(--container-pad);
+    }
+    .article-body p {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--color-ink);
+      margin-bottom: var(--space-xl);
+    }
+    .article-body p:first-of-type::first-letter {
+      font-family: var(--font-display);
+      font-size: 4.2em;
+      font-weight: 900;
+      color: var(--color-bordeaux);
+      float: left;
+      line-height: 0.72;
+      margin-right: 0.08em;
+      margin-top: 0.1em;
+    }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.25;
+      margin-top: var(--space-3xl);
+      margin-bottom: var(--space-lg);
+      letter-spacing: -0.01em;
+    }
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-top: var(--space-2xl);
+      margin-bottom: var(--space-md);
+    }
+
+    /* Pull quote */
+    .article-pullquote {
+      border-left: 3px solid var(--color-bordeaux);
+      padding: var(--space-lg) var(--space-xl);
+      margin: var(--space-2xl) 0;
+      background: var(--color-cream-dark);
+    }
+    .article-pullquote p {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-style: italic;
+      color: var(--color-ink);
+      line-height: 1.5;
+      margin-bottom: var(--space-sm) !important;
+    }
+    .article-pullquote cite {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    /* Inline image */
+    .article-image {
+      margin: var(--space-2xl) 0;
+    }
+    .article-image img,
+    .article-image .img-placeholder {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+      background-image: url("https://picsum.photos/seed/football-locker-room/900/420");
+      background-size: cover;
+      background-position: center;
+    }
+    .article-image figcaption {
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      color: var(--color-ink-muted);
+      margin-top: var(--space-sm);
+      padding-top: var(--space-sm);
+      border-top: 1px solid var(--color-cream-darker);
+    }
+
+    /* Stats box */
+    .article-stats {
+      background: var(--color-cream-dark);
+      border: 1px solid var(--color-cream-darker);
+      padding: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+    .article-stats-title {
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      margin-bottom: var(--space-lg);
+    }
+    .article-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: var(--space-lg);
+    }
+    .stat-item { text-align: center; }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--color-bordeaux);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      color: var(--color-ink-mid);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: var(--space-xs);
+      display: block;
+    }
+
+    /* Article footer */
+    .article-footer {
+      border-top: 1px solid var(--color-cream-darker);
+      margin-top: var(--space-3xl);
+      padding-top: var(--space-xl);
+    }
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+    }
+    .article-tag {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      border: 1px solid var(--color-bordeaux);
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+    }
+    .article-author-bio {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: flex-start;
+      background: var(--color-cream-dark);
+      padding: var(--space-xl);
+    }
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-image: url("https://picsum.photos/seed/author-sara/56/56");
+      background-size: cover;
+      flex-shrink: 0;
+    }
+    .author-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ink);
+    }
+    .author-desc {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      color: var(--color-ink-mid);
+      line-height: 1.6;
+      margin-top: 0.25rem;
+    }
+
+    /* Related articles */
+    .related {
+      background: var(--color-cream-dark);
+      padding: var(--space-3xl) var(--container-pad);
+    }
+    .related-inner {
+      max-width: 860px;
+      margin-inline: auto;
+    }
+    .related-title {
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      margin-bottom: var(--space-xl);
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-xl);
+    }
+    .related-card {
+      background: #fff;
+      border: 1px solid var(--color-cream-darker);
+      overflow: hidden;
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .related-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    .related-card-img {
+      height: 160px;
+      background-size: cover;
+      background-position: center;
+    }
+    .related-card-body { padding: var(--space-lg); }
+    .related-card-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ink);
+      line-height: 1.35;
+      margin-bottom: var(--space-sm);
+    }
+    .related-card-title a { color: inherit; text-decoration: none; transition: color var(--transition-base); }
+    .related-card-title a:hover { color: var(--color-bordeaux); }
+    .related-card-meta {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      color: var(--color-ink-muted);
+    }
+
+    /* Back link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-ui);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-bordeaux);
+      padding: var(--space-md) var(--container-pad);
+      border-bottom: 1px solid var(--color-cream-darker);
+      display: block;
+      max-width: 100%;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.9rem; }
+      .article-wrapper { padding: var(--space-2xl) var(--container-pad); }
+      .article-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <div class="top-bar">
+    <span>Le sport a toujours eu ses épopées. On les raconte.</span>
+  </div>
+
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="/sports-media/index.html" class="nav-logo" aria-label="L'Épopée — accueil">
+        <svg class="nav-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" fill="#C9952A" opacity="0.15"/>
+          <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#C9952A" stroke-width="1.4"/>
+          <path d="M10.5 28 Q16 26 21.5 28" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+        </svg>
+        <span class="nav-logo-text">L'Épopée</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/sports-media/index.html#portraits" class="nav-link">Portraits</a></li>
+        <li><a href="/sports-media/index.html#anatomies" class="nav-link">Anatomies</a></li>
+        <li><a href="/sports-media/index.html#enquetes" class="nav-link">Enquêtes</a></li>
+        <li><a href="/sports-media/index.html#epopees" class="nav-link">Épopées</a></li>
+        <li><a href="/sports-media/index.html#about" class="nav-link">À propos</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="/sports-media/index.html#abonnement" class="btn-subscribe">S'abonner</a>
+      </div>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <a href="/sports-media/index.html" class="back-link">← Retour à L'Épopée</a>
+
+  <!-- HERO -->
+  <header class="article-hero">
+    <div class="article-hero-overlay"></div>
+    <div class="article-hero-content">
+      <div class="article-kicker">
+        <span class="badge badge--enquete">Enquête</span>
+        <span class="badge badge--epopee">Football</span>
+      </div>
+      <h1 class="article-title">L'homophobie dans le foot français : le silence qui dure</h1>
+      <p class="article-standfirst">Des dizaines de joueurs professionnels homosexuels évoluent dans les divisions françaises. Aucun n'a fait son coming-out. Vingt-cinq témoignages recueillis en trois ans dessinent la cartographie d'une institution qui n'est pas prête.</p>
+      <div class="article-byline">
+        <span>Par <strong>Sara Kowalski</strong></span>
+        <span class="article-byline-sep">·</span>
+        <time datetime="2026-06-01">1 juin 2026</time>
+        <span class="article-byline-sep">·</span>
+        <span>27 min de lecture</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTICLE BODY -->
+  <main>
+    <article class="article-wrapper">
+      <div class="article-body">
+
+        <p>Il joue en Ligue 1. Il a une dizaine de sélections en équipe nationale. La nuit, il vérifie son téléphone pour s'assurer qu'aucun message ne trahit ce qu'il cache depuis le début de sa carrière professionnelle. Appelons-le Karim — ce n'est pas son prénom. Il a accepté de nous parler à condition que rien ne permette de l'identifier. «Je n'ai pas peur pour ma vie», dit-il. «J'ai peur pour ma carrière. Ce n'est pas la même chose, mais c'est réel.» Vingt-cinq footballeurs professionnels évoluant dans les divisions françaises nous ont accordé des entretiens dans des conditions similaires, sur trois ans de travail. Voici ce qu'ils ont dit.</p>
+
+        <div class="article-stats">
+          <div class="article-stats-title">L'homophobie dans le football — chiffres clés</div>
+          <div class="article-stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">0</span>
+              <span class="stat-label">Pros français out</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">25</span>
+              <span class="stat-label">Témoignages anonymes</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2</span>
+              <span class="stat-label">Pros européens out (retraités)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1990</span>
+              <span class="stat-label">Année du coming-out Fashanu</span>
+            </div>
+          </div>
+        </div>
+
+        <h2>Le vestiaire comme institution du silence</h2>
+
+        <p>Le vestiaire d'un club de football professionnel français n'est pas un espace neutre. C'est un lieu codifié, hiérarchisé, où les normes de masculinité sont négociées en permanence — et où la déviance par rapport à ces normes a un coût immédiat. Nos interlocuteurs, à une exception près, décrivent le même paysage linguistique : «pd», «tapette», «enculé» utilisés comme insultes banales, intégrées dans la communication quotidienne entre coéquipiers sans intention explicitement malveillante, mais avec un effet structurant très précis. Ces mots ne désignent pas des homosexuels : ils désignent des individus faibles, des joueurs qui ont raté leur tir, des défenseurs qui ont manqué un duel.</p>
+
+        <p>«Personne ne me vise», dit l'un de nos sources, milieu de terrain dans un club de milieu de tableau. «C'est ça le pire. Ils ne savent pas que je suis là. Ils utilisent ces mots comme si l'air était vide.» Cette invisibilité n'est pas un accident. Elle est le produit d'un système où l'existence gay en football professionnel reste impensable — non pas parce que les joueurs seraient tous homophobes au sens clinique du terme, mais parce que le football français n'a jamais eu à construire un langage pour accueillir autre chose.</p>
+
+        <div class="article-pullquote">
+          <p>« Ils utilisent ces mots comme si l'air était vide. Personne ne me vise. C'est ça le pire. »</p>
+          <cite>— Un joueur de Ligue 1, sous anonymat</cite>
+        </div>
+
+        <p>Onze de nos vingt-cinq sources décrivent avoir assisté à des conversations de vestiaire dans lesquelles l'homosexualité était explicitement évoquée avec dégoût. Seize d'entre elles disent n'avoir jamais entendu un coéquipier défendre ou nuancer ces propos. Trois seulement rapportent des épisodes où un joueur, souvent un étranger habitué à des environnements différents, a exprimé un malaise. Les chiffres ne font pas une preuve, mais ils dessinent une topographie.</p>
+
+        <figure class="article-image">
+          <div class="img-placeholder" role="img" aria-label="Tribune vide d'un stade de football français"></div>
+          <figcaption>Un stade de Ligue 1 avant un match. Derrière les chiffres d'affluence, une culture institutionnelle qui n'a pas bougé depuis des décennies.</figcaption>
+        </figure>
+
+        <h2>Justin Fashanu, Thomas Hitzlsperger : les leçons non apprises</h2>
+
+        <p>En 1990, Justin Fashanu devenait le premier footballeur professionnel à faire son coming-out public. Il jouait en Angleterre, avait été le premier joueur à être transféré pour un million de livres sterling, et bénéficiait d'une notoriété suffisante pour que son annonce fasse la une des tabloïds. La réaction fut catastrophique. Son frère John, lui-même joueur professionnel, prit ses distances publiquement. Les clubs l'évitèrent. Sa carrière ne se releva jamais de ce qu'il avait osé dire. En 1998, Justin Fashanu mit fin à ses jours à Londres. Il avait 37 ans.</p>
+
+        <p>L'histoire de Fashanu est connue des journalistes sportifs et d'une partie du monde du football britannique. En France, elle reste largement ignorée dans les structures professionnelles. Aucun de nos vingt-cinq interlocuteurs ne l'avait entendu évoquer dans un cadre institutionnel — pas en formation, pas dans un programme de sensibilisation, pas lors d'une réunion d'équipe. Thomas Hitzlsperger, international allemand avec 52 sélections, fit son coming-out en janvier 2014, plusieurs mois après sa retraite sportive. «J'aurais voulu le faire plus tôt», déclara-t-il à l'époque. «Mais le foot professionnel n'était pas un endroit où je pouvais le faire.» Il avait joué pour la Fiorentina, West Ham, la Lazio et l'Éverton. Dans tous ces clubs, il avait gardé le silence.</p>
+
+        <p>Ces deux exemples — l'un tragique, l'autre plus mesuré — posent la même question : trente-six ans après Fashanu, seize ans après Hitzlsperger, qu'est-ce qui a changé dans le football professionnel français ? La réponse, à la lumière de nos entretiens, est décourageante. Les clubs ont des chartes de valeurs. La FFF a lancé des campagnes de sensibilisation à l'inclusivité. Mais dans les vestiaires, dans la culture informelle qui régit la vie d'un joueur professionnel, les structures fondamentales n'ont pas bougé.</p>
+
+        <div class="article-pullquote">
+          <p>« Le foot professionnel n'était pas un endroit où je pouvais le faire. » — Thomas Hitzlsperger, international allemand, 2014. Seize ans plus tard, ses mots décrivent encore la réalité française.</p>
+          <cite>— Thomas Hitzlsperger, international allemand (52 sélections), venu out en 2014 après sa retraite</cite>
+        </div>
+
+        <h2>La FFF entre discours et réalité du terrain</h2>
+
+        <p>La Fédération Française de Football n'est pas sans avoir posé des gestes. Sa campagne «Tous Ensemble contre l'Homophobie», lancée en 2014 et renouvelée depuis, a produit des visuels, des communiqués, des partenariats avec des associations. Des matches de Ligue 1 ont été précédés de messages d'inclusion lus au micro. Des joueurs ont porté des brassards aux couleurs de l'arc-en-ciel lors de certaines journées thématiques. Sur le papier, la fédération n'ignore pas le problème.</p>
+
+        <p>Sur le terrain — celui des faits et de la culture institutionnelle — la distance entre le discours officiel et la réalité vécue par nos sources est abyssale. Vingt-deux de nos vingt-cinq interlocuteurs disent n'avoir jamais bénéficié d'une formation ou d'une sensibilisation sérieuse sur ces questions dans leur club. Deux décrivent des interventions qu'ils qualifient de «symboliques» — une affiche dans le couloir, un message en réunion d'équipe qui n'a pas donné lieu à discussion. Un seul évoque une conversation réelle avec son staff sur ce sujet, et c'est parce qu'un incident explicitement homophobe avait eu lieu lors d'un match.</p>
+
+        <figure class="article-image" style="background-image: url('https://picsum.photos/seed/football-campagne-fff/900/420'); background-size: cover; background-position: center; height: 420px; margin: var(--space-2xl) 0;">
+        </figure>
+        <p style="font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); margin-top: calc(-1 * var(--space-xl)); margin-bottom: var(--space-2xl); padding-top: var(--space-sm); border-top: 1px solid var(--color-cream-darker);">Campagne «Tous Ensemble contre l'Homophobie» de la FFF, lancée en 2014. Sa visibilité institutionnelle contraste avec l'absence de changement culturel rapportée par les joueurs.</p>
+
+        <h2>Le rugby comme miroir : le facteur Antoine Dupont</h2>
+
+        <p>Le rugby français est-il plus avancé que le football sur ces questions ? La comparaison est tentante, et elle est réelle sur certains aspects — mais il faut la nuancer soigneusement. Dans le rugby professionnel français, les insultes homophobes dans les vestiaires restent monnaie courante selon plusieurs sources que nous avons contactées parallèlement à cette enquête. Mais il y a une différence de degré dans la tolérance publique au discours d'ouverture.</p>
+
+        <p>Antoine Dupont, le demi de mêlée du Stade Toulousain et capitaine du XV de France, n'a jamais fait de déclaration explicite sur l'homophobie dans le rugby. Mais son style de leadership — émotionnel, ouvert, peu conformiste au masculinisme traditionnel — a été associé dans le discours médiatique à une forme de modernisation du rapport au corps et à l'identité dans ce sport. Plusieurs joueurs de rugby que nous avons contactés mentionnent un environnement «moins fermé» que le football, sans pouvoir l'objectiver précisément. Ce que le rugby a que le football n'a pas encore, c'est peut-être simplement la conversation — la possibilité de dire les choses sans que le sujet soit immédiatement fermé.</p>
+
+        <p>La vérité inconfortable est que ni le rugby ni le football professionnel français n'ont de joueur actif ouvertement homosexuel. La différence est que dans le rugby, la question semble un peu moins impensable à poser à voix haute. C'est peu. Mais c'est mesurable.</p>
+
+        <div class="article-pullquote">
+          <p>« Ce n'est pas que mes coéquipiers me détesteraient. C'est qu'ils ne sauraient plus comment me parler. Et moi, je ne saurais plus comment jouer. »</p>
+          <cite>— Un joueur de Ligue 2, sous anonymat</cite>
+        </div>
+
+      </div>
+
+      <footer class="article-footer">
+        <div class="article-tags">
+          <span class="article-tag">Football</span>
+          <span class="article-tag">Enquête</span>
+          <span class="article-tag">Homophobie</span>
+          <span class="article-tag">Ligue 1</span>
+          <span class="article-tag">FFF</span>
+          <span class="article-tag">Société</span>
+        </div>
+        <div class="article-author-bio">
+          <div class="author-avatar"></div>
+          <div>
+            <div class="author-name">Sara Kowalski</div>
+            <p class="author-desc">Journaliste d'enquête à L'Épopée depuis 2022. Elle couvre l'intersection du sport et du fait social — discrimination, pouvoir, économie politique du football. Ancienne correspondante pour Le Monde, elle a mené des enquêtes de terrain dans dix pays.</p>
+          </div>
+        </div>
+      </footer>
+    </article>
+
+    <!-- RELATED ARTICLES -->
+    <section class="related">
+      <div class="related-inner">
+        <h2 class="related-title">À lire aussi</h2>
+        <div class="related-grid">
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/psg-ligue-champions/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="/sports-media/articles/psg-ligue-des-champions.html">Pourquoi le PSG n'a jamais su gagner la Ligue des Champions</a></h3>
+              <div class="related-card-meta">Anatomie · 19 min</div>
+            </div>
+          </div>
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/chabal-rugby-portrait/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="/sports-media/articles/chabal.html">Sébastien Chabal : la bête, le mythe, l'homme blessé</a></h3>
+              <div class="related-card-meta">Portrait · 15 min</div>
+            </div>
+          </div>
+          <div class="related-card">
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/dopage-cyclisme-armstrong/600/300');"></div>
+            <div class="related-card-body">
+              <h3 class="related-card-title"><a href="/sports-media/articles/dopage-cyclisme.html">Le dopage au cyclisme : ce que l'affaire Armstrong n'a pas révélé</a></h3>
+              <div class="related-card-meta">Enquête · 31 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/sports-media/index.html" class="footer-logo">
+            <svg class="footer-logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" fill="#C9952A" opacity="0.15"/>
+              <path d="M16 4 C16 4 8 9.5 8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15 C24 9.5 16 4 16 4 Z" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+              <line x1="16" y1="23" x2="16" y2="29" stroke="#C9952A" stroke-width="1.4"/>
+              <path d="M10.5 28 Q16 26 21.5 28" stroke="#C9952A" stroke-width="1.4" fill="none"/>
+            </svg>
+            <span class="footer-logo-text">L'Épopée</span>
+          </a>
+          <p class="footer-tagline">Le sport mérite mieux que des dépêches</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Rubriques</h4>
+          <ul class="footer-links">
+            <li><a href="/sports-media/index.html#portraits">Portraits</a></li>
+            <li><a href="/sports-media/index.html#anatomies">Anatomies</a></li>
+            <li><a href="/sports-media/index.html#enquetes">Enquêtes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">À propos</h4>
+          <ul class="footer-links">
+            <li><a href="#">Notre manifeste</a></li>
+            <li><a href="#">La rédaction</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 L'Épopée — Journalisme de fond sportif.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/sports-media/script.js"></script>
+</body>
+</html>

@@ -4,18 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pourquoi le Paris Saint-Germain n'a jamais su gagner la Ligue des Champions — L'Épopée</title>
-  <meta name="description" content="Depuis le rachat par QSI en 2011 et plus de deux milliards d'euros dépensés en transferts, le PSG court toujours après la Ligue des Champions. Anatomie d'un échec systémique." />
+  <meta name="description" content="Deux milliards d'euros dépensés en recrues galactiques. Deux finales de Ligue des Champions. Zéro titre européen. Ce n'est pas une question de budget, ni de talent, ni de chance. C'est une question d'architecture." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/sports-media/style.css" />
   <style>
-    /* ── Article-specific styles ── */
     .article-hero {
       position: relative;
       height: clamp(420px, 60vh, 700px);
       overflow: hidden;
-      background-image: url("https://picsum.photos/seed/psg-champions-league/1600/900");
+      background-image: url("https://picsum.photos/seed/psg-champions/1600/900");
       background-size: cover;
       background-position: center 30%;
     }
@@ -26,317 +25,60 @@
     }
     .article-hero-content {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 0; left: 0; right: 0;
       padding: var(--space-3xl) var(--container-pad) var(--space-2xl);
       max-width: 860px;
       margin-inline: auto;
     }
-    .article-kicker {
-      display: flex;
-      align-items: center;
-      gap: var(--space-md);
-      margin-bottom: var(--space-lg);
-    }
-    .article-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.1;
-      color: #fff;
-      letter-spacing: -0.02em;
-      margin-bottom: var(--space-lg);
-    }
-    .article-standfirst {
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-      color: rgba(255,255,255,0.82);
-      line-height: 1.65;
-      max-width: 680px;
-      margin-bottom: var(--space-xl);
-    }
-    .article-byline {
-      display: flex;
-      align-items: center;
-      gap: var(--space-lg);
-      font-family: var(--font-ui);
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.65);
-      flex-wrap: wrap;
-    }
+    .article-kicker { display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-lg); }
+    .article-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.1; color: #fff; letter-spacing: -0.02em; margin-bottom: var(--space-lg); }
+    .article-standfirst { font-family: var(--font-body); font-size: clamp(1rem, 1.8vw, 1.2rem); color: rgba(255,255,255,0.82); line-height: 1.65; max-width: 680px; margin-bottom: var(--space-xl); }
+    .article-byline { display: flex; align-items: center; gap: var(--space-lg); font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.65); flex-wrap: wrap; }
     .article-byline strong { color: rgba(255,255,255,0.9); }
     .article-byline-sep { color: rgba(255,255,255,0.3); }
-
-    /* Article body */
-    .article-wrapper {
-      max-width: 720px;
-      margin-inline: auto;
-      padding: var(--space-3xl) var(--container-pad);
-    }
-    .article-body p {
-      font-family: var(--font-body);
-      font-size: 1.05rem;
-      line-height: 1.85;
-      color: var(--color-ink);
-      margin-bottom: var(--space-xl);
-    }
-    .article-body p:first-of-type::first-letter {
-      font-family: var(--font-display);
-      font-size: 4.2em;
-      font-weight: 900;
-      color: var(--color-bordeaux);
-      float: left;
-      line-height: 0.72;
-      margin-right: 0.08em;
-      margin-top: 0.1em;
-    }
-    .article-body h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.25;
-      margin-top: var(--space-3xl);
-      margin-bottom: var(--space-lg);
-      letter-spacing: -0.01em;
-    }
-    .article-body h3 {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      margin-top: var(--space-2xl);
-      margin-bottom: var(--space-md);
-    }
-
-    /* Pull quote */
-    .article-pullquote {
-      border-left: 3px solid var(--color-bordeaux);
-      padding: var(--space-lg) var(--space-xl);
-      margin: var(--space-2xl) 0;
-      background: var(--color-cream-dark);
-    }
-    .article-pullquote p {
-      font-family: var(--font-display);
-      font-size: clamp(1.15rem, 2vw, 1.45rem);
-      font-style: italic;
-      color: var(--color-ink);
-      line-height: 1.5;
-      margin-bottom: var(--space-sm) !important;
-    }
-    .article-pullquote cite {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-ink-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-style: normal;
-    }
-
-    /* Inline image */
-    .article-image {
-      margin: var(--space-2xl) 0;
-    }
-    .article-image img,
-    .article-image .img-placeholder {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-      background-image: url("https://picsum.photos/seed/psg-champions-league-action/900/420");
-      background-size: cover;
-      background-position: center;
-    }
-    .article-image figcaption {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-ink-muted);
-      margin-top: var(--space-sm);
-      padding-top: var(--space-sm);
-      border-top: 1px solid var(--color-cream-darker);
-    }
-
-    /* Stats box */
-    .article-stats {
-      background: var(--color-cream-dark);
-      border: 1px solid var(--color-cream-darker);
-      padding: var(--space-xl);
-      margin: var(--space-2xl) 0;
-    }
-    .article-stats-title {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      margin-bottom: var(--space-lg);
-    }
-    .article-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: var(--space-lg);
-    }
+    .article-wrapper { max-width: 720px; margin-inline: auto; padding: var(--space-3xl) var(--container-pad); }
+    .article-body p { font-family: var(--font-body); font-size: 1.05rem; line-height: 1.85; color: var(--color-ink); margin-bottom: var(--space-xl); }
+    .article-body p:first-of-type::first-letter { font-family: var(--font-display); font-size: 4.2em; font-weight: 900; color: var(--color-bordeaux); float: left; line-height: 0.72; margin-right: 0.08em; margin-top: 0.1em; }
+    .article-body h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 700; color: var(--color-ink); line-height: 1.25; margin-top: var(--space-3xl); margin-bottom: var(--space-lg); letter-spacing: -0.01em; }
+    .article-pullquote { border-left: 3px solid var(--color-bordeaux); padding: var(--space-lg) var(--space-xl); margin: var(--space-2xl) 0; background: var(--color-cream-dark); }
+    .article-pullquote p { font-family: var(--font-display); font-size: clamp(1.15rem, 2vw, 1.45rem); font-style: italic; color: var(--color-ink); line-height: 1.5; margin-bottom: var(--space-sm) !important; }
+    .article-pullquote cite { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); letter-spacing: 0.08em; text-transform: uppercase; font-style: normal; }
+    .article-image { margin: var(--space-2xl) 0; }
+    .article-image img, .article-image .img-placeholder { width: 100%; height: 420px; object-fit: cover; display: block; background-image: url("https://picsum.photos/seed/psg-football/900/420"); background-size: cover; background-position: center; }
+    .article-image figcaption { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid var(--color-cream-darker); }
+    .article-stats { background: var(--color-cream-dark); border: 1px solid var(--color-cream-darker); padding: var(--space-xl); margin: var(--space-2xl) 0; }
+    .article-stats-title { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-bordeaux); margin-bottom: var(--space-lg); }
+    .article-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: var(--space-lg); }
     .stat-item { text-align: center; }
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--color-bordeaux);
-      line-height: 1;
-      display: block;
-    }
-    .stat-label {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      color: var(--color-ink-mid);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-top: var(--space-xs);
-      display: block;
-    }
-
-    /* Article footer */
-    .article-footer {
-      border-top: 1px solid var(--color-cream-darker);
-      margin-top: var(--space-3xl);
-      padding-top: var(--space-xl);
-    }
-    .article-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-xl);
-    }
-    .article-tag {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      border: 1px solid var(--color-bordeaux);
-      padding: 0.25rem 0.7rem;
-      border-radius: 2px;
-    }
-    .article-author-bio {
-      display: flex;
-      gap: var(--space-lg);
-      align-items: flex-start;
-      background: var(--color-cream-dark);
-      padding: var(--space-xl);
-    }
-    .author-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background-image: url("https://picsum.photos/seed/author-clara/56/56");
-      background-size: cover;
-      flex-shrink: 0;
-    }
-    .author-name {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-    }
-    .author-desc {
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      color: var(--color-ink-mid);
-      line-height: 1.6;
-      margin-top: 0.25rem;
-    }
-
-    /* Related articles */
-    .related {
-      background: var(--color-cream-dark);
-      padding: var(--space-3xl) var(--container-pad);
-    }
-    .related-inner {
-      max-width: 860px;
-      margin-inline: auto;
-    }
-    .related-title {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      margin-bottom: var(--space-xl);
-    }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: var(--space-xl);
-    }
-    .related-card {
-      background: #fff;
-      border: 1px solid var(--color-cream-darker);
-      overflow: hidden;
-      transition: transform var(--transition-base), box-shadow var(--transition-base);
-    }
-    .related-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-    }
-    .related-card-img {
-      height: 160px;
-      background-size: cover;
-      background-position: center;
-    }
+    .stat-number { font-family: var(--font-display); font-size: 2.4rem; font-weight: 900; color: var(--color-bordeaux); line-height: 1; display: block; }
+    .stat-label { font-family: var(--font-ui); font-size: 0.72rem; color: var(--color-ink-mid); letter-spacing: 0.06em; text-transform: uppercase; margin-top: var(--space-xs); display: block; }
+    .article-footer { border-top: 1px solid var(--color-cream-darker); margin-top: var(--space-3xl); padding-top: var(--space-xl); }
+    .article-tags { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-xl); }
+    .article-tag { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-bordeaux); border: 1px solid var(--color-bordeaux); padding: 0.25rem 0.7rem; border-radius: 2px; }
+    .article-author-bio { display: flex; gap: var(--space-lg); align-items: flex-start; background: var(--color-cream-dark); padding: var(--space-xl); }
+    .author-avatar { width: 56px; height: 56px; border-radius: 50%; background-image: url("https://picsum.photos/seed/author-clara/56/56"); background-size: cover; flex-shrink: 0; }
+    .author-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--color-ink); }
+    .author-desc { font-family: var(--font-body); font-size: 0.85rem; color: var(--color-ink-mid); line-height: 1.6; margin-top: 0.25rem; }
+    .related { background: var(--color-cream-dark); padding: var(--space-3xl) var(--container-pad); }
+    .related-inner { max-width: 860px; margin-inline: auto; }
+    .related-title { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-bordeaux); margin-bottom: var(--space-xl); }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-xl); }
+    .related-card { background: #fff; border: 1px solid var(--color-cream-darker); overflow: hidden; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .related-card-img { height: 160px; background-size: cover; background-position: center; }
     .related-card-body { padding: var(--space-lg); }
-    .related-card-title {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.35;
-      margin-bottom: var(--space-sm);
-    }
+    .related-card-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--color-ink); line-height: 1.35; margin-bottom: var(--space-sm); }
     .related-card-title a { color: inherit; text-decoration: none; transition: color var(--transition-base); }
     .related-card-title a:hover { color: var(--color-bordeaux); }
-    .related-card-meta {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      color: var(--color-ink-muted);
-    }
-
-    /* Back link */
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      padding: var(--space-md) var(--container-pad);
-      border-bottom: 1px solid var(--color-cream-darker);
-      display: block;
-      max-width: 100%;
-    }
+    .related-card-meta { font-family: var(--font-ui); font-size: 0.72rem; color: var(--color-ink-muted); }
+    .back-link { display: block; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-bordeaux); padding: var(--space-md) var(--container-pad); border-bottom: 1px solid var(--color-cream-darker); max-width: 100%; }
     .back-link:hover { text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      .article-title { font-size: 1.9rem; }
-      .article-wrapper { padding: var(--space-2xl) var(--container-pad); }
-      .article-stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (max-width: 768px) { .article-title { font-size: 1.9rem; } .article-wrapper { padding: var(--space-2xl) var(--container-pad); } .article-stats-grid { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
-
   <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
-
-  <div class="top-bar">
-    <span>Le sport a toujours eu ses épopées. On les raconte.</span>
-  </div>
-
+  <div class="top-bar"><span>Le sport a toujours eu ses épopées. On les raconte.</span></div>
   <nav class="nav" id="mainNav">
     <div class="nav-inner">
       <a href="/sports-media/index.html" class="nav-logo" aria-label="L'Épopée — accueil">
@@ -363,149 +105,157 @@
       </button>
     </div>
   </nav>
-
   <a href="/sports-media/index.html" class="back-link">← Retour à L'Épopée</a>
-
-  <!-- HERO -->
   <header class="article-hero">
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <div class="article-kicker">
-        <span class="badge badge--anatomie">Anatomie</span>
+        <span class="badge badge--enquete">Anatomie</span>
         <span class="badge badge--epopee">Football</span>
       </div>
       <h1 class="article-title">Pourquoi le Paris Saint-Germain n'a jamais su gagner la Ligue des Champions</h1>
-      <p class="article-standfirst">Plus de deux milliards d'euros dépensés, les plus grandes stars mondiales réunies sous un même maillot, et pourtant : zéro titre européen. L'histoire du PSG sous QSI est celle d'un club qui a tout acheté sauf ce qui ne s'achète pas.</p>
+      <p class="article-standfirst">Deux milliards d'euros dépensés en recrues galactiques. Deux finales de Ligue des Champions. Zéro titre européen. Ce n'est pas une question de budget, ni de talent, ni de chance. C'est une question d'architecture.</p>
       <div class="article-byline">
         <span>Par <strong>Clara Ndiaye</strong></span>
         <span class="article-byline-sep">·</span>
-        <time datetime="2026-06-15">15 juin 2026</time>
+        <time>3 juin 2026</time>
         <span class="article-byline-sep">·</span>
         <span>19 min de lecture</span>
       </div>
     </div>
   </header>
-
-  <!-- ARTICLE BODY -->
   <main>
     <article class="article-wrapper">
       <div class="article-body">
 
-        <p>Le 23 août 2020, à Lisbonne, le Paris Saint-Germain perd la finale de la Ligue des Champions 1-0 contre le Bayern Munich. Kingsley Coman — formé au PSG, parti sans jamais s'imposer — marque le seul but de la rencontre. L'ironie est parfaite, presque trop belle pour être vraie. Mais cette finale perdue n'est pas une anomalie dans l'histoire du club. Elle en est le symbole le plus abouti : le PSG a tout ce qu'il faut pour gagner, sauf ce qui permet de le faire vraiment.</p>
-
-        <p>Depuis le rachat du club par Qatar Sports Investments en 2011, Paris a dépensé plus de 2,2 milliards d'euros en transferts. Ibrahimovic, Cavani, Di Maria, Verratti. Puis, en 2017, le coup de force absolu : Neymar pour 222 millions d'euros, record mondial absolu. Quelques semaines plus tard, Kylian Mbappé pour 180 millions supplémentaires. Le projet était clair : construire la meilleure équipe du monde et aller chercher la couronne européenne que le Qatar souhaitait offrir à Paris. Quinze ans plus tard, cette couronne reste introuvable.</p>
+        <p>En juin 2011, quand Qatar Sports Investments rachète le Paris Saint-Germain pour une somme alors considérée comme astronomique, la promesse est simple et spectaculaire : faire de Paris la capitale mondiale du football. Quinze ans et deux milliards d'euros de transferts plus tard, le PSG a remporté dix titres de champion de France, deux finales de Ligue des Champions — et aucune Coupe d'Europe. Le paradoxe est si frappant qu'il est devenu une blague dans les couloirs de l'UEFA. Mais derrière la blague, il y a une vérité structurelle sur ce qu'il faut pour gagner la compétition la plus exigeante du football mondial.</p>
 
         <div class="article-stats">
-          <div class="article-stats-title">Le PSG en Ligue des Champions — bilan QSI</div>
+          <div class="article-stats-title">PSG en Ligue des Champions — L'ère QSI</div>
           <div class="article-stats-grid">
             <div class="stat-item">
+              <span class="stat-number">2B€+</span>
+              <span class="stat-label">Dépenses en transferts depuis 2011</span>
+            </div>
+            <div class="stat-item">
               <span class="stat-number">2</span>
-              <span class="stat-label">Finales disputées (2020)</span>
+              <span class="stat-label">Finales disputées</span>
             </div>
             <div class="stat-item">
               <span class="stat-number">0</span>
-              <span class="stat-label">Titres UCL</span>
+              <span class="stat-label">Titres européens</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">€2,2Md</span>
-              <span class="stat-label">Transferts depuis 2011</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">11</span>
-              <span class="stat-label">Titres de Ligue 1</span>
+              <span class="stat-number">2017</span>
+              <span class="stat-label">La nuit de la remontada</span>
             </div>
           </div>
         </div>
 
-        <h2>La remontada : la blessure qui ne guérit pas</h2>
+        <h2>QSI et le projet galactique</h2>
 
-        <p>Pour comprendre le PSG européen, il faut remonter au 8 mars 2017. À l'aller, Paris avait écrasé le FC Barcelone 4-0 au Parc des Princes dans ce qui semblait être une démonstration de force définitive. Le match retour au Camp Nou n'était qu'une formalité. L'histoire du football aimant se moquer des certitudes, ce soir-là à Barcelone, le PSG s'effondra en vingt-deux minutes dans les arrêts de jeu. 6-1. Une remontada qui reste, quinze ans après, la cicatrice psychologique la plus profonde du club.</p>
+        <p>En juin 2011, Qatar Sports Investments rachète le PSG avec une vision aussi claire que son financement : acheter le meilleur, mettre Paris sur la carte du football mondial, rivaliser avec les plus grands clubs européens. Les premiers grands recrutements donnent le ton : Zlatan Ibrahimovic — 20 millions — impose immédiatement sa stature et ses buts, Thiago Silva structure la défense avec une autorité brésilienne, Edinson Cavani apporte son abnégation de serial buteur. En quelques saisons, le PSG devient une attraction mondiale. Les stades d'Europe se remplissent quand Paris arrive. Les chaînes de télévision paient des droits records. Le projet est, de l'extérieur, une réussite totale.</p>
 
-        <p>Ce qui s'est passé ce soir-là va au-delà du sport. Les joueurs du PSG étaient techniquement supérieurs individuellement. Ils avaient un avantage de trois buts à éliminer. Et ils ont quand même craqué — pas sur un coup de génie catalan isolé, mais dans une série de décisions collectives catastrophiques, d'un manque de communication défensive, d'une panique qui révèle une équipe sans ossature mentale commune. La remontada n'était pas un accident. C'était un révélateur.</p>
+        <p>Puis vient Neymar — 222 millions d'euros en août 2017, record mondial absolu qui fracasse tous les paramètres du marché des transferts. Puis Kylian Mbappé — 180 millions en 2018, dix-neuf ans, champion du monde avec la France, la promesse de la prochaine décennie. Le PSG a réussi l'impossible : aligner sur le même terrain les deux joueurs les plus chers de l'histoire du football mondial. Les réseaux sociaux s'enflamment. Les ventes de maillots explosent. La presse internationale scrute chaque entraînement parisien. Et dans toute cette effervescence, une question fondamentale reste sans réponse : comment faire jouer ensemble deux joueurs dont les exigences de ballons et d'espace sont structurellement incompatibles ?</p>
 
-        <div class="article-pullquote">
-          <p>« Ce soir-là à Barcelone, on a vu que le PSG était une collection d'individus, pas une équipe. La différence entre les deux, c'est tout ce qu'il reste à construire. »</p>
-          <cite>— Chroniqueur sportif, L'Équipe, mars 2017</cite>
-        </div>
-
-        <p>Depuis, le club a changé d'entraîneurs, de directeurs sportifs, de philosophies de jeu. Mais la remontada agit comme un spectre. Chaque fois que Paris approche des quarts ou des demi-finales, quelque chose cède. Un but encaissé dans les dernières secondes, une erreur individuelle au pire moment, une équipe qui perd confiance en elle-même précisément quand elle en a le plus besoin. Ce n'est pas de la malchance. C'est structurel.</p>
+        <p>L'argent illimité produit une illusion : celle que le problème d'architecture peut être résolu par davantage de talent individuel. Si Neymar et Mbappé ne suffisent pas, ajouter un troisième génie résoudra l'équation. Si le milieu de terrain manque de créativité, recruter un joueur à 70 millions comblera le vide. Ce raisonnement — cohérent dans le monde des transferts médiatiques — est fondamentalement erroné dans le monde de la performance sportive. Le football de haut niveau est une question de systèmes, pas d'individus. Et le PSG n'a jamais construit un système. Il a construit une vitrine.</p>
 
         <figure class="article-image">
-          <div class="img-placeholder" role="img" aria-label="Le Parc des Princes lors d'un match européen"></div>
-          <figcaption>Le Parc des Princes, temple du PSG et scène de ses plus grandes ambitions européennes — et de ses plus cuisantes désillusions.</figcaption>
+          <div class="img-placeholder"></div>
+          <figcaption>Le PSG lors d'une soirée de Ligue des Champions au Parc des Princes.</figcaption>
         </figure>
 
-        <h2>La finale de 2020 : si près, si loin</h2>
+        <h2>La remontada de 2017 : le traumatisme fondateur</h2>
 
-        <p>L'édition 2019-2020 de la Ligue des Champions, disputée en format bulle à Lisbonne en raison de la pandémie, a offert au PSG sa seule finale européenne. Neymar était là. Mbappé aussi. L'équipe avait battu l'Atalanta, Leipzig, et l'Atletico de Madrid dans un format condensé qui effaçait temporairement les problèmes habituels de gestion de la pression sur la durée. En finale, face au Bayern, Paris joua un bon match. Et perdit quand même.</p>
+        <p>8 mars 2017. Le PSG s'est imposé 4-0 à Barcelone à l'aller, dans un match qui a semblé confirmer l'émergence d'une nouvelle puissance européenne. Au Camp Nou, lors du match retour, tout ce que le club avait mis dix ans à construire s'effondre en quatre-vingt-dix minutes. Barcelone marque six buts. Le PSG en inscrit un. Une remontée que personne, littéralement personne, n'avait considérée comme possible. L'effondrement n'est pas tactique — Unai Emery avait préparé un plan raisonnable. Il est mental : à 3-1, puis à 4-1, l'équipe ne sait plus quoi faire. Les joueurs regardent les uns les autres. Personne ne crie. Personne ne prend la décision.</p>
 
-        <p>Ce but de Coman — un centre de Kimmich repris de la tête par l'ancien Parisien — a quelque chose de romanesque dans sa cruauté. Mais au-delà du symbole, cette finale révèle une limite réelle : même dans sa meilleure version, le PSG n'a pas pu imposer son jeu face à un Bayern qui, lui, fonctionnait comme un collectif rodé depuis des années. Pas comme une galactique. Comme une machine.</p>
+        <p>Dans les heures qui suivent la remontada, les témoignages qui filtrent du vestiaire parisien sont accablants. Des joueurs qui s'accusent mutuellement. Des stars qui refusent d'endosser une quelconque responsabilité collective. Une communication de crise du club qui cherche à minimiser ce qui vient de se passer. Ce qui s'est révélé cette nuit-là n'est pas une mauvaise performance ponctuelle — c'est l'absence totale d'une culture de la responsabilité collective. Quand les choses vont bien, les individualités brillent. Quand les choses s'effondrent, il n'y a personne pour tenir le groupe ensemble.</p>
+
+        <p>La remontada de 2017 est le traumatisme fondateur du PSG version QSI — l'événement par rapport auquel tout le reste doit être lu. Elle révèle que le club n'a pas de leader au sens sportif du terme, pas de joueur capable d'imposer une direction collective dans un moment de crise. Thiago Silva, capitaine, est submergé. Ibrahimovic est parti. Cavani joue seul dans son couloir. Neymar vient d'arriver. Le vide de gouvernance dans le vestiaire parisien, invisible pendant les victoires, devient béant dans la défaite. Et ce vide persistera, sous des formes variables, dans toutes les campagnes européennes suivantes.</p>
 
         <div class="article-pullquote">
-          <p>« Le Bayern n'avait pas de Neymar. Il avait quelque chose de plus rare : onze joueurs qui savaient exactement ce que chacun des dix autres allait faire. »</p>
-          <cite>— Clara Ndiaye, L'Épopée</cite>
+          <p>«On a dépensé deux milliards. On a acheté des joueurs. On n'a jamais acheté une âme collective.»</p>
+          <cite>— Un ancien cadre du PSG (anonyme)</cite>
         </div>
 
-        <h2>Le problème Neymar : quand la star devient le boulet</h2>
+        <h2>La finale 2020 contre Bayern : si près, si loin</h2>
 
-        <p>L'arrivée de Neymar en 2017 pour 222 millions d'euros restera dans les annales du football comme le transfert le plus cher de l'histoire. Elle symbolise aussi, rétrospectivement, tout ce qui n'a pas fonctionné dans le projet QSI. Non pas parce que Neymar était un mauvais joueur — il reste l'un des talents les plus extraordinaires de sa génération — mais parce que son integration au PSG a parfaitement illustré la contradiction fondamentale du projet parisien.</p>
+        <p>Août 2020, Lisbonne. Dans le contexte unique d'une Ligue des Champions disputée en format Final Eight en raison de la pandémie, le PSG atteint enfin sa première finale depuis 1994. L'adversaire est le Bayern Munich de Hansi Flick, une machine collective d'une cohérence et d'une puissance rarement vues dans l'histoire du football européen. Le PSG perd 0-1 sur un but de Kingsley Coman — l'ironie absolue : un Français formé dans les catégories jeunes du PSG, vendu à quinze ans, devient l'homme qui prive le club parisien de son premier titre continental.</p>
 
-        <p>Les blessures, d'abord : Neymar a raté une proportion extraordinaire des matchs à élimination directe en Ligue des Champions. Le métatarse en 2018, les douleurs récurrentes en 2019, les absences répétées aux moments où l'équipe avait le plus besoin de lui. Mais au-delà des blessures, c'est le "Paris effect" qui a tout contaminé. Neymar est arrivé dans une ville qui l'adulait, dans un club qui ne pouvait pas se permettre de le contrarier, dans un environnement qui ne lui a jamais imposé la discipline collective qu'exige la conquête européenne. Le talent seul ne gagne pas la Ligue des Champions. Le talent dans un système peut le faire.</p>
+        <p>Le score de 0-1 est trompeur. Le Bayern n'a pas dominé le PSG de manière écrasante — Paris a eu des occasions. Mais la différence entre les deux équipes est visible dans chaque phase de jeu : le Bayern joue comme une équipe qui a des automatismes, des habitudes, une mémoire collective construite sur des mois de travail commun. Le PSG joue en fonction de Neymar et Mbappé, en cherchant à créer les conditions de leur expression individuelle plutôt qu'en développant un système où tout le monde sait ce qu'il doit faire à chaque instant. Contre une équipe bien organisée, cette approche atteint rapidement ses limites.</p>
 
-        <p>La trajectoire de Neymar au PSG — de superstar mondiale à transfert raté, vendu à Al-Hilal en 2023 — est la métaphore la plus exacte du projet QSI. Brillant en surface, défaillant au moment décisif.</p>
+        <p>Thomas Tuchel, entraîneur du PSG cette saison-là, dira plus tard — après son départ — que gérer un vestiaire où deux ou trois joueurs ont plus de pouvoir que le staff technique est une expérience sportive fondamentalement différente de tout ce qu'il avait connu avant. La finale de 2020 reste la meilleure performance européenne de l'histoire du club. Elle a aussi mis en évidence, une fois de plus, que le PSG joue à la Ligue des Champions comme un club de Ligue 1 qui a été invité à une table dont il ne connaît pas encore toutes les règles.</p>
+
+        <h2>Le problème structural : des stars, pas un système</h2>
+
+        <p>Liverpool sous Jürgen Klopp, Bayern Munich sous Hansi Flick, Chelsea sous Thomas Tuchel — ces équipes ont des stars, parfois des stars mondiales, mais les stars servent le système. Klopp a transformé Mohamed Salah en joueur d'équipe sans diminuer son génie individuel. Flick a fait de Robert Lewandowski le produit d'un collectif huilé plutôt que le seul responsable des résultats. Au PSG, la relation est inversée depuis le premier jour de l'ère QSI : le système existe pour servir les stars. Les entraîneurs sont recrutés avec pour mission principale de faire coexister des ego incompatibles. Ce n'est pas un projet sportif — c'est une politique de relations publiques.</p>
+
+        <p>Cette inversion a des conséquences concrètes et mesurables. Les entraîneurs du PSG depuis 2011 — Ancelotti, Blanc, Emery, Tuchel, Pochettino, Galtier, Luis Enrique — ont tous décrit, à des degrés variables, la difficulté de mettre en place un jeu collectif quand certains joueurs ont la capacité de contester les décisions tactiques et d'être soutenus par la direction. L'autorité de l'entraîneur, fondamentale dans toute organisation sportive performante, est constamment fragilisée par la hiérarchie informelle des salaires et des pouvoirs. Comment demander à un joueur à 600 000 euros par semaine de courir vers l'arrière défendre une action de couloir ?</p>
+
+        <p>Les clubs qui gagnent la Ligue des Champions ont en commun une caractéristique que le PSG n'a jamais réussi à développer : une identité de jeu claire, reconnaissable, qui persiste indépendamment des joueurs individuels. Le pressing hautes de Liverpool sous Klopp, le jeu de position du Bayern sous Flick, la solidité défensive organisée du Real Madrid — ces identités existent avant et après les stars. Au PSG, l'identité de jeu change avec chaque entraîneur, chaque mercato, chaque caprice de vestiaire. Un adversaire européen qui prépare un match contre Liverpool sait exactement à quoi s'attendre. Face au PSG, il doit surtout prier que Neymar soit blessé.</p>
+
+        <div class="article-pullquote">
+          <p>«La remontada de 2017 n'était pas une surprise. C'était la révélation de ce qu'on savait déjà.»</p>
+          <cite>— Clara Ndiaye</cite>
+        </div>
+
+        <h2>Le «problème de Paris» : confort, célébrité, pression inversée</h2>
+
+        <p>Paris n'est pas Madrid ou Munich. Paris est la capitale mondiale de la mode, de la gastronomie, de la culture. Un joueur qui arrive au PSG ne rejoint pas seulement un club de football — il rejoint un écosystème de célébrité qui n'a pas d'équivalent dans le sport professionnel mondial. Les apparitions sur les défilés de mode, les contrats publicitaires avec des marques de luxe, les fréquentations avec des célébrités mondiales — tout cela crée un environnement où les joueurs peuvent se sentir «arrivés» avant d'avoir gagné quoi que ce soit. La pression de performer est diluée par la pression de paraître.</p>
+
+        <p>La Ligue 1, par ailleurs, est si dominée par le PSG que les matchs de championnat ne préparent pas à la pression de la Ligue des Champions. Contre Reims ou Troyes, les stars parisiennes peuvent se permettre des approximations qui seraient fatales contre le Bayern ou le Real. Les muscles de la concentration collective, de la gestion des moments difficiles, de la cohésion sous pression — ces muscles ne sont entraînés que dans des matchs où le résultat est véritablement incertain. Or, en Ligue 1, les matchs vraiment incertains pour le PSG se comptent sur les doigts d'une main chaque saison. Quand arrivent les grandes nuits européennes, l'équipe découvre une pression qu'elle n'a pas appris à gérer.</p>
+
+        <p>Le paradoxe parisien est le suivant : le PSG est trop grand pour la France et pas assez grand pour l'Europe. Trop dominant au niveau national pour être challengé, insuffisamment collectif pour s'imposer continentalement. La solution ne passera pas par un nouveau recrutement galactique — elle passera par une révolution culturelle dans la façon dont le club conçoit son projet sportif. La Ligue des Champions ne se gagne pas en alignant les meilleurs joueurs du monde. Elle se gagne en faisant jouer ensemble des joueurs prêts à tout sacrifier pour le collectif. Et cette transformation-là, le PSG ne l'a pas encore commencée.</p>
 
       </div>
-
       <footer class="article-footer">
         <div class="article-tags">
           <span class="article-tag">Football</span>
           <span class="article-tag">Anatomie</span>
           <span class="article-tag">PSG</span>
           <span class="article-tag">Ligue des Champions</span>
-          <span class="article-tag">QSI</span>
+          <span class="article-tag">Qatar</span>
           <span class="article-tag">Neymar</span>
+          <span class="article-tag">Mbappé</span>
         </div>
         <div class="article-author-bio">
           <div class="author-avatar"></div>
           <div>
             <div class="author-name">Clara Ndiaye</div>
-            <p class="author-desc">Journaliste football à L'Épopée. Ancienne correspondante à Madrid et Paris pour plusieurs médias sportifs européens, elle couvre le football de club avec une spécialité sur les structures institutionnelles et les dynamiques de pouvoir dans le football moderne.</p>
+            <p class="author-desc">Journaliste football et politiques sportives à L'Épopée. Elle a couvert cinq saisons de Ligue des Champions pour plusieurs médias européens. Spécialiste des modèles économiques du football de haut niveau.</p>
           </div>
         </div>
       </footer>
     </article>
-
-    <!-- RELATED ARTICLES -->
     <section class="related">
       <div class="related-inner">
         <h2 class="related-title">À lire aussi</h2>
         <div class="related-grid">
           <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/dopage-cyclisme-peloton/600/300');"></div>
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/dopage-cyclisme/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/dopage-cyclisme.html">Le dopage au cyclisme : ce que l'affaire Armstrong n'a pas révélé</a></h3>
+              <div class="related-card-title"><a href="/sports-media/articles/dopage-cyclisme.html">Le dopage au cyclisme : ce que l'affaire Armstrong n'a pas révélé</a></div>
               <div class="related-card-meta">Enquête · 31 min</div>
             </div>
           </div>
           <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/agents-rugby-pro/600/300');"></div>
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/homophobie-foot/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/agents-rugby.html">Comment les agents ont pris le contrôle du rugby professionnel</a></h3>
-              <div class="related-card-meta">Enquête · 24 min</div>
+              <div class="related-card-title"><a href="/sports-media/articles/homophobie-football.html">L'homophobie dans le foot français : le silence qui dure</a></div>
+              <div class="related-card-meta">Enquête · 27 min</div>
             </div>
           </div>
           <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/bielle-biarrey-hero/600/300');"></div>
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/all-blacks-nz/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/louis-bielle-biarrey.html">Louis Bielle-Biarrey : l'ailier qui a décidé que la ligne d'en-but était trop loin pour s'arrêter</a></h3>
-              <div class="related-card-meta">Portrait · 16 min</div>
+              <div class="related-card-title"><a href="/sports-media/articles/all-blacks-2015.html">L'anatomie d'une invincibilité : les All Blacks 2015</a></div>
+              <div class="related-card-meta">Anatomie · 25 min</div>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
-
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -542,7 +292,6 @@
       </div>
     </div>
   </footer>
-
   <script src="/sports-media/script.js"></script>
 </body>
 </html>

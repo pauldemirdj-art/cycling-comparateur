@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Comment les agents ont pris le contrôle du rugby professionnel — L'Épopée</title>
-  <meta name="description" content="Depuis la professionnalisation du rugby en 1995, les agents ont progressivement colonisé chaque rouage du jeu. Entre commissions opaques, conflits d'intérêts assumés et transferts déstabilisants, enquête sur les hommes de l'ombre qui tirent les ficelles du rugby moderne." />
+  <meta name="description" content="Ils ne jouent pas, ne coachent pas, ne dirigent pas de club. Pourtant, depuis vingt ans, les super-agents du rugby professionnel décident en coulisses qui joue où, combien, et pour combien de temps. Portrait d'un pouvoir invisible." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -14,7 +14,7 @@
       position: relative;
       height: clamp(420px, 60vh, 700px);
       overflow: hidden;
-      background-image: url("https://picsum.photos/seed/rugby-agents-business/1600/900");
+      background-image: url("https://picsum.photos/seed/agents-rugby/1600/900");
       background-size: cover;
       background-position: center 30%;
     }
@@ -25,310 +25,60 @@
     }
     .article-hero-content {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 0; left: 0; right: 0;
       padding: var(--space-3xl) var(--container-pad) var(--space-2xl);
       max-width: 860px;
       margin-inline: auto;
     }
-    .article-kicker {
-      display: flex;
-      align-items: center;
-      gap: var(--space-md);
-      margin-bottom: var(--space-lg);
-    }
-    .article-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.1;
-      color: #fff;
-      letter-spacing: -0.02em;
-      margin-bottom: var(--space-lg);
-    }
-    .article-standfirst {
-      font-family: var(--font-body);
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-      color: rgba(255,255,255,0.82);
-      line-height: 1.65;
-      max-width: 680px;
-      margin-bottom: var(--space-xl);
-    }
-    .article-byline {
-      display: flex;
-      align-items: center;
-      gap: var(--space-lg);
-      font-family: var(--font-ui);
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.65);
-      flex-wrap: wrap;
-    }
+    .article-kicker { display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-lg); }
+    .article-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.1; color: #fff; letter-spacing: -0.02em; margin-bottom: var(--space-lg); }
+    .article-standfirst { font-family: var(--font-body); font-size: clamp(1rem, 1.8vw, 1.2rem); color: rgba(255,255,255,0.82); line-height: 1.65; max-width: 680px; margin-bottom: var(--space-xl); }
+    .article-byline { display: flex; align-items: center; gap: var(--space-lg); font-family: var(--font-ui); font-size: 0.82rem; color: rgba(255,255,255,0.65); flex-wrap: wrap; }
     .article-byline strong { color: rgba(255,255,255,0.9); }
     .article-byline-sep { color: rgba(255,255,255,0.3); }
-
-    .article-wrapper {
-      max-width: 720px;
-      margin-inline: auto;
-      padding: var(--space-3xl) var(--container-pad);
-    }
-    .article-body p {
-      font-family: var(--font-body);
-      font-size: 1.05rem;
-      line-height: 1.85;
-      color: var(--color-ink);
-      margin-bottom: var(--space-xl);
-    }
-    .article-body p:first-of-type::first-letter {
-      font-family: var(--font-display);
-      font-size: 4.2em;
-      font-weight: 900;
-      color: var(--color-bordeaux);
-      float: left;
-      line-height: 0.72;
-      margin-right: 0.08em;
-      margin-top: 0.1em;
-    }
-    .article-body h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.25;
-      margin-top: var(--space-3xl);
-      margin-bottom: var(--space-lg);
-      letter-spacing: -0.01em;
-    }
-    .article-body h3 {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      margin-top: var(--space-2xl);
-      margin-bottom: var(--space-md);
-    }
-
-    .article-pullquote {
-      border-left: 3px solid var(--color-bordeaux);
-      padding: var(--space-lg) var(--space-xl);
-      margin: var(--space-2xl) 0;
-      background: var(--color-cream-dark);
-    }
-    .article-pullquote p {
-      font-family: var(--font-display);
-      font-size: clamp(1.15rem, 2vw, 1.45rem);
-      font-style: italic;
-      color: var(--color-ink);
-      line-height: 1.5;
-      margin-bottom: var(--space-sm) !important;
-    }
-    .article-pullquote cite {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-ink-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-style: normal;
-    }
-
-    .article-image {
-      margin: var(--space-2xl) 0;
-    }
-    .article-image img,
-    .article-image .img-placeholder {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-      background-image: url("https://picsum.photos/seed/rugby-contract-signing/900/420");
-      background-size: cover;
-      background-position: center;
-    }
-    .article-image figcaption {
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      color: var(--color-ink-muted);
-      margin-top: var(--space-sm);
-      padding-top: var(--space-sm);
-      border-top: 1px solid var(--color-cream-darker);
-    }
-
-    .article-stats {
-      background: var(--color-cream-dark);
-      border: 1px solid var(--color-cream-darker);
-      padding: var(--space-xl);
-      margin: var(--space-2xl) 0;
-    }
-    .article-stats-title {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      margin-bottom: var(--space-lg);
-    }
-    .article-stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: var(--space-lg);
-    }
+    .article-wrapper { max-width: 720px; margin-inline: auto; padding: var(--space-3xl) var(--container-pad); }
+    .article-body p { font-family: var(--font-body); font-size: 1.05rem; line-height: 1.85; color: var(--color-ink); margin-bottom: var(--space-xl); }
+    .article-body p:first-of-type::first-letter { font-family: var(--font-display); font-size: 4.2em; font-weight: 900; color: var(--color-bordeaux); float: left; line-height: 0.72; margin-right: 0.08em; margin-top: 0.1em; }
+    .article-body h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 1.9rem); font-weight: 700; color: var(--color-ink); line-height: 1.25; margin-top: var(--space-3xl); margin-bottom: var(--space-lg); letter-spacing: -0.01em; }
+    .article-pullquote { border-left: 3px solid var(--color-bordeaux); padding: var(--space-lg) var(--space-xl); margin: var(--space-2xl) 0; background: var(--color-cream-dark); }
+    .article-pullquote p { font-family: var(--font-display); font-size: clamp(1.15rem, 2vw, 1.45rem); font-style: italic; color: var(--color-ink); line-height: 1.5; margin-bottom: var(--space-sm) !important; }
+    .article-pullquote cite { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); letter-spacing: 0.08em; text-transform: uppercase; font-style: normal; }
+    .article-image { margin: var(--space-2xl) 0; }
+    .article-image img, .article-image .img-placeholder { width: 100%; height: 420px; object-fit: cover; display: block; background-image: url("https://picsum.photos/seed/rugby-negotiation/900/420"); background-size: cover; background-position: center; }
+    .article-image figcaption { font-family: var(--font-ui); font-size: 0.78rem; color: var(--color-ink-muted); margin-top: var(--space-sm); padding-top: var(--space-sm); border-top: 1px solid var(--color-cream-darker); }
+    .article-stats { background: var(--color-cream-dark); border: 1px solid var(--color-cream-darker); padding: var(--space-xl); margin: var(--space-2xl) 0; }
+    .article-stats-title { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-bordeaux); margin-bottom: var(--space-lg); }
+    .article-stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: var(--space-lg); }
     .stat-item { text-align: center; }
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 900;
-      color: var(--color-bordeaux);
-      line-height: 1;
-      display: block;
-    }
-    .stat-label {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      color: var(--color-ink-mid);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-top: var(--space-xs);
-      display: block;
-    }
-
-    .article-footer {
-      border-top: 1px solid var(--color-cream-darker);
-      margin-top: var(--space-3xl);
-      padding-top: var(--space-xl);
-    }
-    .article-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-xl);
-    }
-    .article-tag {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      border: 1px solid var(--color-bordeaux);
-      padding: 0.25rem 0.7rem;
-      border-radius: 2px;
-    }
-    .article-author-bio {
-      display: flex;
-      gap: var(--space-lg);
-      align-items: flex-start;
-      background: var(--color-cream-dark);
-      padding: var(--space-xl);
-    }
-    .author-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background-image: url("https://picsum.photos/seed/author-lucie/56/56");
-      background-size: cover;
-      flex-shrink: 0;
-    }
-    .author-name {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-    }
-    .author-desc {
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      color: var(--color-ink-mid);
-      line-height: 1.6;
-      margin-top: 0.25rem;
-    }
-
-    .related {
-      background: var(--color-cream-dark);
-      padding: var(--space-3xl) var(--container-pad);
-    }
-    .related-inner {
-      max-width: 860px;
-      margin-inline: auto;
-    }
-    .related-title {
-      font-family: var(--font-ui);
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      margin-bottom: var(--space-xl);
-    }
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: var(--space-xl);
-    }
-    .related-card {
-      background: #fff;
-      border: 1px solid var(--color-cream-darker);
-      overflow: hidden;
-      transition: transform var(--transition-base), box-shadow var(--transition-base);
-    }
-    .related-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-hover);
-    }
-    .related-card-img {
-      height: 160px;
-      background-size: cover;
-      background-position: center;
-    }
+    .stat-number { font-family: var(--font-display); font-size: 2.4rem; font-weight: 900; color: var(--color-bordeaux); line-height: 1; display: block; }
+    .stat-label { font-family: var(--font-ui); font-size: 0.72rem; color: var(--color-ink-mid); letter-spacing: 0.06em; text-transform: uppercase; margin-top: var(--space-xs); display: block; }
+    .article-footer { border-top: 1px solid var(--color-cream-darker); margin-top: var(--space-3xl); padding-top: var(--space-xl); }
+    .article-tags { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-xl); }
+    .article-tag { font-family: var(--font-ui); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-bordeaux); border: 1px solid var(--color-bordeaux); padding: 0.25rem 0.7rem; border-radius: 2px; }
+    .article-author-bio { display: flex; gap: var(--space-lg); align-items: flex-start; background: var(--color-cream-dark); padding: var(--space-xl); }
+    .author-avatar { width: 56px; height: 56px; border-radius: 50%; background-image: url("https://picsum.photos/seed/author-lucie/56/56"); background-size: cover; flex-shrink: 0; }
+    .author-name { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--color-ink); }
+    .author-desc { font-family: var(--font-body); font-size: 0.85rem; color: var(--color-ink-mid); line-height: 1.6; margin-top: 0.25rem; }
+    .related { background: var(--color-cream-dark); padding: var(--space-3xl) var(--container-pad); }
+    .related-inner { max-width: 860px; margin-inline: auto; }
+    .related-title { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-bordeaux); margin-bottom: var(--space-xl); }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-xl); }
+    .related-card { background: #fff; border: 1px solid var(--color-cream-darker); overflow: hidden; transition: transform var(--transition-base), box-shadow var(--transition-base); }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .related-card-img { height: 160px; background-size: cover; background-position: center; }
     .related-card-body { padding: var(--space-lg); }
-    .related-card-title {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--color-ink);
-      line-height: 1.35;
-      margin-bottom: var(--space-sm);
-    }
+    .related-card-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--color-ink); line-height: 1.35; margin-bottom: var(--space-sm); }
     .related-card-title a { color: inherit; text-decoration: none; transition: color var(--transition-base); }
     .related-card-title a:hover { color: var(--color-bordeaux); }
-    .related-card-meta {
-      font-family: var(--font-ui);
-      font-size: 0.72rem;
-      color: var(--color-ink-muted);
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: var(--font-ui);
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-bordeaux);
-      padding: var(--space-md) var(--container-pad);
-      border-bottom: 1px solid var(--color-cream-darker);
-      display: block;
-      max-width: 100%;
-    }
+    .related-card-meta { font-family: var(--font-ui); font-size: 0.72rem; color: var(--color-ink-muted); }
+    .back-link { display: block; font-family: var(--font-ui); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-bordeaux); padding: var(--space-md) var(--container-pad); border-bottom: 1px solid var(--color-cream-darker); max-width: 100%; }
     .back-link:hover { text-decoration: underline; }
-
-    @media (max-width: 768px) {
-      .article-title { font-size: 1.9rem; }
-      .article-wrapper { padding: var(--space-2xl) var(--container-pad); }
-      .article-stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    @media (max-width: 768px) { .article-title { font-size: 1.9rem; } .article-wrapper { padding: var(--space-2xl) var(--container-pad); } .article-stats-grid { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
 <body>
-
   <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
-
-  <div class="top-bar">
-    <span>Le sport a toujours eu ses épopées. On les raconte.</span>
-  </div>
-
+  <div class="top-bar"><span>Le sport a toujours eu ses épopées. On les raconte.</span></div>
   <nav class="nav" id="mainNav">
     <div class="nav-inner">
       <a href="/sports-media/index.html" class="nav-logo" aria-label="L'Épopée — accueil">
@@ -355,120 +105,128 @@
       </button>
     </div>
   </nav>
-
   <a href="/sports-media/index.html" class="back-link">← Retour à L'Épopée</a>
-
   <header class="article-hero">
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
       <div class="article-kicker">
-        <span class="badge badge--portrait">Enquête</span>
+        <span class="badge badge--enquete">Enquête</span>
         <span class="badge badge--epopee">Rugby</span>
       </div>
       <h1 class="article-title">Comment les agents ont pris le contrôle du rugby professionnel</h1>
-      <p class="article-standfirst">Depuis la professionnalisation du rugby en 1995, les agents ont progressivement colonisé chaque rouage du jeu. Entre commissions opaques, conflits d'intérêts assumés et transferts déstabilisants, enquête sur les hommes de l'ombre qui tirent les ficelles du rugby moderne.</p>
+      <p class="article-standfirst">Ils ne jouent pas, ne coachent pas, ne dirigent pas de club. Pourtant, depuis vingt ans, les super-agents du rugby professionnel décident en coulisses qui joue où, combien, et pour combien de temps. Portrait d'un pouvoir invisible.</p>
       <div class="article-byline">
         <span>Par <strong>Lucie Bertrand</strong></span>
         <span class="article-byline-sep">·</span>
-        <time datetime="2026-06-03">3 juin 2026</time>
+        <time>28 mai 2026</time>
         <span class="article-byline-sep">·</span>
         <span>24 min de lecture</span>
       </div>
     </div>
   </header>
-
   <main>
     <article class="article-wrapper">
       <div class="article-body">
 
-        <p>En août 1995, World Rugby annonçait la professionnalisation du rugby à XV — une décision qui mettait fin à cent vingt ans d'amateurisme officiel et ouvrait les vannes d'un marché dont personne, à l'époque, ne mesurait vraiment l'ampleur. En l'espace de quelques semaines, les premiers agents ont fait leur apparition dans les coulisses des clubs. Ils venaient du football, de la boxe, du tennis. Ils connaissaient les contrats, les clauses, les leviers de négociation. Les clubs de rugby, eux, ne savaient pas encore ce que signifiait gérer une masse salariale. Cette asymétrie d'information — les agents d'un côté, des dirigeants démunis de l'autre — est à la racine de tout ce qui va suivre.</p>
-
-        <p>Trente ans après la bascule, les agents ne sont plus des intermédiaires périphériques. Ils sont devenus des acteurs centraux du rugby professionnel, capables d'influencer des recrutements, de peser sur des décisions d'entraîneur, de placer des joueurs dans des clubs avec lesquels ils entretiennent des relations financières non déclarées. Le rugby a mis beaucoup de temps à regarder ce phénomène en face. Il commence à peine à en mesurer les conséquences.</p>
+        <p>Lors d'une soirée de Top 14 en 2023, un directeur sportif d'un club du milieu de tableau reçoit dans les couloirs du stade, avant le coup d'envoi, un appel de son agent habituel. L'agent lui propose deux joueurs en même temps — un pilier international et un centre de bon niveau — à des tarifs qu'il qualifie de «préférentiels». Ce que le directeur sportif sait, sans pouvoir le prouver, c'est que ces deux joueurs appartiennent à la même agence que le numéro huit qu'il vient de prêter à un club adverse. L'agent gère les deux parties de plusieurs transactions simultanées. Et personne, officiellement, ne voit rien. Ce moment banal résume vingt ans de transformation silencieuse du rugby professionnel français.</p>
 
         <div class="article-stats">
-          <div class="article-stats-title">Rugby professionnel — chiffres clés</div>
+          <div class="article-stats-title">Les agents dans le rugby professionnel</div>
           <div class="article-stats-grid">
             <div class="stat-item">
-              <span class="stat-number">30%+</span>
-              <span class="stat-label">Joueurs étrangers Top 14</span>
+              <span class="stat-number">1995</span>
+              <span class="stat-label">Professionnalisation du rugby</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">2,1 ans</span>
-              <span class="stat-label">Durée moyenne d'un contrat</span>
+              <span class="stat-number">40%</span>
+              <span class="stat-label">Joueurs Top 14 représentés par 5 agences</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">11,2 M€</span>
-              <span class="stat-label">Salary cap par club</span>
+              <span class="stat-number">15%</span>
+              <span class="stat-label">Commission habituelle sur un transfert</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number">40+</span>
-              <span class="stat-label">Joueurs gérés par les top agents</span>
+              <span class="stat-number">3x</span>
+              <span class="stat-label">Augmentation des transferts en 10 ans</span>
             </div>
           </div>
         </div>
 
-        <h2>L'argent d'abord</h2>
+        <h2>1995 : la naissance d'un marché</h2>
 
-        <p>Les chiffres du marché des agents dans le rugby professionnel restent très largement opaques — c'est précisément l'un des problèmes. On sait, par les quelques enquêtes menées par des journalistes spécialisés et par les données publiées par la Ligue nationale de rugby en France, que les commissions d'agents tournent généralement entre 5 et 10 % des contrats bruts des joueurs. Dans un marché où les salaires des internationaux de premier rang oscillent entre 500 000 et 2 millions d'euros annuels, une commission de 8 % représente donc entre 40 000 et 160 000 euros par joueur et par an — sans compter les bonus de signature et les droits à l'image, dont les agents négocient généralement une part séparée.</p>
+        <p>Avant août 1995, le rugby à XV est un sport amateur dans tous les sens du terme. Les joueurs sont des avocats, des agriculteurs, des enseignants qui jouent le week-end par amour du jeu. Les transferts n'existent pas au sens contractuel — on change de club comme on change de quartier, avec une lettre et une poignée de main. Puis World Rugby décide la professionnalisation, du jour au lendemain, sans transition planifiée, sans code du travail sportif existant, sans règles établies pour encadrer les contrats, les transferts, les droits à l'image. Ce vide juridique est l'opportunité que les premiers agents du rugby ont saisie avec une vivacité remarquable. En quelques mois, une profession nouvelle existe — sans réglementation, sans éthique codifiée, sans contrôle institutionnel.</p>
 
-        <p>Ce marché a explosé depuis 2010, au rythme de la croissance des droits télévisés et de l'internationalisation du recrutement. Selon les estimations les plus sérieuses disponibles, le volume total des transactions dans le rugby professionnel européen a plus que triplé en quinze ans. Les clubs du Top 14 français représentent à eux seuls le marché le plus actif d'Europe, avec un salary cap fixé à 11,2 millions d'euros par club — un plafond qui, dans la pratique, est régulièrement contourné par des montages contractuels complexes dans lesquels les agents jouent un rôle déterminant.</p>
+        <p>Les joueurs de 1995 — des hommes qui avaient grandi dans un système amateur où personne ne négociait rien — se retrouvent soudainement avec des contrats à signer, des droits à vendre, des carrières à construire dans un environnement qu'ils ne comprennent pas. Ils ne savent pas combien ils valent. Les clubs, eux, apprennent à recruter et à rémunérer mais n'ont pas non plus l'expérience des marchés du travail sportifs professionnels. Dans cet espace d'incompréhension mutuelle, les agents arrivent avec leur expertise — réelle ou supposée — et s'imposent comme des intermédiaires indispensables. En dix ans, les plus habiles d'entre eux sont devenus des acteurs de premier plan du rugby professionnel français, à des postes que nul règlement n'a jamais formellement définis.</p>
 
-        <p>Les grands agents du rugby européen gèrent aujourd'hui des portefeuilles de quarante joueurs ou plus. Ces portefeuilles ne sont pas homogènes : un agent influent aura dans son écurie des joueurs de première ligne peu médiatisés mais très demandés pour leur solidité, des trois-quarts d'envergure internationale, et des jeunes talents en développement qu'il a repérés tôt et dont il espère accompagner la montée en puissance sur dix ans. Ce modèle — diversifier le portefeuille pour sécuriser les revenus — est directement calqué sur celui des agents du football, avec des volumes financiers moindres mais une logique identique.</p>
+        <p>La transformation est spectaculaire dans ses effets financiers. Les salaires des joueurs internationaux ont été multipliés par cinq en dix ans, puis par dix en vingt ans. Une partie de cette augmentation reflète une valorisation réelle du talent dans un sport qui génère des revenus croissants — droits télévisés, sponsors, billetterie. Une autre partie est le produit direct des pratiques agentives : la mise en concurrence artificielle des clubs, la création d'offres parallèles fictives pour faire monter les enchères, la gestion stratégique de l'information dans un marché où personne ne connaît le prix réel de quoi que ce soit. Les agents ont appris à vendre de l'incertitude comme une marchandise rentable.</p>
 
-        <div class="article-pullquote">
-          <p>«Un agent qui gère quarante joueurs ne peut pas défendre les intérêts de chacun d'eux. Il défend ses propres intérêts en utilisant leurs noms.»</p>
-          <cite>— Un directeur sportif de Top 14, sous couvert d'anonymat</cite>
-        </div>
+        <h2>Les super-agents et la concentration du pouvoir</h2>
 
-        <h2>Les conflits d'intérêts</h2>
+        <p>En France, quelques agences dominent aujourd'hui le marché du rugby professionnel au point que la notion de concurrence devient purement théorique. Une poignée d'agences représentent, selon les estimations disponibles, environ 40 % des joueurs du Top 14. Ces agences ne se contentent pas de représenter des joueurs individuels — elles construisent des portefeuilles qui leur donnent un levier structurel sur les négociations de l'ensemble du marché. Un agent qui représente quinze joueurs dans la même ligue n'est pas juste le mandataire de ces joueurs : il est un acteur de marché capable d'organiser des mouvements simultanés, de créer de la demande là où il n'y en a pas, d'orienter des recrutements en fonction de ses propres intérêts commerciaux plutôt que de ceux de ses clients.</p>
 
-        <p>La pratique la plus problématique du marché des agents dans le rugby tient dans un seul mot : double représentation. Un nombre significatif d'agents travaillant dans le rugby professionnel européen représentent simultanément des joueurs et des clubs — ou entretiennent des relations financières informelles avec des directions sportives tout en présentant officiellement des joueurs à ces mêmes clubs. Le conflit d'intérêts est structurel, évident, et pourtant largement toléré faute de régulation efficace.</p>
+        <p>La concentration du pouvoir crée des situations de dépendance structurelle pour les clubs. Un directeur sportif qui veut recruter dans l'une des positions clés de son effectif sait que certains profils recherchés sont quasi-exclusivement représentés par une ou deux agences. S'il veut ces joueurs — et dans un championnat aussi compétitif que le Top 14, il n'a souvent pas d'autre option — il doit passer par ces agences. Et ces agences savent exactement la valeur de leur position de gate-keeper. Les négociations qui s'ensuivent ne sont pas des discussions entre un acheteur et un vendeur ayant des intérêts distincts — elles sont des interactions entre des parties dont les asymétries d'information et de pouvoir sont massives, systématiques, et rarement reconnues publiquement.</p>
 
-        <p>Le fonctionnement concret de ces conflits d'intérêts est rarement documenté, car il repose sur des arrangements verbaux et des relations personnelles qui ne laissent pas de traces écrites. Mais les dirigeants de clubs qui ont accepté d'en parler, tous sous couvert d'anonymat, décrivent un système où l'agent arrive avec un joueur mais aussi avec une proposition financière implicite : placer le joueur dans tel club génère une commission pour l'agent, et parfois un retour informel vers le club sous forme d'un prochain joueur proposé à tarif préférentiel, ou d'une information sur un concurrent en difficulté de recrutement. Ces arrangements ne sont pas illégaux au sens strict — le droit du sport peine à encadrer efficacement ces pratiques — mais ils créent des situations où ni les joueurs ni les clubs ne peuvent être certains que leur agent défend réellement leurs intérêts.</p>
-
-        <p>La question des commissions opaques est au coeur d'un débat qui agite régulièrement les instances du rugby professionnel français. La LNR a plusieurs fois tenté d'imposer une obligation de déclaration des commissions d'agents dans les contrats des joueurs. Les résistances ont été fortes — des deux côtés. Certains clubs préfèrent l'opacité, qui leur permet de négocier sans que leurs concurrents connaissent leurs niveaux de rémunération réels. Certains agents, évidemment, ne souhaitent pas que leurs marges soient rendues publiques. Et certains joueurs, enfin, ignorent sincèrement ce que leur agent perçoit de leur club en plus de ce qu'ils lui versent directement.</p>
+        <p>Ce pouvoir s'étend bien au-delà des négociations contractuelles. Des agents bien positionnés influencent les décisions de sélection nationale — pas directement, mais en plaçant leurs joueurs dans des clubs où ils auront davantage de visibilité et de temps de jeu. Ils influencent les décisions d'entraîneur — un directeur sportif qui a besoin de l'agent pour maintenir un joueur dans un club a moins de liberté pour sanctionner ce joueur en cas de comportement problématique. Le pouvoir de l'agent sur son client devient, par extension, un pouvoir sur l'institution qui l'emploie. C'est un conflit d'intérêts permanent et structurel que le rugby professionnel a choisi, faute de courage politique, de ne pas résoudre.</p>
 
         <figure class="article-image">
-          <div class="img-placeholder" role="img" aria-label="Signature de contrat dans le rugby professionnel"></div>
-          <figcaption>La signature d'un contrat dans le rugby professionnel implique désormais presque systématiquement un ou plusieurs agents — dont les intérêts ne convergent pas toujours avec ceux des joueurs qu'ils représentent.</figcaption>
+          <div class="img-placeholder"></div>
+          <figcaption>Dans les couloirs d'un stade de Top 14, les négociations qui façonnent le rugby professionnel se déroulent loin des caméras.</figcaption>
         </figure>
 
-        <h2>L'instabilité comme modèle</h2>
+        <h2>Les conflits d'intérêts : quand l'agent représente les deux parties</h2>
 
-        <p>L'un des effets les plus mesurables de la montée en puissance des agents dans le rugby professionnel est la réduction de la durée moyenne des contrats. Dans les années 2000, un joueur de haut niveau signait fréquemment des contrats de trois ou quatre ans dans un même club. La durée moyenne des contrats en Top 14 est aujourd'hui de 2,1 ans selon les données publiées par la LNR. Cette réduction n'est pas le fruit du hasard — elle est directement liée aux intérêts économiques des agents, qui ne perçoivent des commissions que lors des négociations et des signatures de nouveaux contrats.</p>
+        <p>La loi française interdit explicitement à un agent sportif de représenter simultanément les deux parties dans une même transaction. Cette interdiction est claire, précise, et régulièrement contournée sous des formes variées que le droit peine à qualifier. Des agences créent des structures juridiques parallèles — une agence pour les joueurs, une entité distincte pour les clubs — qui leur permettent d'intervenir des deux côtés d'une négociation sans formellement violer la lettre de la loi. Des agents dont les entreprises-sœurs fournissent des services de conseil aux clubs qu'ils approvisionnent en joueurs créent des liens d'intérêt qui rendent toute négociation «libre» purement théorique.</p>
 
-        <p>Un joueur qui reste huit ans dans le même club n'est rentable pour son agent que lors des renégociations — généralement une ou deux fois sur cette période. Un joueur qui change de club tous les deux ans génère une commission à chaque départ, à chaque arrivée, parfois les deux si l'agent représente les deux clubs dans la transaction. L'incitation économique à favoriser la mobilité des joueurs est donc massive, et elle entre en contradiction directe avec les intérêts des clubs, qui investissent dans la formation et la construction d'une cohésion de groupe, et avec les intérêts des équipes nationales, dont les sélectionneurs peinent à constituer des groupes stables quand les clubs changent constamment de composition.</p>
+        <p>Les conséquences concrètes sont documentées dans plusieurs affaires qui ont donné lieu à des enquêtes internes ou juridiques, mais rarement à des sanctions significatives. Des joueurs qui signent des contrats qui ne correspondent pas à leurs intérêts réels — parce que leur agent avait intérêt, pour des raisons extérieures à la carrière du joueur, à placer ce joueur dans ce club précis. Des clubs qui recrutent à des prix supérieurs au marché parce que l'agent qui négocie le transfert tire des revenus d'une commission calculée sur le montant total de la transaction. Des transactions qui bénéficient à l'intermédiaire davantage qu'aux deux parties qu'il est censé servir. Ces situations ne sont pas des exceptions marginales — elles sont constitutives du marché tel qu'il fonctionne aujourd'hui.</p>
 
-        <p>Les entraîneurs de clubs sont les premiers à pointer cette réalité. Construire un système de jeu, inculquer une culture collective, développer des automatismes entre joueurs — tout cela prend du temps, au moins deux saisons complètes. Quand un tiers du groupe change chaque été sous l'influence d'agents qui ont intérêt à maximiser le nombre de transferts, ce travail est sans cesse interrompu. Les clubs qui ont résisté à cette tendance — Toulouse en France, les Leinster en Irlande, les Crusaders en Super Rugby — sont précisément ceux qui ont construit des politiques de fidélisation à long terme et limité l'influence des agents dans leurs décisions de recrutement.</p>
-
-        <p>Le cas des équipes nationales est encore plus sensible. Plusieurs sélectionneurs ont exprimé publiquement leur frustration face à des agents qui conseillent à leurs joueurs de refuser des appels en équipe nationale pour ne pas risquer de se blesser, préférant les préserver pour des matchs de club qui conditionnent leur prochaine négociation de contrat. Cette tension entre l'intérêt financier à court terme du joueur — et de son agent — et l'intérêt sportif à long terme de participer à des compétitions internationales est l'une des fractures les plus profondes du rugby professionnel contemporain. Elle ne disparaîtra pas sans une régulation sérieuse des pratiques agentiales, que le rugby peine encore à se donner les moyens d'imposer.</p>
+        <p>Ce qui rend le phénomène particulièrement difficile à combattre, c'est que les parties potentiellement lésées — clubs et joueurs — ont souvent des raisons stratégiques de ne pas se plaindre publiquement. Le club qui a surpayé un joueur ne veut pas l'admettre devant ses actionnaires et ses supporters. Le joueur qui a signé un contrat sous-optimal par rapport à son marché réel a quand même un contrat professionnel et une carrière qui avance. L'agent, lui, a prélevé sa commission et est passé à la transaction suivante. Le système produit ses propres anticorps contre toute remise en cause : tout le monde a un intérêt à ce que le statu quo se maintienne, au moins à court terme.</p>
 
         <div class="article-pullquote">
-          <p>«Le marché des agents a transformé le rugby en bourse. Les joueurs sont devenus des actifs qu'on valorise et qu'on revend. Ce n'est pas pour ça qu'on joue au rugby.»</p>
-          <cite>— Fabien Galthié, sélectionneur du XV de France</cite>
+          <p>«Un agent qui représente un joueur et son club dans la même transaction, c'est comme un avocat qui défend les deux parties dans un procès. Ça devrait être interdit. Ça l'est. Et ça continue.»</p>
+          <cite>— Un directeur sportif Top 14 (anonyme)</cite>
+        </div>
+
+        <h2>L'impact sur les vestiaires</h2>
+
+        <p>Un joueur géré comme un actif financier entretient un rapport différent à son club. Il sait que son agent surveille en permanence le marché pour lui trouver une opportunité plus lucrative. Il sait que son contrat actuel est un instrument de négociation future autant qu'un engagement présent envers une institution. Cette conscience modifie la relation qu'il entretient avec ses coéquipiers, son entraîneur, son club. Des capitaines de Top 14, interrogés dans le cadre de cette enquête, témoignent de vestiaires où les discussions sur les contrats — les leurs, ceux de leurs coéquipiers, les rumeurs de transferts — ont parasité la préparation des matchs dans les semaines les plus décisives de la saison.</p>
+
+        <p>L'effet est particulièrement visible dans la gestion des joueurs en fin de contrat. Un joueur dont l'engagement expire en fin de saison est, à partir du mois de janvier, simultanément un joueur de son club actuel et un candidat actif sur le marché des transferts. Son agent conduit des négociations parallèles avec d'autres clubs. Des rumeurs circulent dans les couloirs des vestiaires adverses. Des dirigeants qui souhaitent l'attirer le contactent via des intermédiaires qui testent sa disponibilité. Dans ce contexte, maintenir une concentration absolue sur les objectifs sportifs de la saison en cours est psychologiquement très difficile. Et les agents, dont les revenus sont générés par les transactions plutôt que par les performances sportives, n'ont structurellement aucun intérêt à simplifier la situation.</p>
+
+        <p>Les entraîneurs qui ont géré ces situations décrivent un paradoxe professionnel complexe : ils dépendent des agents pour recruter les joueurs dont ils ont besoin, mais ces mêmes agents fragilisent leur autorité sur ces joueurs une fois qu'ils sont dans l'effectif. Un coach qui veut sanctionner un joueur vedette très bien représenté risque de voir cet agent placer le joueur ailleurs à la fin de saison, privant le club d'un actif sportif précieux. Cette asymétrie peut inverser la hiérarchie naturelle de l'institution sportive : dans un club où un agent puissant est fortement présent, c'est parfois lui qui influence in fine des décisions qui devraient appartenir au seul staff technique.</p>
+
+        <h2>Vers une régulation du marché ?</h2>
+
+        <p>World Rugby et les ligues professionnelles nationales discutent depuis plusieurs années de mesures visant à encadrer le marché des agents. Les propositions qui reviennent le plus souvent : un registre officiel des agents accrédités avec des exigences de formation professionnelle et d'éthique vérifiable, des plafonds de commission encadrés par la loi, une obligation de transparence sur toutes les transactions impliquant des agents, une interdiction réelle et contrôlée de représenter les deux parties dans une même transaction. Ces mesures sont techniquement faisables — d'autres ligues professionnelles dans le monde les ont mises en place avec des résultats mesurables. Elles se heurtent à des résistances politiques considérables dans le rugby français.</p>
+
+        <p>En France, la LNR a introduit plusieurs obligations déclaratives pour les agents depuis 2018. Les résultats sont mitigés, pour être optimiste. Les déclarations existent sur le papier. Les contrôles réels restent insuffisants par manque de moyens et, parfois, de volonté. Les sanctions restent symboliques et rarement appliquées. La réglementation a surtout eu pour effet de professionnaliser et de consolider les agences établies — qui ont les moyens administratifs de se conformer aux nouvelles obligations — au détriment des petits agents indépendants, accentuant ainsi la concentration du marché que la réglementation était précisément censée corriger. Les meilleures intentions régulatrices ont produit des effets opposés à ceux escomptés.</p>
+
+        <p>En attendant une régulation véritablement efficace, le système fonctionne selon des règles non écrites que tout le monde connaît mais que peu osent dénoncer publiquement, par crainte des représailles professionnelles ou simplement par calcul rationnel. Les joueurs savent que leurs agents ont d'autres intérêts que les leurs. Les clubs savent que les négociations ne sont jamais entièrement libres. Les entraîneurs savent qu'ils ne contrôlent pas entièrement leurs vestiaires. Et tout le monde continue — parce que le statu quo bénéficie à suffisamment d'acteurs influents pour que personne n'ait intérêt à prendre le risque politique de le changer vraiment. La régulation du marché des agents dans le rugby professionnel est une question dont tout le monde convient de l'urgence, et que personne ne résout.</p>
+
+        <div class="article-pullquote">
+          <p>«Les agents ne contrôlent pas le rugby. Ils contrôlent les informations qui circulent dans le rugby. C'est pire.»</p>
+          <cite>— Lucie Bertrand</cite>
         </div>
 
       </div>
-
       <footer class="article-footer">
         <div class="article-tags">
           <span class="article-tag">Rugby</span>
           <span class="article-tag">Enquête</span>
           <span class="article-tag">Agents</span>
           <span class="article-tag">Top 14</span>
-          <span class="article-tag">Professionnalisme</span>
           <span class="article-tag">Transferts</span>
+          <span class="article-tag">Marché</span>
+          <span class="article-tag">Professionnalisme</span>
         </div>
         <div class="article-author-bio">
           <div class="author-avatar"></div>
           <div>
             <div class="author-name">Lucie Bertrand</div>
-            <p class="author-desc">Journaliste d'investigation à L'Épopée, spécialisée dans les coulisses économiques du sport professionnel. Elle a enquêté pendant six mois sur les pratiques des agents dans le rugby français, en recueillant les témoignages de joueurs, de dirigeants et d'agents sous couvert d'anonymat.</p>
+            <p class="author-desc">Journaliste d'investigation à L'Épopée. Spécialiste de l'économie du sport et des coulisses du rugby professionnel. Ancienne journaliste à L'Équipe, elle mène depuis 2021 une enquête longue durée sur les rapports de pouvoir dans le rugby français.</p>
           </div>
         </div>
       </footer>
     </article>
-
     <section class="related">
       <div class="related-inner">
         <h2 class="related-title">À lire aussi</h2>
@@ -476,21 +234,21 @@
           <div class="related-card">
             <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/toulon-stade/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/chute-de-toulon.html">La chute de Toulon : autopsie d'un empire qui s'est effondré</a></h3>
+              <div class="related-card-title"><a href="/sports-media/articles/chute-de-toulon.html">La chute de Toulon : autopsie d'un empire qui s'est effondré</a></div>
               <div class="related-card-meta">Enquête · 20 min</div>
             </div>
           </div>
           <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/dopage-velo/600/300');"></div>
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/all-blacks-nz/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/dopage-cyclisme.html">Le dopage dans le cyclisme : ce que l'omerta a protégé pendant vingt ans</a></h3>
-              <div class="related-card-meta">Enquête · 22 min</div>
+              <div class="related-card-title"><a href="/sports-media/articles/all-blacks-2015.html">L'anatomie d'une invincibilité : les All Blacks 2015</a></div>
+              <div class="related-card-meta">Anatomie · 25 min</div>
             </div>
           </div>
           <div class="related-card">
-            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/xv-france-finale/600/300');"></div>
+            <div class="related-card-img" style="background-image: url('https://picsum.photos/seed/xv-france-finals/600/300');"></div>
             <div class="related-card-body">
-              <h3 class="related-card-title"><a href="/sports-media/articles/xv-de-france-finales.html">Pourquoi le XV de France perd toujours les finales qu'il mérite de gagner</a></h3>
+              <div class="related-card-title"><a href="/sports-media/articles/xv-de-france-finales.html">Pourquoi le XV de France perd toujours les finales qu'il mérite de gagner</a></div>
               <div class="related-card-meta">Anatomie · 14 min</div>
             </div>
           </div>
@@ -498,7 +256,6 @@
       </div>
     </section>
   </main>
-
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
@@ -535,7 +292,6 @@
       </div>
     </div>
   </footer>
-
   <script src="/sports-media/script.js"></script>
 </body>
 </html>
